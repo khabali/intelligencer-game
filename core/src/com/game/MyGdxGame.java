@@ -14,13 +14,14 @@ public class MyGdxGame extends ApplicationAdapter {
 	
 	int defaultWeight = 480;
 	int defaultHeight = 320;
-	int scale = 1;
+	int scale = 2;
 	
 	@Override
 	public void create () {
 		orthographicCamera  = new OrthographicCamera();
 		orthographicCamera.setToOrtho(false, defaultWeight * scale, defaultHeight * scale);	
-		isoMap = new IsoMap("iso_test_map.tmx");
+		
+		isoMap = new IsoMap("iso_map_test2.tmx");
 		isoMap.setOrthographicCamera(orthographicCamera);
 	}
 
