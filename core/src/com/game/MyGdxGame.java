@@ -1,38 +1,39 @@
 package com.game;
 
+import com.artemis.World;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.game.isomap.IsoMap;
+import com.game.entity.EntityFactory;
+import com.game.system.MapRenderSystem;
 
-public class MyGdxGame extends ApplicationAdapter {
+public class MyGdxGame extends ApplicationAdapter {	
+	private OrthographicCamera camera;
+	private World world;
 	
-	
-	OrthographicCamera orthographicCamera;
-	IsoMap isoMap;
-	
-	int defaultWeight = 480;
-	int defaultHeight = 320;
-	int scale = 2;
+	private int defaultWeight = 480;
+	private int defaultHeight = 320;
+	private int scale = 2;
 	
 	@Override
 	public void create () {
-		orthographicCamera  = new OrthographicCamera();
-		orthographicCamera.setToOrtho(false, defaultWeight * scale, defaultHeight * scale);	
+		camera  = new OrthographicCamera();
+		world = new World(); // World is part of the artemis framework
 		
-		isoMap = new IsoMap("iso_map_test2.tmx");
-		isoMap.setOrthographicCamera(orthographicCamera);
+		camera.setToOrtho(false, defaultWeight * scale, defaultHeight * scale);	
+		world.setSystem(new MapRenderSystem(camera));
+		world.initialize();
+		
+		// create the univers entity which contains the map componenet
+		EntityFactory.createUnivers(world, "iso_map_test2.tmx").addToWorld();
 	}
 
 	@Override
 	public void render () {
 		Gdx.gl.glClearColor(0.0f, 0.0f, 0.0f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		
-		
-		
-		isoMap.render();
-		
+		camera.update();
+		world.process();
 	}
 }
