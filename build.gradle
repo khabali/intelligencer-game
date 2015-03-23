@@ -47,7 +47,8 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-		compile fileTree(dir: 'libs', include: '*.jar')
+        compile "net.onedaybeard.artemis:artemis-odb:0.9.0"
+		
     }
 }
 
