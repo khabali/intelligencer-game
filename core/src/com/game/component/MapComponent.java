@@ -6,6 +6,9 @@ import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 
 public class MapComponent extends Component {
 	
+	public static int TILEWIDTH = 64;
+	public static int TILEHEIGHT = 32;
+	
 	private TiledMap tiledMap;
 	
 	public MapComponent(String fileName) {

@@ -29,53 +29,51 @@ public class MovementSystem extends EntityProcessingSystem {
 			DirectionComponent direction = dirc.get(e);
 			float deltaTime= Gdx.graphics.getDeltaTime();
 			// Moving
-			if (movement.state == MovementComponent.MOVING) { // request to move on rows
-				// Move on row
-				if (position.rowPos != movement.targetRow) {
-					if (position.rowPos < movement.targetRow) {
-						position.setRowPos(position.rowPos+movement.velocity*deltaTime);
-						System.out.println(position.rowPos);
-						if (movement.targetRow-position.rowPos <= movement.velocity*deltaTime) position.rowPos = movement.targetRow;
-					}
-					if (position.rowPos > movement.targetRow) {
-						position.setRowPos(position.rowPos-movement.velocity*deltaTime);
-						if (position.rowPos-movement.targetRow <= movement.velocity*deltaTime) position.rowPos = movement.targetRow;
-					}
-				}
-				// Move on column
-				if (position.colPos != movement.targetCol) { // request to move on columns
-					if (position.colPos < movement.targetCol) { // move up in columns
-						position.setColPos(position.colPos+movement.velocity*deltaTime);
-						if (movement.targetCol-position.colPos <= movement.velocity*deltaTime) position.colPos = movement.targetCol; // this in case if it exceeds target
-					}
-					if (position.colPos > movement.targetCol) { // move down in columns
-						position.setColPos(position.colPos-movement.velocity*deltaTime);
-						if (position.colPos-movement.targetCol <= movement.velocity*deltaTime) position.colPos = movement.targetCol;
-					}
-				}
-			}
+			moveOnRow(deltaTime, position, movement);
+			moveOnCol(deltaTime, position, movement);
 			// Change side
-			if (position.rowPos<movement.targetRow && position.colPos==movement.targetCol) direction.toBackRight();
-			if (position.rowPos>movement.targetRow && position.colPos==movement.targetCol) direction.toFrontLeft();
-			if (position.rowPos==movement.targetRow && position.colPos<movement.targetCol) direction.toBackLeft();
-			if (position.rowPos==movement.targetCol && position.colPos>movement.targetCol) direction.toFrontRight();
-			if (position.rowPos<movement.targetRow && position.colPos<movement.targetCol) direction.toBack();
-			if (position.rowPos>movement.targetRow && position.colPos>movement.targetCol) direction.toFront();
-			if (position.rowPos>movement.targetRow && position.colPos<movement.targetCol) direction.toLeft();
-			if (position.rowPos<movement.targetRow && position.colPos>movement.targetCol) direction.toRight();
-			
+			changeSide(position, movement, direction);		
 			// Check if arrived
-			if (position.rowPos==movement.targetRow && position.colPos==movement.targetCol) movement.doStop();
-			
+			if (position.rowPos==movement.targetRow && position.colPos==movement.targetCol) movement.doStop();			
 			// calculate x and y from row and column
 			int spriteWidth = e.getComponent(SpriteComponent.class).getSpriteWidth();
 			int spriteHeight = e.getComponent(SpriteComponent.class).getSpriteHeight();
 			position.x = (position.rowPos-position.colPos) * MapComponent.TILEHEIGHT - (spriteWidth-MapComponent.TILEWIDTH)/2;
-			position.y = (position.rowPos+position.colPos) * (MapComponent.TILEHEIGHT/2);
-			
-		}
-		
+			position.y = (position.rowPos+position.colPos) * (MapComponent.TILEHEIGHT/2);			
+		}		
 	}
 	
+	private void changeSide(PositionComponent position, MovementComponent movement, DirectionComponent direction) {
+		if (position.rowPos<movement.targetRow && position.colPos==movement.targetCol) direction.toBackRight();
+		if (position.rowPos>movement.targetRow && position.colPos==movement.targetCol) direction.toFrontLeft();
+		if (position.rowPos==movement.targetRow && position.colPos<movement.targetCol) direction.toBackLeft();
+		if (position.rowPos==movement.targetCol && position.colPos>movement.targetCol) direction.toFrontRight();
+		if (position.rowPos<movement.targetRow && position.colPos<movement.targetCol) direction.toBack();
+		if (position.rowPos>movement.targetRow && position.colPos>movement.targetCol) direction.toFront();
+		if (position.rowPos>movement.targetRow && position.colPos<movement.targetCol) direction.toLeft();
+		if (position.rowPos<movement.targetRow && position.colPos>movement.targetCol) direction.toRight();
+	}
+	
+	private void moveOnRow(float deltaTime, PositionComponent pos, MovementComponent mov) {
+		if (pos.rowPos < mov.targetRow) {
+			pos.rowPos += mov.velocity * deltaTime;
+			if (pos.rowPos > mov.targetRow) pos.rowPos = mov.targetRow;
+		}
+		if (pos.rowPos > mov.targetRow) {
+			pos.rowPos -= mov.velocity * deltaTime;
+			if (pos.rowPos < mov.targetRow) pos.rowPos = mov.targetRow;
+		}
+	}
+	
+	private void moveOnCol(float deltaTime, PositionComponent pos, MovementComponent mov) {
+		if (pos.colPos < mov.targetCol) {
+			pos.colPos += mov.velocity * deltaTime;
+			if (pos.colPos > mov.targetCol) pos.colPos = mov.targetCol;
+		}
+		if (pos.colPos > mov.targetCol) {
+			pos.colPos -= mov.velocity * deltaTime;
+			if (pos.colPos < mov.targetCol) pos.colPos = mov.targetCol;
+		}
+	}
 
 }
