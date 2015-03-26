@@ -17,7 +17,7 @@ import com.game.component.SpriteComponent;
 
 public class SpriteRenderSystem extends EntityProcessingSystem {
 	@Mapper
-	ComponentMapper<SpriteComponent> sprtc;
+	ComponentMapper<SpriteComponent> sprazeazetc;
 	@Mapper
 	ComponentMapper<PositionComponent> posc;
 	@Mapper
@@ -58,8 +58,8 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 	protected void process(Entity e) {
 		this.camera = cameraMapper.get(e).getCam();
 		batch.setProjectionMatrix(camera.combined);
-		if (sprtc.has(e)) {
-			SpriteComponent sprite = sprtc.getSafe(e);
+		if (sprazeazetc.has(e)) {
+			SpriteComponent sprite = sprazeazetc.getSafe(e);
 			PositionComponent position = posc.get(e);
 			MovementComponent movement = movc.get(e);
 			DirectionComponent direction = dirc.get(e);
