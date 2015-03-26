@@ -1,5 +1,8 @@
 package com.game.input;
 
+import com.badlogic.gdx.math.Vector2;
+import com.game.utils.IsoMaths;
+
 public class GameInput {
 
 	public InputButton leftButton;
@@ -68,6 +71,9 @@ public class GameInput {
 				&& touch.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
 			System.out.println("Touch button  " + touch.position.x + "      "
 					+ touch.position.y);
+
+			System.out.println(IsoMaths.translateScreenToIso(new Vector2(
+					touch.position.x, touch.position.y)));
 
 			touch.release();
 
