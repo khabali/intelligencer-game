@@ -39,8 +39,8 @@ public class MyGdxGame extends ApplicationAdapter implements GestureListener {
 		float screenH = Gdx.graphics.getHeight();
 
 		this.camera = new OrthographicCamera();
-		camera.viewportWidth = screenW;
-		camera.viewportHeight = camera.viewportWidth * (screenW / screenH);
+		camera.viewportWidth = screenW * (screenW / screenH);
+		camera.viewportHeight = screenH;
 		camera.position.set(0, 0, 0);
 		camera.position.set(0, 0, 0);
 		camera.update();
@@ -71,8 +71,8 @@ public class MyGdxGame extends ApplicationAdapter implements GestureListener {
 	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
-		camera.viewportWidth = width;
-		camera.viewportHeight = camera.viewportWidth * (width / height);
+		camera.viewportWidth = width * (width / height);
+		camera.viewportHeight = height;
 		camera.position.set(0, 0, 0);
 		camera.update();
 		world.getSystem(MapRenderSystem.class).updateView(camera);
