@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="isometric" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="32">
+<map version="1.0" orientation="isometric" renderorder="right-down" width="2" height="2" tilewidth="64" tileheight="32">
  <tileset firstgid="1" name="grassland" tilewidth="64" tileheight="32">
   <image source="grassland.png" width="1024" height="1344"/>
  </tileset>
@@ -12,14 +12,14 @@
  <tileset firstgid="1177" name="tree" tilewidth="256" tileheight="256">
   <image source="tree.png" width="256" height="256"/>
  </tileset>
- <layer name="floor" width="50" height="50">
+ <layer name="floor" width="2" height="2">
   <data encoding="base64" compression="zlib">
-   eJzt2E0KgzAQBWA9gKsi3YjkCr3/5boxVMI0zl+Sp8ziQatB3scYW9ynaZofkv3I6B5eFs667cjovhLLRiSfW4A9lOMz/0L1RrScHbnfXR3Zku+jK4c26wALtT8s/dfic2uTd2p9R5rexffavCT9PDyS++fsqD2HtZ20M6oZqHOtHZoZceZwXlOuXRoarNdLFQvloCwt9q3kXktFrtb3dGivzbGMcEhnw7H02h/WrpyZoDiovok4dgdH2V3bH8HhmXBgJRw4eYJB4ngdGd3Xy4HqkThQ5yPZG/86I1g8HBxL69l5OaxOJAe1pscekv5ucPv0fK5p3tNIO6HNoUenHnNAc1jeY6I4rO9iURzWhAMnSP8HI5FIJBK5c75TPBtE
+   eJyTY2BgYIRiOSAGAAJ8AD8=
   </data>
  </layer>
- <layer name="grass" width="50" height="50">
+ <layer name="grass" width="2" height="2">
   <data encoding="base64" compression="zlib">
-   eJztmf8KgjAQgEV9gaIX6v+i5/Px7HdQQRgEElRHCtday805b/M+GBQl3qe73Y1FUTjcY/ln2XeqlIZxntF1i8ROLLaQOZl6UmVd+cySb7eHJ66bP3FS8pDlc5ZG0aqBAyUPjConLpI5NSeQ5zbzuM81Qefey9d/D45iHafm16pq3qn6zaVHPWRc488BNK0bx/g9XKLzXkrkg+P3pScxQVyvqJBp5pNYT/ZEvQCYTwWKLyccq4q88igEH4w4vyj1kzgW3fkG3Hp2mf7oK7AXfi/is4f462GLSYs6aEpbD1zLKKH7LCk6MAzjhjZ7EGqE4hKKB6DaFzLDxaR3ZhifGBGd47q5R9WjS7p25po4PHivzTBMn/jed1M4F28KnL/uAljz4Vxs6/BcvCueUrVKtg==
+   eJx7wcTA8ByIHwHxZyAGACSIA60=
   </data>
  </layer>
 </map>
