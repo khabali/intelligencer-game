@@ -11,6 +11,11 @@ import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.viewport.FillViewport;
+import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 import com.game.component.MovementComponent;
 import com.game.entity.EntityFactory;
 import com.game.system.InputSystem;
@@ -18,7 +23,7 @@ import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.SpriteRenderSystem;
 
-public class MyGdxGame extends ApplicationAdapter implements GestureListener {
+public class MyGdxGame extends ApplicationAdapter {
 
 	//
 	private final String tag = getClass().getName();
@@ -26,6 +31,7 @@ public class MyGdxGame extends ApplicationAdapter implements GestureListener {
 	//
 	private World world;
 	private OrthographicCamera camera;
+	private ScreenViewport viewport;
 	Entity hero;
 
 	@Override
@@ -38,21 +44,14 @@ public class MyGdxGame extends ApplicationAdapter implements GestureListener {
 		float screenW = Gdx.graphics.getWidth();
 		float screenH = Gdx.graphics.getHeight();
 
-		this.camera = new OrthographicCamera();
-		camera.viewportWidth = screenW * (screenW / screenH);
-		camera.viewportHeight = screenH;
-		camera.position.set(0, 0, 0);
-		camera.position.set(0, 0, 0);
-		camera.update();
-
-		// load map
-		TiledMap map = new TmxMapLoader().load("iso_map_test2.tmx");
+		this.camera = new OrthographicCamera(screenW, screenH);
+		this.camera.position.set(screenW/2, screenH/2, 0);
 
 		world = new World(); // World is part of the artemis framework
-		world.setSystem(new MapRenderSystem(camera, map));
-		world.setSystem(new InputSystem());
+		world.setSystem(new MapRenderSystem(camera));
+		world.setSystem(new InputSystem(camera));
 		world.setSystem(new MovementSystem());
-		world.setSystem(new SpriteRenderSystem());
+		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
 		// create the univers entity which contains the map componenet
@@ -70,65 +69,23 @@ public class MyGdxGame extends ApplicationAdapter implements GestureListener {
 
 	@Override
 	public void resize(int width, int height) {
-		super.resize(width, height);
+		//super.resize(width, height);
+		camera.setToOrtho(false, width, height);
+		//viewport.update(width, height);
+		//camera.update();
+		//camera.viewportWidth = width;
+		//camera.viewportHeight = height;
+		//camera.position.set(0, 0, 0);
+		/*
 		camera.viewportWidth = width * (width / height);
 		camera.viewportHeight = height;
 		camera.position.set(0, 0, 0);
 		camera.update();
-		world.getSystem(MapRenderSystem.class).updateView(camera);
+		*/
+		//world.getSystem(MapRenderSystem.class).updateView();
 
 		Gdx.app.debug(tag, "viewPort resized w:" + camera.viewportWidth + " h:"
 				+ camera.viewportHeight);
-	}
-
-	@Override
-	public boolean touchDown(float x, float y, int pointer, int button) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean tap(float x, float y, int count, int button) {
-		MovementComponent mov = hero.getComponent(MovementComponent.class);
-		mov.doMove(10, 5);
-		return true;
-	}
-
-	@Override
-	public boolean longPress(float x, float y) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean fling(float velocityX, float velocityY, int button) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean pan(float x, float y, float deltaX, float deltaY) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean panStop(float x, float y, int pointer, int button) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean zoom(float initialDistance, float distance) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean pinch(Vector2 initialPointer1, Vector2 initialPointer2,
-			Vector2 pointer1, Vector2 pointer2) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 }

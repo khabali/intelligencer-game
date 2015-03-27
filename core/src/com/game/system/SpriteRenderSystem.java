@@ -9,7 +9,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.game.component.CameraComponent;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
@@ -25,9 +24,6 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 	@Mapper
 	ComponentMapper<DirectionComponent> dirc;
 
-	@Mapper
-	ComponentMapper<CameraComponent> cameraMapper;
-
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
 
@@ -37,11 +33,11 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 	// private Bag<AtlasRegion> regionsByEntity; // collection of regions of
 	// every entity to render
 
-	public SpriteRenderSystem() {
+	public SpriteRenderSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(SpriteComponent.class,
 				PositionComponent.class, MovementComponent.class,
-				DirectionComponent.class, CameraComponent.class));
-
+				DirectionComponent.class));
+		this.camera = camera;
 	}
 
 	@Override
@@ -56,7 +52,6 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 
 	@Override
 	protected void process(Entity e) {
-		this.camera = cameraMapper.get(e).getCam();
 		batch.setProjectionMatrix(camera.combined);
 		if (spetc.has(e)) {
 			SpriteComponent sprite = spetc.getSafe(e);

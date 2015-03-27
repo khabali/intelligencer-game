@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="2" height="2" tilewidth="64" tileheight="32">
+ <tileset firstgid="1" name="grassland" tilewidth="64" tileheight="32">
+  <image source="grassland.png" width="1024" height="1344"/>
+ </tileset>
+ <tileset firstgid="673" name="grassland" tilewidth="64" tileheight="64">
+  <image source="grassland.png" width="1024" height="1344"/>
+ </tileset>
+ <tileset firstgid="1009" name="grassland" tilewidth="128" tileheight="64">
+  <image source="grassland.png" width="1024" height="1344"/>
+ </tileset>
+ <tileset firstgid="1177" name="tree" tilewidth="256" tileheight="256">
+  <image source="tree.png" width="256" height="256"/>
+ </tileset>
+ <layer name="floor" width="2" height="2">
+  <data encoding="base64" compression="zlib">
+   eJyTY2BgYIRiOSAGAAJ8AD8=
+  </data>
+ </layer>
+ <layer name="grass" width="2" height="2">
+  <data encoding="base64" compression="zlib">
+   eJx7wcTA8ByIHwHxZyAGACSIA60=
+  </data>
+ </layer>
+</map>
