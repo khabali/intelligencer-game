@@ -1,63 +1,32 @@
 package com.game.input;
 
-import com.badlogic.gdx.math.Vector2;
-import com.game.utils.IsoMaths;
+import com.badlogic.gdx.Gdx;
 
 public class GameInput {
 
-	public InputButton leftButton;
-	public InputButton rightButton;
-	public InputButton upButton;
-	public InputButton downButton;
+	private final String tag = getClass().getName();
 
-	//
-	public InputButton touch;
+	private static GameInput _instance;
 
-	// Buttons keys
-	public static final int LEFT = 1;
-	public static final int RIGHT = 2;
-	public static final int UP = 3;
-	public static final int DOWN = 4;
-	public static final int TOUCH = 5;
+	public static GameInput getInstance() {
+		if (_instance == null) {
+			_instance = new GameInput();
+		}
+		return _instance;
+	}
 
-	public GameInput() {
+	private InputButton leftButton;
+	private InputButton rightButton;
+	private InputButton upButton;
+	private InputButton downButton;
+	private TouchButton touchButton = new TouchButton();
+
+	private GameInput() {
 		leftButton = new InputButton();
 		rightButton = new InputButton();
 		upButton = new InputButton();
 		downButton = new InputButton();
-		touch = new InputButton();
-	}
-
-	public boolean isPressed(int key) {
-
-		boolean pressed = false;
-		switch (key) {
-		case LEFT:
-			pressed = leftButton.isPressed();
-			break;
-		case RIGHT:
-			pressed = rightButton.isPressed();
-			break;
-		case UP:
-			pressed = upButton.isPressed();
-			break;
-		case DOWN:
-			pressed = downButton.isPressed();
-			break;
-
-		case TOUCH:
-			pressed = touch.isTouched();
-			break;
-
-		default:
-			break;
-		}
-
-		return pressed;
-	}
-
-	public boolean isDragged() {
-		return touch.isDraged();
+		touchButton = new TouchButton();
 	}
 
 	public void update(float deltaTime) {
@@ -67,16 +36,32 @@ public class GameInput {
 			leftButton.release();
 		}
 
-		if (touch.isTouched()
-				&& touch.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
-			System.out.println("Touch button  " + touch.position.x + "      "
-					+ touch.position.y);
-
-			System.out.println(IsoMaths.translateScreenToIso(new Vector2(
-					touch.position.x, touch.position.y)));
-
-			touch.release();
-
+		if (touchButton.isTouched()
+				|| touchButton.isPaned()
+				|| touchButton.isDraged()
+				&& touchButton.getTouchDuration(System.currentTimeMillis()) >= deltaTime * 2.0f) {
+			Gdx.app.debug(tag, "Touch released ...");
+			touchButton.release();
 		}
+	}
+
+	public TouchButton getTouchButton() {
+		return touchButton;
+	}
+
+	public InputButton getLeftButton() {
+		return leftButton;
+	}
+
+	public InputButton getRightButton() {
+		return rightButton;
+	}
+
+	public InputButton getDownButton() {
+		return downButton;
+	}
+
+	public InputButton getUpButton() {
+		return upButton;
 	}
 }
