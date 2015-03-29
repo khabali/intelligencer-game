@@ -14,8 +14,9 @@ public class InputHandler implements GestureListener, InputProcessor {
 
 	@Override
 	public boolean tap(float x, float y, int count, int button) {
-		// TODO Auto-generated method stub
-		return false;
+		GameInput.getInstance().getTouchButton()
+		.touch(System.currentTimeMillis(), x, y);
+		return true;
 	}
 
 	@Override
@@ -35,7 +36,7 @@ public class InputHandler implements GestureListener, InputProcessor {
 
 		GameInput.getInstance().getTouchButton()
 				.pan(System.currentTimeMillis(), x, y, deltaX, deltaY);
-		return false;
+		return true;
 	}
 
 	@Override

@@ -50,14 +50,13 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		world = new World(); // World is part of the artemis framework
 		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new MovementSystem());
+		world.setSystem(new MovementSystem(camera));
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
 		// create the univers entity which contains the map componenet
 		EntityFactory.createUnivers(world).addToWorld();
-		hero = EntityFactory.createHero(world);
-		hero.addToWorld();
+		EntityFactory.createHero(world).addToWorld();
 	}
 
 	@Override

@@ -6,19 +6,28 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import com.game.component.DirectionComponent;
 import com.game.component.MapComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
+import com.game.input.GameInput;
+import com.game.input.TouchButton;
+import com.game.utils.IsoMaths;
 
 public class MovementSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<PositionComponent> posc;
 	@Mapper ComponentMapper<MovementComponent> movc;
 	@Mapper ComponentMapper<DirectionComponent> dirc;
+	
+	OrthographicCamera camera;
 
-	public MovementSystem() {
+	public MovementSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
+		this.camera = camera;
 	}
 
 	@Override
@@ -28,6 +37,8 @@ public class MovementSystem extends EntityProcessingSystem {
 			MovementComponent movement = movc.getSafe(e);
 			DirectionComponent direction = dirc.get(e);
 			float deltaTime= Gdx.graphics.getDeltaTime();
+			// input processing
+			processInput(movement);
 			// Moving
 			moveOnRow(deltaTime, position, movement);
 			moveOnCol(deltaTime, position, movement);
@@ -73,6 +84,22 @@ public class MovementSystem extends EntityProcessingSystem {
 		if (pos.colPos > mov.targetCol) {
 			pos.colPos -= mov.velocity * deltaTime;
 			if (pos.colPos < mov.targetCol) pos.colPos = mov.targetCol;
+		}
+	}
+	
+	private void processInput(MovementComponent movement) {
+		TouchButton touch = GameInput.getInstance().getTouchButton();
+		if (touch.isTouched()) {
+			Vector2 pos = touch.position;
+			System.out.println(pos.x + " : " + pos.y);
+			Vector3 v = camera.unproject(new Vector3(pos.x, pos.y, 0));
+			System.out.println(v.x + " : " + v.y);
+			//Vector2 v2 = IsoMaths.coorToTab(v.x, v.y, MapComponent.TILEHEIGHT);
+			Vector2 v2 = IsoMaths.screenToMap(v.x, v.y, MapComponent.TILEWIDTH, MapComponent.TILEHEIGHT);
+			System.out.println("col=" + v2.y + " : row=" + v2.x);
+			int row = (int)v2.x;
+			int col = (int)v2.y;
+			movement.doMove(row, col);
 		}
 	}
 

@@ -12,7 +12,7 @@ public class TouchButton {
 	public Vector2 position = new Vector2(0, 0);
 	public Vector2 delta = new Vector2(0, 0);
 
-	public void touch(float currentTime, int x, int y) {
+	public void touch(float currentTime, float x, float y) {
 		if (!touch) {
 			touch = true;
 			touchTime = currentTime;

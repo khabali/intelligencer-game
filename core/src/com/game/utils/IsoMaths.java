@@ -32,6 +32,24 @@ public final class IsoMaths {
 
 		return screenPos;
 	}
+	
+	public static Vector2 screenToMap(float x, float y, int tileWidth, int tileHeight) {
+		float tileWidthHalf = tileWidth/2;
+		float tileHeightHalf = tileHeight/2;
+		int mapx = (int)((x / tileWidthHalf + y / tileHeightHalf) / 2);
+		int mapy = (int)((y / tileHeightHalf - (x / tileWidthHalf)) / 2);
+		return new Vector2(mapx, mapy);
+	}
+	
+	// screen to isometric
+	public static Vector2 coorToTab(float x, float y, int tileHeight) {
+		Point iso= new Point();
+		iso= iso.screentoIsometric(new Point(x, y));
+		float isoSide= (float)(tileHeight* 1.414213); // 1.414213 --> SQRT(2)
+		int row= (int)(iso.getX()/ isoSide);
+		int col= (int)(iso.getY()/ isoSide);
+		return new Vector2(col, row);
+	}
 
 	private IsoMaths() {
 

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="isometric" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="32">
+<map version="1.0" orientation="isometric" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="32" nextobjectid="5">
  <tileset firstgid="1" name="grassland" tilewidth="64" tileheight="32">
   <image source="grassland.png" width="1024" height="1344"/>
+  <tile id="151">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="348">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="673" name="grassland" tilewidth="64" tileheight="64">
   <image source="grassland.png" width="1024" height="1344"/>
+  <tile id="71">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="1009" name="grassland" tilewidth="128" tileheight="64">
   <image source="grassland.png" width="1024" height="1344"/>
@@ -18,6 +33,9 @@
   </data>
  </layer>
  <layer name="grass" width="50" height="50">
+  <properties>
+   <property name="blocked" value=""/>
+  </properties>
   <data encoding="base64" compression="zlib">
    eJztmf8KgjAQgEV9gaIX6v+i5/Px7HdQQRgEElRHCtday805b/M+GBQl3qe73Y1FUTjcY/ln2XeqlIZxntF1i8ROLLaQOZl6UmVd+cySb7eHJ66bP3FS8pDlc5ZG0aqBAyUPjConLpI5NSeQ5zbzuM81Qefey9d/D45iHafm16pq3qn6zaVHPWRc488BNK0bx/g9XKLzXkrkg+P3pScxQVyvqJBp5pNYT/ZEvQCYTwWKLyccq4q88igEH4w4vyj1kzgW3fkG3Hp2mf7oK7AXfi/is4f462GLSYs6aEpbD1zLKKH7LCk6MAzjhjZ7EGqE4hKKB6DaFzLDxaR3ZhifGBGd47q5R9WjS7p25po4PHivzTBMn/jed1M4F28KnL/uAljz4Vxs6/BcvCueUrVKtg==
   </data>
