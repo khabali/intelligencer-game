@@ -3,18 +3,11 @@ package com.game.entity;
 import com.artemis.Entity;
 import com.artemis.World;
 import com.game.component.DirectionComponent;
-import com.game.component.MapComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
 
 public class EntityFactory {
-
-	public static Entity createUnivers(World world) {
-		Entity e = world.createEntity();
-		e.addComponent(new MapComponent("iso_map_test2.tmx"));
-		return e;
-	}
 
 	public static Entity createHero(World world) {
 		Entity e = world.createEntity();

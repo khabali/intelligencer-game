@@ -10,24 +10,25 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.game.component.DirectionComponent;
-import com.game.component.MapComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
 import com.game.input.GameInput;
 import com.game.input.TouchButton;
-import com.game.utils.IsoMaths;
+import com.game.map.Map;
 
 public class MovementSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<PositionComponent> posc;
 	@Mapper ComponentMapper<MovementComponent> movc;
 	@Mapper ComponentMapper<DirectionComponent> dirc;
 	
-	OrthographicCamera camera;
+	private OrthographicCamera camera;
+	private Map map;
 
-	public MovementSystem(OrthographicCamera camera) {
+	public MovementSystem(OrthographicCamera camera, Map m) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
 		this.camera = camera;
+		this.map = m;
 	}
 
 	@Override
@@ -48,9 +49,9 @@ public class MovementSystem extends EntityProcessingSystem {
 			if (position.rowPos==movement.targetRow && position.colPos==movement.targetCol) movement.doStop();			
 			// calculate x and y from row and column
 			int spriteWidth = e.getComponent(SpriteComponent.class).getSpriteWidth();
-			int spriteHeight = e.getComponent(SpriteComponent.class).getSpriteHeight();
-			position.x = (position.rowPos-position.colPos) * MapComponent.TILEHEIGHT - (spriteWidth-MapComponent.TILEWIDTH)/2;
-			position.y = (position.rowPos+position.colPos) * (MapComponent.TILEHEIGHT/2);			
+			Vector2 v = map.mapToScreen(position.rowPos, position.colPos, spriteWidth);
+			position.x = v.x;
+			position.y = v.y;
 		}		
 	}
 	
@@ -91,12 +92,8 @@ public class MovementSystem extends EntityProcessingSystem {
 		TouchButton touch = GameInput.getInstance().getTouchButton();
 		if (touch.isTouched()) {
 			Vector2 pos = touch.position;
-			System.out.println(pos.x + " : " + pos.y);
 			Vector3 v = camera.unproject(new Vector3(pos.x, pos.y, 0));
-			System.out.println(v.x + " : " + v.y);
-			//Vector2 v2 = IsoMaths.coorToTab(v.x, v.y, MapComponent.TILEHEIGHT);
-			Vector2 v2 = IsoMaths.screenToMap(v.x, v.y, MapComponent.TILEWIDTH, MapComponent.TILEHEIGHT);
-			System.out.println("col=" + v2.y + " : row=" + v2.x);
+			Vector2 v2 = map.screenToMap(v.x, v.y);
 			int row = (int)v2.x;
 			int col = (int)v2.y;
 			movement.doMove(row, col);

@@ -13,6 +13,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.game.entity.EntityFactory;
 import com.game.input.GameInput;
 import com.game.input.InputHandler;
+import com.game.map.Map;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.SpriteRenderSystem;
@@ -26,7 +27,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	private InputHandler inputHandler;
 	private World world;
 	private OrthographicCamera camera;
-	Entity hero;
+	private Map map;
 
 	@Override
 	public void create() {
@@ -34,28 +35,27 @@ public class MyGdxGame extends ApplicationAdapter {
 		// LOG LEVEL
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
-		//
+		// input registration
 		this.inputHandler = new InputHandler();
 		InputMultiplexer multiplexer = new InputMultiplexer();
 		multiplexer.addProcessor(inputHandler);
 		multiplexer.addProcessor(new GestureDetector(inputHandler));
 		Gdx.input.setInputProcessor(multiplexer);
 
-		// initialisation du camera
-		float screenW = Gdx.graphics.getWidth();
-		float screenH = Gdx.graphics.getHeight();
-
-		this.camera = new OrthographicCamera(screenW, screenH);
-		this.camera.position.set(screenW / 2, screenH / 2, 0);
+		// camera init
+		this.camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		this.camera.position.set(Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 2, 0);
+		
+		// map init
+		Map map = new Map("iso_map_test2.tmx");
 
 		world = new World(); // World is part of the artemis framework
-		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new MovementSystem(camera));
+		world.setSystem(new MapRenderSystem(camera, map));
+		world.setSystem(new MovementSystem(camera, map));
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
 		// create the univers entity which contains the map componenet
-		EntityFactory.createUnivers(world).addToWorld();
 		EntityFactory.createHero(world).addToWorld();
 	}
 
