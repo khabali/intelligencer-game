@@ -1,5 +1,6 @@
 package com.game.input;
 
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.input.GestureDetector.GestureListener;
 import com.badlogic.gdx.math.Vector2;
@@ -15,7 +16,7 @@ public class InputHandler implements GestureListener, InputProcessor {
 	@Override
 	public boolean tap(float x, float y, int count, int button) {
 		GameInput.getInstance().getTouchButton()
-		.touch(System.currentTimeMillis(), x, y);
+				.touch(System.currentTimeMillis(), x, y);
 		return true;
 	}
 
@@ -60,8 +61,19 @@ public class InputHandler implements GestureListener, InputProcessor {
 
 	@Override
 	public boolean keyDown(int keycode) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean pressed = false;
+		if (Keys.ENTER == keycode) {
+			GameInput.getInstance().getEnterButton()
+					.press(System.currentTimeMillis());
+			pressed = true;
+		}
+
+		if (Keys.ESCAPE == keycode) {
+			GameInput.getInstance().getEscapeButton()
+					.press(System.currentTimeMillis());
+			pressed = true;
+		}
+		return pressed;
 	}
 
 	@Override

@@ -15,25 +15,26 @@ public class GameInput {
 		return _instance;
 	}
 
-	private InputButton leftButton;
-	private InputButton rightButton;
-	private InputButton upButton;
-	private InputButton downButton;
-	private TouchButton touchButton = new TouchButton();
+	private InputButton enterButton;
+	private InputButton escapeButton;
+	private TouchButton touchButton;
 
 	private GameInput() {
-		leftButton = new InputButton();
-		rightButton = new InputButton();
-		upButton = new InputButton();
-		downButton = new InputButton();
+		enterButton = new InputButton();
+		escapeButton = new InputButton();
 		touchButton = new TouchButton();
 	}
 
 	public void update(float deltaTime) {
 
-		if (leftButton.isPressed()
-				&& leftButton.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
-			leftButton.release();
+		if (escapeButton.isPressed()
+				&& escapeButton.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
+			escapeButton.release();
+		}
+
+		if (enterButton.isPressed()
+				&& enterButton.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
+			enterButton.release();
 		}
 
 		if (touchButton.isTouched()
@@ -49,19 +50,11 @@ public class GameInput {
 		return touchButton;
 	}
 
-	public InputButton getLeftButton() {
-		return leftButton;
+	public InputButton getEnterButton() {
+		return enterButton;
 	}
 
-	public InputButton getRightButton() {
-		return rightButton;
-	}
-
-	public InputButton getDownButton() {
-		return downButton;
-	}
-
-	public InputButton getUpButton() {
-		return upButton;
+	public InputButton getEscapeButton() {
+		return escapeButton;
 	}
 }
