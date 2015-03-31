@@ -9,6 +9,8 @@ import com.game.debug.GameLogger;
 import com.game.entity.EntityFactory;
 import com.game.input.GameInput;
 import com.game.map.Map;
+import com.game.resources.GameAssetsManager;
+import com.game.resources.GameRessources;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.SpriteRenderSystem;
@@ -17,7 +19,8 @@ public class Level1GameState extends GameStateAdapter {
 
 	private World world;
 	private OrthographicCamera camera;
-	Entity hero;
+	private Entity hero;
+	private GameAssetsManager gameAssetsManager;
 
 	public Level1GameState(GameStateManager gsm) {
 		super(gsm);
@@ -35,7 +38,7 @@ public class Level1GameState extends GameStateAdapter {
 		this.camera.position.set(screenW / 2, screenH / 2, 0);
 
 		// map init
-		Map map = new Map("iso_map_test2.tmx");
+		Map map = new Map(GameRessources.LVL1_MAP_TMX);
 
 		world = new World(); // World is part of the artemis framework
 		world.setSystem(new MapRenderSystem(camera, map));
@@ -43,8 +46,17 @@ public class Level1GameState extends GameStateAdapter {
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
-		hero = EntityFactory.createHero(world);
+		gameAssetsManager = new GameAssetsManager();
+		gameAssetsManager.loadRessource(GameRessources.SPRITE_SHEET_WOMEN,
+				GameAssetsManager.TEXTURE);
+
+		// finish loading
+		gameAssetsManager.finishLoading();
+
+		hero = EntityFactory.createHero(world, gameAssetsManager
+				.getTextureRessource(GameRessources.SPRITE_SHEET_WOMEN));
 		hero.addToWorld();
+
 	}
 
 	@Override
@@ -82,6 +94,12 @@ public class Level1GameState extends GameStateAdapter {
 		camera.setToOrtho(false, width, height);
 		GameLogger.debug(tag, "viewPort resized w:" + camera.viewportWidth
 				+ " h:" + camera.viewportHeight);
+	}
+
+	@Override
+	public void dispose() {
+		super.dispose();
+		gameAssetsManager.dispose();
 	}
 
 }

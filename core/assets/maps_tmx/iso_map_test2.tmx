@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="isometric" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="32" nextobjectid="5">
  <tileset firstgid="1" name="grassland" tilewidth="64" tileheight="32">
-  <image source="grassland.png" width="1024" height="1344"/>
+  <image source="../maps_tileset/grassland.png" width="1024" height="1344"/>
   <tile id="151">
    <properties>
     <property name="blocked" value="true"/>
@@ -14,7 +14,7 @@
   </tile>
  </tileset>
  <tileset firstgid="673" name="grassland" tilewidth="64" tileheight="64">
-  <image source="grassland.png" width="1024" height="1344"/>
+  <image source="../maps_tileset/grassland.png" width="1024" height="1344"/>
   <tile id="71">
    <properties>
     <property name="blocked" value="true"/>
@@ -22,13 +22,13 @@
   </tile>
  </tileset>
  <tileset firstgid="1009" name="grassland" tilewidth="128" tileheight="64">
-  <image source="grassland.png" width="1024" height="1344"/>
+  <image source="../maps_tileset/grassland.png" width="1024" height="1344"/>
  </tileset>
  <tileset firstgid="1177" name="tree" tilewidth="256" tileheight="256">
-  <image source="tree.png" width="256" height="256"/>
+  <image source="../maps_tileset/tree.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="1178" name="yellowSelect" tilewidth="64" tileheight="32">
-  <image source="yellowSelect.png" width="64" height="32"/>
+  <image source="../maps_tileset/yellowSelect.png" width="64" height="32"/>
  </tileset>
  <layer name="floor" width="50" height="50">
   <data encoding="base64" compression="zlib">

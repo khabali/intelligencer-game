@@ -9,9 +9,7 @@ public class SpriteComponent extends Component {
 	// public String name;
 	public TextureRegion[][] regions;
 
-	public SpriteComponent(String filename, int rows, int cols) {
-		// this.name = name;
-		Texture sheetTexture = new Texture(filename);
+	public SpriteComponent(Texture sheetTexture, int rows, int cols) {
 		regions = TextureRegion.split(sheetTexture, sheetTexture.getWidth()
 				/ cols, sheetTexture.getHeight() / rows);
 	}
