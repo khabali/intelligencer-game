@@ -16,6 +16,7 @@ import com.game.component.SpriteComponent;
 import com.game.input.GameInput;
 import com.game.input.TouchButton;
 import com.game.map.Map;
+import com.game.pathfinding.PathFinder;
 
 public class MovementSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<PositionComponent> posc;
@@ -24,29 +25,33 @@ public class MovementSystem extends EntityProcessingSystem {
 	
 	private OrthographicCamera camera;
 	private Map map;
+	private PathFinder pathFinder;
+	
+	private MovementComponent movement;
+	private PositionComponent position;
+	private DirectionComponent direction;
 
 	public MovementSystem(OrthographicCamera camera, Map m) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
 		this.camera = camera;
 		this.map = m;
+		this.pathFinder = new PathFinder(map);
 	}
 
 	@Override
 	protected void process(Entity e) {
 		if (movc.has(e)) {
-			PositionComponent position = posc.get(e);
-			MovementComponent movement = movc.getSafe(e);
-			DirectionComponent direction = dirc.get(e);
+			position = posc.get(e);
+			movement = movc.getSafe(e);
+			direction = dirc.get(e);
 			float deltaTime= Gdx.graphics.getDeltaTime();
 			// input processing
-			processInput(movement);
-			// Moving
-			moveOnRow(deltaTime, position, movement);
-			moveOnCol(deltaTime, position, movement);
-			// Change side
-			changeSide(position, movement, direction);		
-			// Check if arrived
-			if (position.rowPos==movement.targetRow && position.colPos==movement.targetCol) movement.doStop();			
+			processInput();
+			// Moving the object
+			if (movement.isMoving()) {
+				// next move
+				nextStep(deltaTime);
+			}	
 			// calculate x and y from row and column
 			int spriteWidth = e.getComponent(SpriteComponent.class).getSpriteWidth();
 			Vector2 v = map.mapToScreen(position.rowPos, position.colPos, spriteWidth);
@@ -55,40 +60,40 @@ public class MovementSystem extends EntityProcessingSystem {
 		}		
 	}
 	
-	private void changeSide(PositionComponent position, MovementComponent movement, DirectionComponent direction) {
+	private void changeSide() {
 		if (position.rowPos<movement.targetRow && position.colPos==movement.targetCol) direction.toBackRight();
 		if (position.rowPos>movement.targetRow && position.colPos==movement.targetCol) direction.toFrontLeft();
 		if (position.rowPos==movement.targetRow && position.colPos<movement.targetCol) direction.toBackLeft();
-		if (position.rowPos==movement.targetCol && position.colPos>movement.targetCol) direction.toFrontRight();
+		if (position.rowPos==movement.targetRow && position.colPos>movement.targetCol) direction.toFrontRight();
 		if (position.rowPos<movement.targetRow && position.colPos<movement.targetCol) direction.toBack();
 		if (position.rowPos>movement.targetRow && position.colPos>movement.targetCol) direction.toFront();
 		if (position.rowPos>movement.targetRow && position.colPos<movement.targetCol) direction.toLeft();
 		if (position.rowPos<movement.targetRow && position.colPos>movement.targetCol) direction.toRight();
 	}
 	
-	private void moveOnRow(float deltaTime, PositionComponent pos, MovementComponent mov) {
-		if (pos.rowPos < mov.targetRow) {
-			pos.rowPos += mov.velocity * deltaTime;
-			if (pos.rowPos > mov.targetRow) pos.rowPos = mov.targetRow;
+	private void moveOnRow(float deltaTime) {
+		if (position.rowPos < movement.targetRow) {
+			position.rowPos += movement.velocity * deltaTime;
+			if (position.rowPos > movement.targetRow) position.rowPos = movement.targetRow;
 		}
-		if (pos.rowPos > mov.targetRow) {
-			pos.rowPos -= mov.velocity * deltaTime;
-			if (pos.rowPos < mov.targetRow) pos.rowPos = mov.targetRow;
-		}
-	}
-	
-	private void moveOnCol(float deltaTime, PositionComponent pos, MovementComponent mov) {
-		if (pos.colPos < mov.targetCol) {
-			pos.colPos += mov.velocity * deltaTime;
-			if (pos.colPos > mov.targetCol) pos.colPos = mov.targetCol;
-		}
-		if (pos.colPos > mov.targetCol) {
-			pos.colPos -= mov.velocity * deltaTime;
-			if (pos.colPos < mov.targetCol) pos.colPos = mov.targetCol;
+		if (position.rowPos > movement.targetRow) {
+			position.rowPos -= movement.velocity * deltaTime;
+			if (position.rowPos < movement.targetRow) position.rowPos = movement.targetRow;
 		}
 	}
 	
-	private void processInput(MovementComponent movement) {
+	private void moveOnCol(float deltaTime) {
+		if (position.colPos < movement.targetCol) {
+			position.colPos += movement.velocity * deltaTime;
+			if (position.colPos > movement.targetCol) position.colPos = movement.targetCol;
+		}
+		if (position.colPos > movement.targetCol) {
+			position.colPos -= movement.velocity * deltaTime;
+			if (position.colPos < movement.targetCol) position.colPos = movement.targetCol;
+		}
+	}
+	
+	private void processInput() {
 		TouchButton touch = GameInput.getInstance().getTouchButton();
 		if (touch.isTouched()) {
 			Vector2 pos = touch.position;
@@ -96,8 +101,45 @@ public class MovementSystem extends EntityProcessingSystem {
 			Vector2 v2 = map.screenToMap(v.x, v.y);
 			int row = (int)v2.x;
 			int col = (int)v2.y;
-			movement.doMove(row, col);
+			doMove(row, col);
 		}
+	}
+	
+	private void doMove(int row, int col) {
+		// if it is moving stop it
+		if (movement.isMoving()) doStop();
+		// mark as moving
+		movement.setMoving();
+		// calling A*, the map is reversed thus, we convert coordinates
+		pathFinder.aStar((int)position.colPos, (int)position.rowPos, (int)col, (int)row);
+		// after the A* is performed the target row and col are set to current row and col
+		// each step updates targets
+	}
+	
+	private void doStop() {
+		pathFinder.clearPath();
+		movement.setIdle();
+	}
+	
+	public void nextStep(float deltaTime) {
+		if (position.rowPos == movement.targetRow && position.colPos == movement.targetCol) {
+			Vector2 next= pathFinder.nextStep();
+			if (next!= null) {
+				// we convert back coordinates to move the object
+				// map coordinates are reversed according to object's coordinates
+				movement.targetCol = (int) next.x;
+				movement.targetRow = (int) next.y;
+				//targetCol= (int)(this.terrain.tileMapCols- 1- next.x);
+				//targetRow= (int)(this.terrain.tileMapRows- 1- next.y);
+			}else { // means arrived
+				doStop();
+				return;
+			}
+		}
+		moveOnRow(deltaTime);
+		moveOnCol(deltaTime);
+		changeSide();
+		//System.out.println("row: "+ this.row+ ", col: "+ this.col);
 	}
 
 }

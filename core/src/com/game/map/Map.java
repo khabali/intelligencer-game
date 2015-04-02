@@ -1,10 +1,12 @@
 package com.game.map;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.math.Vector2;
+import com.game.pathfinding.Terrain;
 
-public class Map {
+public class Map implements Terrain {
 	
 	//public static int TILEWIDTH = 64;
 	//public static int TILEHEIGHT = 32;
@@ -16,17 +18,33 @@ public class Map {
 	public static final String PROP_TILE_HEIGHT = "tileheight";
 
 	private TiledMap tiledMap;
+	private TiledMapTileLayer grassLayer;
 
 	public Map(String fileName) {
 		tiledMap = new TmxMapLoader().load(fileName);
+		grassLayer = (TiledMapTileLayer) tiledMap.getLayers().get(1);
 	}
-
+	 
+	@Override
+	// this the width in cells
 	public int getWidth() {
 		return tiledMap.getProperties().get(PROP_WIDTH, Integer.class);
 	}
-
+	
+	@Override
+	// this the height in cells
 	public int getHeight() {
 		return tiledMap.getProperties().get(PROP_HEIGHT, Integer.class);
+	}
+	
+	// this is the width in pixels
+	public int getPixelWidth() {
+		return getWidth() * getTileWidth();
+	}
+	
+	// this is the height in pixels
+	public int getPixelHeight() {
+		return getHeight() * getTileHeight();
 	}
 
 	public int getTileWidth() {
@@ -56,6 +74,17 @@ public class Map {
 		v.x = (row-col) * getTileHeight() - (spriteWidth - getTileWidth()) / 2;
 		v.y = (row + col) * (getTileHeight() / 2);
 		return v;
+	}
+
+	@Override
+	public boolean passable(int x, int y) {
+		if (grassLayer.getCell(Math.abs(y), x) == null) return true;
+		return !grassLayer.getCell(Math.abs(y), x).getTile().getProperties().containsKey("blocked");
+	}
+
+	@Override
+	public int cost(int x, int y) {
+		return 1;
 	}
 
 }

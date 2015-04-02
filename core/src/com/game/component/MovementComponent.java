@@ -1,6 +1,8 @@
 package com.game.component;
 
 import com.artemis.Component;
+import com.game.pathfinding.PathFinder;
+import com.game.pathfinding.Terrain;
 
 public class MovementComponent extends Component {
 
@@ -19,14 +21,16 @@ public class MovementComponent extends Component {
 		this.velocity = vel;
 	}
 
-	public void doMove(int row, int col) {
+	public void setMoving() {
 		this.state = MOVING;
-		targetRow = row;
-		targetCol = col;
 	}
 
-	public void doStop() {
+	public void setIdle() {
 		this.state = IDLE;
+	}
+	
+	public boolean isMoving() {
+		return this.state == MOVING;
 	}
 
 }
