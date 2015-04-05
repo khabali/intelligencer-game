@@ -11,14 +11,17 @@ public class MovementComponent extends Component {
 	public int state;
 	public float velocity; // movement speed
 	public int targetRow, targetCol;
+	public PathFinder pathFinder;
 
-	public MovementComponent(int state) {
+	public MovementComponent(Terrain terrain, int state) {
 		this.state = state;
+		pathFinder = new PathFinder(terrain);
 	}
 
-	public MovementComponent(int state, float vel) {
+	public MovementComponent(Terrain terrain, int state, float vel) {
 		this.state = state;
 		this.velocity = vel;
+		pathFinder = new PathFinder(terrain);
 	}
 
 	public void setMoving() {

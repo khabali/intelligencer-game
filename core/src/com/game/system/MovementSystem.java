@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.game.World;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
@@ -25,17 +26,19 @@ public class MovementSystem extends EntityProcessingSystem {
 	
 	private OrthographicCamera camera;
 	private Map map;
-	private PathFinder pathFinder;
 	
 	private MovementComponent movement;
 	private PositionComponent position;
 	private DirectionComponent direction;
 
-	public MovementSystem(OrthographicCamera camera, Map m) {
+	public MovementSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
 		this.camera = camera;
-		this.map = m;
-		this.pathFinder = new PathFinder(map);
+	}
+	
+	@Override
+	protected void initialize() {
+		this.map = ((Map)((World)this.world).getTerrain());
 	}
 
 	@Override
@@ -101,6 +104,8 @@ public class MovementSystem extends EntityProcessingSystem {
 			Vector2 v2 = map.screenToMap(v.x, v.y);
 			int row = (int)v2.x;
 			int col = (int)v2.y;
+			System.out.println("do move " + row + "," + col);
+			//clickMovPos = new Vector2(row, col);
 			doMove(row, col);
 		}
 	}
@@ -111,26 +116,24 @@ public class MovementSystem extends EntityProcessingSystem {
 		// mark as moving
 		movement.setMoving();
 		// calling A*, the map is reversed thus, we convert coordinates
-		pathFinder.aStar((int)position.colPos, (int)position.rowPos, (int)col, (int)row);
+		System.out.println("do move from " + (int)position.rowPos + "," + (int)position.colPos);
+		System.out.println("do move to " + (int)row + "," + (int)col);
+		movement.pathFinder.aStar((int)position.colPos, (int)position.rowPos, (int)col, (int)row);
 		// after the A* is performed the target row and col are set to current row and col
 		// each step updates targets
 	}
 	
 	private void doStop() {
-		pathFinder.clearPath();
+		movement.pathFinder.clearPath();
 		movement.setIdle();
 	}
 	
 	public void nextStep(float deltaTime) {
 		if (position.rowPos == movement.targetRow && position.colPos == movement.targetCol) {
-			Vector2 next= pathFinder.nextStep();
+			Vector2 next= movement.pathFinder.nextStep();
 			if (next!= null) {
-				// we convert back coordinates to move the object
-				// map coordinates are reversed according to object's coordinates
 				movement.targetCol = (int) next.x;
 				movement.targetRow = (int) next.y;
-				//targetCol= (int)(this.terrain.tileMapCols- 1- next.x);
-				//targetRow= (int)(this.terrain.tileMapRows- 1- next.y);
 			}else { // means arrived
 				doStop();
 				return;
@@ -139,7 +142,6 @@ public class MovementSystem extends EntityProcessingSystem {
 		moveOnRow(deltaTime);
 		moveOnCol(deltaTime);
 		changeSide();
-		//System.out.println("row: "+ this.row+ ", col: "+ this.col);
 	}
 
 }

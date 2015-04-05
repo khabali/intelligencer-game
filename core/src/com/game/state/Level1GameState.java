@@ -1,7 +1,8 @@
 package com.game.state;
 
+import com.game.World;
 import com.artemis.Entity;
-import com.artemis.World;
+import com.artemis.EntityManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -38,12 +39,10 @@ public class Level1GameState extends GameStateAdapter {
 		this.camera = new OrthographicCamera(screenW, screenH);
 		this.camera.position.set(screenW / 2, screenH / 2, 0);
 
-		// map init
-		Map map = new Map(GameRessources.LVL1_MAP_TMX);
-
 		world = new World(); // World is part of the artemis framework
-		world.setSystem(new MapRenderSystem(camera, map));
-		world.setSystem(new MovementSystem(camera, map));
+		world.setTerrain(new Map(GameRessources.LVL1_MAP_TMX));
+		world.setSystem(new MapRenderSystem(camera));
+		world.setSystem(new MovementSystem(camera));
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
