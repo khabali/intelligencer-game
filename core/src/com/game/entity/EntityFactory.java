@@ -19,4 +19,13 @@ public class EntityFactory {
 		return e;
 	}
 
+	public static Entity createSoldier(World world, Texture sheetTexture) {
+		Entity e = world.createEntity();
+		e.addComponent(new SpriteComponent(sheetTexture, 8, 9));
+		e.addComponent(new PositionComponent(10, 10));
+		e.addComponent(new MovementComponent(MovementComponent.IDLE, 1.5f));
+		e.addComponent(new DirectionComponent(DirectionComponent.FRONT));
+		return e;
+	}
+
 }

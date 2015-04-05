@@ -4,6 +4,7 @@ import com.artemis.Entity;
 import com.artemis.World;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.game.debug.GameLogger;
 import com.game.entity.EntityFactory;
@@ -56,6 +57,11 @@ public class Level1GameState extends GameStateAdapter {
 		hero = EntityFactory.createHero(world, gameAssetsManager
 				.getTextureRessource(GameRessources.SPRITE_SHEET_WOMEN));
 		hero.addToWorld();
+
+		// Enemies
+		Entity soldier = EntityFactory.createSoldier(world, gameAssetsManager
+				.getTextureRessource(GameRessources.SPRITE_SHEET_WOMEN));
+		soldier.addToWorld();
 
 	}
 
