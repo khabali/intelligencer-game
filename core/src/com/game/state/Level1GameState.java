@@ -1,18 +1,15 @@
 package com.game.state;
 
-import com.game.World;
 import com.artemis.Entity;
-import com.artemis.EntityManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
+import com.game.World;
 import com.game.debug.GameLogger;
 import com.game.entity.EntityFactory;
 import com.game.input.GameInput;
 import com.game.map.Map;
-import com.game.resources.GameAssetsManager;
-import com.game.resources.GameRessources;
+import com.game.resources.MapLevels;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.SpriteRenderSystem;
@@ -22,7 +19,7 @@ public class Level1GameState extends GameStateAdapter {
 	private World world;
 	private OrthographicCamera camera;
 	private Entity hero;
-	private GameAssetsManager gameAssetsManager;
+
 
 	public Level1GameState(GameStateManager gsm) {
 		super(gsm);
@@ -40,27 +37,14 @@ public class Level1GameState extends GameStateAdapter {
 		this.camera.position.set(screenW / 2, screenH / 2, 0);
 
 		world = new World(); // World is part of the artemis framework
-		world.setTerrain(new Map(GameRessources.LVL1_MAP_TMX));
+		world.setTerrain(new Map(MapLevels.LVL1_MAP_TMX));
 		world.setSystem(new MapRenderSystem(camera));
 		world.setSystem(new MovementSystem(camera));
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
-		gameAssetsManager = new GameAssetsManager();
-		gameAssetsManager.loadRessource(GameRessources.SPRITE_SHEET_WOMEN,
-				GameAssetsManager.TEXTURE);
-
-		// finish loading
-		gameAssetsManager.finishLoading();
-
-		hero = EntityFactory.createHero(world, gameAssetsManager
-				.getTextureRessource(GameRessources.SPRITE_SHEET_WOMEN));
+		hero = EntityFactory.createHero(world);
 		hero.addToWorld();
-
-		// Enemies
-		Entity soldier = EntityFactory.createSoldier(world, gameAssetsManager
-				.getTextureRessource(GameRessources.SPRITE_SHEET_WOMEN));
-		soldier.addToWorld();
 
 	}
 
@@ -104,7 +88,6 @@ public class Level1GameState extends GameStateAdapter {
 	@Override
 	public void dispose() {
 		super.dispose();
-		gameAssetsManager.dispose();
 	}
 
 }

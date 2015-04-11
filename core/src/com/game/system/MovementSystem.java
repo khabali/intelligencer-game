@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.game.World;
+import com.game.component.Direction;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
@@ -17,19 +18,18 @@ import com.game.component.SpriteComponent;
 import com.game.input.GameInput;
 import com.game.input.TouchButton;
 import com.game.map.Map;
-import com.game.pathfinding.PathFinder;
 
 public class MovementSystem extends EntityProcessingSystem {
-	@Mapper ComponentMapper<PositionComponent> posc;
-	@Mapper ComponentMapper<MovementComponent> movc;
-	@Mapper ComponentMapper<DirectionComponent> dirc;
+	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
+	@Mapper ComponentMapper<MovementComponent> movementComponentMapper;
+	@Mapper ComponentMapper<DirectionComponent> directionComponentMapper;
 	
 	private OrthographicCamera camera;
 	private Map map;
 	
-	private MovementComponent movement;
-	private PositionComponent position;
-	private DirectionComponent direction;
+	private MovementComponent movementComponent;
+	private PositionComponent positionComponent;
+	private DirectionComponent directionComponent;
 
 	public MovementSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
@@ -43,56 +43,56 @@ public class MovementSystem extends EntityProcessingSystem {
 
 	@Override
 	protected void process(Entity e) {
-		if (movc.has(e)) {
-			position = posc.get(e);
-			movement = movc.getSafe(e);
-			direction = dirc.get(e);
+		if (movementComponentMapper.has(e)) {
+			positionComponent = positionComponentMapper.get(e);
+			movementComponent = movementComponentMapper.getSafe(e);
+			directionComponent = directionComponentMapper.get(e);
 			float deltaTime= Gdx.graphics.getDeltaTime();
 			// input processing
 			processInput();
 			// Moving the object
-			if (movement.isMoving()) {
+			if (movementComponent.isMoving()) {
 				// next move
 				nextStep(deltaTime);
 			}	
 			// calculate x and y from row and column
-			int spriteWidth = e.getComponent(SpriteComponent.class).getSpriteWidth();
-			Vector2 v = map.mapToScreen(position.rowPos, position.colPos, spriteWidth);
-			position.x = v.x;
-			position.y = v.y;
+			int spriteWidth = e.getComponent(SpriteComponent.class).spriteWidth(directionComponent.direction, movementComponent.state);
+			Vector2 v = map.mapToScreen(positionComponent.rowPos, positionComponent.colPos, spriteWidth);
+			positionComponent.x = v.x;
+			positionComponent.y = v.y;
 		}		
 	}
 	
 	private void changeSide() {
-		if (position.rowPos<movement.targetRow && position.colPos==movement.targetCol) direction.toBackRight();
-		if (position.rowPos>movement.targetRow && position.colPos==movement.targetCol) direction.toFrontLeft();
-		if (position.rowPos==movement.targetRow && position.colPos<movement.targetCol) direction.toBackLeft();
-		if (position.rowPos==movement.targetRow && position.colPos>movement.targetCol) direction.toFrontRight();
-		if (position.rowPos<movement.targetRow && position.colPos<movement.targetCol) direction.toBack();
-		if (position.rowPos>movement.targetRow && position.colPos>movement.targetCol) direction.toFront();
-		if (position.rowPos>movement.targetRow && position.colPos<movement.targetCol) direction.toLeft();
-		if (position.rowPos<movement.targetRow && position.colPos>movement.targetCol) direction.toRight();
+		if (positionComponent.rowPos<movementComponent.targetRow && positionComponent.colPos==movementComponent.targetCol) directionComponent.change(Direction.BACKRIGHT);
+		if (positionComponent.rowPos>movementComponent.targetRow && positionComponent.colPos==movementComponent.targetCol) directionComponent.change(Direction.FRONTLEFT);
+		if (positionComponent.rowPos==movementComponent.targetRow && positionComponent.colPos<movementComponent.targetCol) directionComponent.change(Direction.BACKLEFT);
+		if (positionComponent.rowPos==movementComponent.targetRow && positionComponent.colPos>movementComponent.targetCol) directionComponent.change(Direction.FRONTRIGHT);
+		if (positionComponent.rowPos<movementComponent.targetRow && positionComponent.colPos<movementComponent.targetCol) directionComponent.change(Direction.BACK);
+		if (positionComponent.rowPos>movementComponent.targetRow && positionComponent.colPos>movementComponent.targetCol) directionComponent.change(Direction.FRONT);
+		if (positionComponent.rowPos>movementComponent.targetRow && positionComponent.colPos<movementComponent.targetCol) directionComponent.change(Direction.LEFT);
+		if (positionComponent.rowPos<movementComponent.targetRow && positionComponent.colPos>movementComponent.targetCol) directionComponent.change(Direction.RIGHT);
 	}
 	
 	private void moveOnRow(float deltaTime) {
-		if (position.rowPos < movement.targetRow) {
-			position.rowPos += movement.velocity * deltaTime;
-			if (position.rowPos > movement.targetRow) position.rowPos = movement.targetRow;
+		if (positionComponent.rowPos < movementComponent.targetRow) {
+			positionComponent.rowPos += movementComponent.velocity * deltaTime;
+			if (positionComponent.rowPos > movementComponent.targetRow) positionComponent.rowPos = movementComponent.targetRow;
 		}
-		if (position.rowPos > movement.targetRow) {
-			position.rowPos -= movement.velocity * deltaTime;
-			if (position.rowPos < movement.targetRow) position.rowPos = movement.targetRow;
+		if (positionComponent.rowPos > movementComponent.targetRow) {
+			positionComponent.rowPos -= movementComponent.velocity * deltaTime;
+			if (positionComponent.rowPos < movementComponent.targetRow) positionComponent.rowPos = movementComponent.targetRow;
 		}
 	}
 	
 	private void moveOnCol(float deltaTime) {
-		if (position.colPos < movement.targetCol) {
-			position.colPos += movement.velocity * deltaTime;
-			if (position.colPos > movement.targetCol) position.colPos = movement.targetCol;
+		if (positionComponent.colPos < movementComponent.targetCol) {
+			positionComponent.colPos += movementComponent.velocity * deltaTime;
+			if (positionComponent.colPos > movementComponent.targetCol) positionComponent.colPos = movementComponent.targetCol;
 		}
-		if (position.colPos > movement.targetCol) {
-			position.colPos -= movement.velocity * deltaTime;
-			if (position.colPos < movement.targetCol) position.colPos = movement.targetCol;
+		if (positionComponent.colPos > movementComponent.targetCol) {
+			positionComponent.colPos -= movementComponent.velocity * deltaTime;
+			if (positionComponent.colPos < movementComponent.targetCol) positionComponent.colPos = movementComponent.targetCol;
 		}
 	}
 	
@@ -112,28 +112,28 @@ public class MovementSystem extends EntityProcessingSystem {
 	
 	private void doMove(int row, int col) {
 		// if it is moving stop it
-		if (movement.isMoving()) doStop();
+		if (movementComponent.isMoving()) doStop();
 		// mark as moving
-		movement.setMoving();
+		movementComponent.setMoving();
 		// calling A*, the map is reversed thus, we convert coordinates
-		System.out.println("do move from " + (int)position.rowPos + "," + (int)position.colPos);
+		System.out.println("do move from " + (int)positionComponent.rowPos + "," + (int)positionComponent.colPos);
 		System.out.println("do move to " + (int)row + "," + (int)col);
-		movement.pathFinder.aStar((int)position.colPos, (int)position.rowPos, (int)col, (int)row);
+		movementComponent.pathFinder.aStar((int)positionComponent.colPos, (int)positionComponent.rowPos, (int)col, (int)row);
 		// after the A* is performed the target row and col are set to current row and col
 		// each step updates targets
 	}
 	
 	private void doStop() {
-		movement.pathFinder.clearPath();
-		movement.setIdle();
+		movementComponent.pathFinder.clearPath();
+		movementComponent.setIdle();
 	}
 	
 	public void nextStep(float deltaTime) {
-		if (position.rowPos == movement.targetRow && position.colPos == movement.targetCol) {
-			Vector2 next= movement.pathFinder.nextStep();
+		if (positionComponent.rowPos == movementComponent.targetRow && positionComponent.colPos == movementComponent.targetCol) {
+			Vector2 next= movementComponent.pathFinder.nextStep();
 			if (next!= null) {
-				movement.targetCol = (int) next.x;
-				movement.targetRow = (int) next.y;
+				movementComponent.targetCol = (int) next.x;
+				movementComponent.targetRow = (int) next.y;
 			}else { // means arrived
 				doStop();
 				return;

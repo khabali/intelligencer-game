@@ -1,6 +1,5 @@
 package com.game.input;
 
-import com.badlogic.gdx.Gdx;
 
 public class GameInput {
 
@@ -41,7 +40,7 @@ public class GameInput {
 				|| touchButton.isPaned()
 				|| touchButton.isDraged()
 				&& touchButton.getTouchDuration(System.currentTimeMillis()) >= deltaTime * 2.0f) {
-			Gdx.app.debug(tag, "Touch released ...");
+			//Gdx.app.debug(tag, "Touch released ...");
 			touchButton.release();
 		}
 	}

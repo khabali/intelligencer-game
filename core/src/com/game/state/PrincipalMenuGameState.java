@@ -5,16 +5,13 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.game.input.GameInput;
-import com.game.resources.GameAssetsManager;
-import com.game.resources.GameRessources;
+import com.game.resources.AssetsManager;
 
 public class PrincipalMenuGameState extends GameStateAdapter {
 
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
 	private Texture background;
-
-	private GameAssetsManager assetsManager;
 
 	public PrincipalMenuGameState(GameStateManager gsm) {
 		super(gsm);
@@ -24,12 +21,16 @@ public class PrincipalMenuGameState extends GameStateAdapter {
 	@Override
 	public void init() {
 
-		assetsManager = new GameAssetsManager();
-		assetsManager.loadRessource(GameRessources.MENU_BG,
-				GameAssetsManager.TEXTURE);
-		assetsManager.finishLoading();
+		// load assets
+		AssetsManager.load();
+		while (!AssetsManager.manager.update()) {
+			Gdx.app.debug(tag, "Loading assets : "+ (int) (AssetsManager.manager.getProgress() * 100) + " %");
+		}
+		
+		Gdx.app.debug(tag, "Loading assets : "+ (int) (AssetsManager.manager.getProgress() * 100) + " %");
 
-		background = assetsManager.getTextureRessource(GameRessources.MENU_BG);
+		background = AssetsManager.manager.get(AssetsManager.MENU_BG,
+				Texture.class);
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, background.getWidth(), background.getHeight());
 
@@ -60,5 +61,11 @@ public class PrincipalMenuGameState extends GameStateAdapter {
 		if (GameInput.getInstance().getEscapeButton().isPressed()) {
 			Gdx.app.exit();
 		}
+	}
+
+	@Override
+	public void dispose() {
+		super.dispose();
+		AssetsManager.dispose();
 	}
 }

@@ -1,31 +1,27 @@
 package com.game.entity;
 
 import com.artemis.Entity;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.game.World;
-import com.badlogic.gdx.graphics.Texture;
+import com.game.component.Action;
+import com.game.component.Direction;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
+import com.game.resources.AssetsManager;
 
 public class EntityFactory {
 
-	public static Entity createHero(World world, Texture sheetTexture) {
+	public static Entity createHero(World world) {
 		Entity e = world.createEntity();
-		e.addComponent(new SpriteComponent(sheetTexture, 8, 9));
+		TextureAtlas sheetTexture = AssetsManager.manager.get(AssetsManager.SPRITE_SHEET_VILLAGER, TextureAtlas.class);
+		e.addComponent(new SpriteComponent(sheetTexture, "villager"));
 		e.addComponent(new PositionComponent(0, 0));
-		e.addComponent(new MovementComponent(world.getTerrain(), MovementComponent.IDLE, 1.5f));
-		e.addComponent(new DirectionComponent(DirectionComponent.RIGHT));
+		e.addComponent(new MovementComponent(world.getTerrain(), Action.idle, 2.1f));
+		e.addComponent(new DirectionComponent(Direction.RIGHT));
 		return e;
 	}
 
-	public static Entity createSoldier(World world, Texture sheetTexture) {
-		Entity e = world.createEntity();
-		e.addComponent(new SpriteComponent(sheetTexture, 8, 9));
-		e.addComponent(new PositionComponent(10, -10));
-		e.addComponent(new MovementComponent(world.getTerrain(), MovementComponent.IDLE, 1.5f));
-		e.addComponent(new DirectionComponent(DirectionComponent.FRONT));
-		return e;
-	}
-
+	
 }
