@@ -6,6 +6,7 @@ import com.game.World;
 import com.game.component.Action;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
+import com.game.component.KnifeWeaponComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
@@ -20,6 +21,7 @@ public class EntityFactory {
 		e.addComponent(new PositionComponent(0, 0));
 		e.addComponent(new MovementComponent(world.getTerrain(), Action.idle, 2.1f));
 		e.addComponent(new DirectionComponent(Direction.RIGHT));
+		e.addComponent(new KnifeWeaponComponent(5, true));
 		return e;
 	}
 

@@ -60,13 +60,8 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 			DirectionComponent direction = directionComponentMapper.get(e);
 
 			// Animation regions
-			if (movement.state == Action.idle) {
-				animation = new Animation(0.060f,
-						sprite.getSprites(direction.direction, movement.state));
-			} else if (movement.state == Action.walk) {
-				animation = new Animation(0.050f,
-						sprite.getSprites(direction.direction, movement.state));
-			}
+			animation = new Animation(0.050f,
+					sprite.getSprites(direction.direction, movement.state));
 			frameTime += Gdx.graphics.getDeltaTime();
 			batch.draw(animation.getKeyFrame(frameTime, true), position.x, position.y);
 		}

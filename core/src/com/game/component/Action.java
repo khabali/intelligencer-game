@@ -5,6 +5,8 @@ public enum Action {
 	idle,
 
 	walk,
+	
+	shot,
 
 	death;
 
