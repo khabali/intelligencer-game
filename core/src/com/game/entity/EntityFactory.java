@@ -19,7 +19,18 @@ public class EntityFactory {
 		TextureAtlas sheetTexture = AssetsManager.manager.get(AssetsManager.SPRITE_SHEET_VILLAGER, TextureAtlas.class);
 		e.addComponent(new SpriteComponent(sheetTexture, "villager"));
 		e.addComponent(new PositionComponent(0, 0));
-		e.addComponent(new MovementComponent(world.getTerrain(), Action.idle, 2.1f));
+		e.addComponent(new MovementComponent(world.getTerrain(), Action.Idle, 2.1f));
+		e.addComponent(new DirectionComponent(Direction.RIGHT));
+		return e;
+	}
+	
+	
+	public static Entity createArcher(World world) {
+		Entity e = world.createEntity();
+		TextureAtlas sheetTexture = AssetsManager.manager.get(AssetsManager.SPRITE_SHEET_ARCHER, TextureAtlas.class);
+		e.addComponent(new SpriteComponent(sheetTexture, "Archer"));
+		e.addComponent(new PositionComponent(10, -10));
+		e.addComponent(new MovementComponent(world.getTerrain(), Action.Idle, 2.1f));
 		e.addComponent(new DirectionComponent(Direction.RIGHT));
 		e.addComponent(new KnifeWeaponComponent(5, true));
 		return e;

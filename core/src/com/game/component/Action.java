@@ -2,12 +2,16 @@ package com.game.component;
 
 public enum Action {
 
-	idle,
+	Idle,
 
-	walk,
+	Walk,
 	
 	shot,
 
-	death;
+	Death,
+	
+	Fire;
+	
+	
 
 }

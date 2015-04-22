@@ -45,6 +45,8 @@ public class Level1GameState extends GameStateAdapter {
 
 		hero = EntityFactory.createHero(world);
 		hero.addToWorld();
+		
+		EntityFactory.createArcher(world).addToWorld();
 
 	}
 

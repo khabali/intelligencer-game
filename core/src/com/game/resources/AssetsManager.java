@@ -17,6 +17,7 @@ public class AssetsManager {
 	public static final String SPRITE_SHEET_WOMEN = "sprites/woman.png";
 	/** villager sprites sheet */
 	public static final String SPRITE_SHEET_VILLAGER = "sprites/villager.txt";
+	public static final String SPRITE_SHEET_ARCHER = "sprites/archer.txt";
 
 	public static void load() {
 		// Menu
@@ -25,6 +26,7 @@ public class AssetsManager {
 		// sprites
 		manager.load(SPRITE_SHEET_WOMEN, Texture.class);
 		manager.load(SPRITE_SHEET_VILLAGER, TextureAtlas.class);
+		manager.load(SPRITE_SHEET_ARCHER, TextureAtlas.class);
 	}
 
 	public static void dispose() {

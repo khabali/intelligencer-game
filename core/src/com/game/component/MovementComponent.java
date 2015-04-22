@@ -23,15 +23,15 @@ public class MovementComponent extends Component {
 	}
 
 	public void setMoving() {
-		this.state = Action.walk;
+		this.state = Action.Walk;
 	}
 
 	public void setIdle() {
-		this.state = Action.idle;
+		this.state = Action.Idle;
 	}
 
 	public boolean isMoving() {
-		return this.state == Action.walk;
+		return this.state == Action.Walk;
 	}
 
 }
