@@ -8,7 +8,7 @@ public class PositionComponent extends Component {
 
 	public PositionComponent(int row, int col) {
 		this.rowPos = row;
-		this.colPos = col;
+		this.colPos = -col;
 	}
 
 	public void setRowPos(float row) {

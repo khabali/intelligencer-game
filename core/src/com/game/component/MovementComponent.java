@@ -25,6 +25,16 @@ public class MovementComponent extends Component {
 	public void setMoving() {
 		this.state = Action.Walk;
 	}
+	
+	public void setTarget(int row, int col) {
+		targetRow = row;
+		targetCol = col;
+	}
+	
+	public void setTarget(float row, float col) {
+		targetRow = (int)row;
+		targetCol = (int)col;
+	}
 
 	public void setIdle() {
 		this.state = Action.Idle;

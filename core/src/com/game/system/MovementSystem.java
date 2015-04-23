@@ -53,7 +53,7 @@ public class MovementSystem extends EntityProcessingSystem {
 			// Moving the object
 			if (movementComponent.isMoving()) {
 				// next move
-				nextStep(deltaTime);
+				nextStep();
 			}	
 			// calculate x and y from row and column
 			int spriteWidth = e.getComponent(SpriteComponent.class).spriteWidth(directionComponent.direction, movementComponent.state);
@@ -113,14 +113,15 @@ public class MovementSystem extends EntityProcessingSystem {
 	private void doMove(int row, int col) {
 		// if it is moving stop it
 		if (movementComponent.isMoving()) doStop();
-		// mark as moving
-		movementComponent.setMoving();
 		// calling A*, the map is reversed thus, we convert coordinates
 		System.out.println("do move from " + (int)positionComponent.rowPos + "," + (int)positionComponent.colPos);
 		System.out.println("do move to " + (int)row + "," + (int)col);
 		movementComponent.pathFinder.aStar((int)positionComponent.colPos, (int)positionComponent.rowPos, (int)col, (int)row);
 		// after the A* is performed the target row and col are set to current row and col
 		// each step updates targets
+		// mark as moving
+		movementComponent.setMoving();
+		movementComponent.setTarget(positionComponent.rowPos, positionComponent.colPos);
 	}
 	
 	private void doStop() {
@@ -128,12 +129,16 @@ public class MovementSystem extends EntityProcessingSystem {
 		movementComponent.setIdle();
 	}
 	
-	public void nextStep(float deltaTime) {
+	public void nextStep() {
+		float deltaTime= Gdx.graphics.getDeltaTime();
+		System.out.println("target rowpos: " + positionComponent.rowPos + ", colpos: " + positionComponent.colPos);
+		System.out.println("target targetrow: " + movementComponent.targetRow + ", targetcol: " + movementComponent.targetCol);
 		if (positionComponent.rowPos == movementComponent.targetRow && positionComponent.colPos == movementComponent.targetCol) {
 			Vector2 next= movementComponent.pathFinder.nextStep();
 			if (next!= null) {
 				movementComponent.targetCol = (int) next.x;
 				movementComponent.targetRow = (int) next.y;
+				System.out.println("target col: " + movementComponent.targetCol + ", row: " + movementComponent.targetRow);
 			}else { // means arrived
 				doStop();
 				return;

@@ -18,7 +18,6 @@ public class Level1GameState extends GameStateAdapter {
 
 	private World world;
 	private OrthographicCamera camera;
-	private Entity hero;
 
 
 	public Level1GameState(GameStateManager gsm) {
@@ -43,8 +42,7 @@ public class Level1GameState extends GameStateAdapter {
 		world.setSystem(new SpriteRenderSystem(camera));
 		world.initialize();
 
-		hero = EntityFactory.createHero(world);
-		hero.addToWorld();
+		EntityFactory.createHero(world).addToWorld();
 		
 		EntityFactory.createArcher(world).addToWorld();
 
