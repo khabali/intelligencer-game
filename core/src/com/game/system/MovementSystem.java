@@ -15,7 +15,10 @@ import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
+import com.game.component.State;
+import com.game.component.StateComponent;
 import com.game.input.GameInput;
+import com.game.input.InputButton;
 import com.game.input.TouchButton;
 import com.game.map.Map;
 
@@ -23,6 +26,8 @@ public class MovementSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
 	@Mapper ComponentMapper<MovementComponent> movementComponentMapper;
 	@Mapper ComponentMapper<DirectionComponent> directionComponentMapper;
+	@Mapper ComponentMapper<SpriteComponent> spriteComponentMapper;
+	@Mapper ComponentMapper<StateComponent> stateComponentMapper;
 	
 	private OrthographicCamera camera;
 	private Map map;
@@ -30,9 +35,11 @@ public class MovementSystem extends EntityProcessingSystem {
 	private MovementComponent movementComponent;
 	private PositionComponent positionComponent;
 	private DirectionComponent directionComponent;
+	private SpriteComponent spriteComponent;
+	private StateComponent stateComponent;
 
 	public MovementSystem(OrthographicCamera camera) {
-		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
+		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, SpriteComponent.class, StateComponent.class));
 		this.camera = camera;
 	}
 	
@@ -42,21 +49,26 @@ public class MovementSystem extends EntityProcessingSystem {
 	}
 
 	@Override
+	// process only entities that have a movement a position a direction a sprite and a state
 	protected void process(Entity e) {
-		if (movementComponentMapper.has(e)) {
-			positionComponent = positionComponentMapper.get(e);
-			movementComponent = movementComponentMapper.getSafe(e);
-			directionComponent = directionComponentMapper.get(e);
-			float deltaTime= Gdx.graphics.getDeltaTime();
-			// input processing
-			processInput();
+		if (movementComponentMapper.has(e) && 
+				positionComponentMapper.has(e) && 
+				directionComponentMapper.has(e) &&
+				spriteComponentMapper.has(e) &&
+				stateComponentMapper.has(e)) {
+			positionComponent = positionComponentMapper.getSafe(e);
+			movementComponent = movementComponentMapper.getSafe(e);		
+			directionComponent = directionComponentMapper.getSafe(e);
+			spriteComponent = spriteComponentMapper.getSafe(e);
+			stateComponent = stateComponentMapper.getSafe(e);
+			
 			// Moving the object
-			if (movementComponent.isMoving()) {
+			if (movementComponent.isMoving) {
 				// next move
 				nextStep();
 			}	
 			// calculate x and y from row and column
-			int spriteWidth = e.getComponent(SpriteComponent.class).spriteWidth(directionComponent.direction, movementComponent.state);
+			int spriteWidth = spriteComponent.spriteWidth(directionComponent.direction, stateComponent.state);
 			Vector2 v = map.mapToScreen(positionComponent.rowPos, positionComponent.colPos, spriteWidth);
 			positionComponent.x = v.x;
 			positionComponent.y = v.y;
@@ -96,9 +108,10 @@ public class MovementSystem extends EntityProcessingSystem {
 		}
 	}
 	
+	/*
 	private void processInput() {
 		TouchButton touch = GameInput.getInstance().getTouchButton();
-		if (touch.isTouched()) {
+		if (touch.isTouched() || touch.isDoubleTouched()) {
 			Vector2 pos = touch.position;
 			Vector3 v = camera.unproject(new Vector3(pos.x, pos.y, 0));
 			Vector2 v2 = map.screenToMap(v.x, v.y);
@@ -109,25 +122,7 @@ public class MovementSystem extends EntityProcessingSystem {
 			doMove(row, col);
 		}
 	}
-	
-	private void doMove(int row, int col) {
-		// if it is moving stop it
-		if (movementComponent.isMoving()) doStop();
-		// calling A*, the map is reversed thus, we convert coordinates
-		System.out.println("do move from " + (int)positionComponent.rowPos + "," + (int)positionComponent.colPos);
-		System.out.println("do move to " + (int)row + "," + (int)col);
-		movementComponent.pathFinder.aStar((int)positionComponent.colPos, (int)positionComponent.rowPos, (int)col, (int)row);
-		// after the A* is performed the target row and col are set to current row and col
-		// each step updates targets
-		// mark as moving
-		movementComponent.setMoving();
-		movementComponent.setTarget(positionComponent.rowPos, positionComponent.colPos);
-	}
-	
-	private void doStop() {
-		movementComponent.pathFinder.clearPath();
-		movementComponent.setIdle();
-	}
+	*/
 	
 	public void nextStep() {
 		float deltaTime= Gdx.graphics.getDeltaTime();
@@ -140,7 +135,7 @@ public class MovementSystem extends EntityProcessingSystem {
 				movementComponent.targetRow = (int) next.y;
 				System.out.println("target col: " + movementComponent.targetCol + ", row: " + movementComponent.targetRow);
 			}else { // means arrived
-				doStop();
+				movementComponent.doStop();
 				return;
 			}
 		}

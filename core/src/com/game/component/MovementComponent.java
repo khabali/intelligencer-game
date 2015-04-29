@@ -6,24 +6,18 @@ import com.game.pathfinding.Terrain;
 
 public class MovementComponent extends Component {
 
-	public Action state;
 	public float velocity; // movement speed
 	public int targetRow, targetCol;
 	public PathFinder pathFinder;
+	public boolean isMoving;
 
-	public MovementComponent(Terrain terrain, Action state) {
-		this.state = state;
+	public MovementComponent(Terrain terrain) {
 		pathFinder = new PathFinder(terrain);
 	}
 
-	public MovementComponent(Terrain terrain, Action state, float vel) {
-		this.state = state;
+	public MovementComponent(Terrain terrain, float vel) {
 		this.velocity = vel;
 		pathFinder = new PathFinder(terrain);
-	}
-
-	public void setMoving() {
-		this.state = Action.Walk;
 	}
 	
 	public void setTarget(int row, int col) {
@@ -35,13 +29,22 @@ public class MovementComponent extends Component {
 		targetRow = (int)row;
 		targetCol = (int)col;
 	}
-
-	public void setIdle() {
-		this.state = Action.Idle;
+	
+	public void setMoving(boolean b) {
+		isMoving = b;
 	}
-
-	public boolean isMoving() {
-		return this.state == Action.Walk;
+	
+	public void doMoveFromTo(int row, int col, int targetRow, int targetCol) {
+		if (isMoving) doStop();
+		pathFinder.aStar(col, row, targetCol, targetRow);
+		//init target to current position, astar need it this way
+		setTarget(row, col);
+		isMoving = true;
+	}
+	
+	public void doStop() {
+		pathFinder.clearPath();
+		isMoving = false;
 	}
 
 }

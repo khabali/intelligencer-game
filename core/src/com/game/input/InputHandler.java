@@ -16,7 +16,7 @@ public class InputHandler implements GestureListener, InputProcessor {
 	@Override
 	public boolean tap(float x, float y, int count, int button) {
 		GameInput.getInstance().getTouchButton()
-				.touch(System.currentTimeMillis(), x, y);
+				.touch(System.currentTimeMillis(), x, y, count);
 		return true;
 	}
 
@@ -72,6 +72,12 @@ public class InputHandler implements GestureListener, InputProcessor {
 			GameInput.getInstance().getEscapeButton()
 					.press(System.currentTimeMillis());
 			pressed = true;
+		}
+		
+		if (Keys.A == keycode) {
+			GameInput.getInstance().getAButton()
+			.press(System.currentTimeMillis());
+	pressed = true;
 		}
 		return pressed;
 	}

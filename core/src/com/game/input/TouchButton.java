@@ -11,8 +11,9 @@ public class TouchButton {
 	private float touchTime;
 	public Vector2 position = new Vector2(0, 0);
 	public Vector2 delta = new Vector2(0, 0);
+	public int count;
 
-	public void touch(float currentTime, float x, float y) {
+	public void touch(float currentTime, float x, float y, int c) {
 		if (!touch) {
 			touch = true;
 			touchTime = currentTime;
@@ -20,6 +21,7 @@ public class TouchButton {
 		lastTouchedTime = currentTime;
 		position.x = x;
 		position.y = y;
+		count = c;
 	}
 
 	public void pan(float currentTime, float x, float y, float deltaX,

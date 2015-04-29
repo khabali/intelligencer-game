@@ -12,6 +12,7 @@ import com.game.map.Map;
 import com.game.resources.MapLevels;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
+import com.game.system.PlayerAISystem;
 import com.game.system.SpriteRenderSystem;
 
 public class Level1GameState extends GameStateAdapter {
@@ -38,12 +39,12 @@ public class Level1GameState extends GameStateAdapter {
 		world = new World(); // World is part of the artemis framework
 		world.setTerrain(new Map(MapLevels.LVL1_MAP_TMX));
 		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new MovementSystem(camera));
 		world.setSystem(new SpriteRenderSystem(camera));
+		world.setSystem(new PlayerAISystem(camera));
+		world.setSystem(new MovementSystem(camera));
 		world.initialize();
 
-		EntityFactory.createHero(world).addToWorld();
-		
+		EntityFactory.createHero(world).addToWorld();		
 		EntityFactory.createArcher(world).addToWorld();
 
 	}

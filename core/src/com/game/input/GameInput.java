@@ -16,11 +16,13 @@ public class GameInput {
 
 	private InputButton enterButton;
 	private InputButton escapeButton;
+	private InputButton aButton;
 	private TouchButton touchButton;
 
 	private GameInput() {
 		enterButton = new InputButton();
 		escapeButton = new InputButton();
+		aButton = new InputButton();
 		touchButton = new TouchButton();
 	}
 
@@ -34,6 +36,11 @@ public class GameInput {
 		if (enterButton.isPressed()
 				&& enterButton.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
 			enterButton.release();
+		}
+		
+		if (aButton.isPressed()
+				&& aButton.getPressedDuration(System.currentTimeMillis()) <= deltaTime * 2.0f) {
+			aButton.release();
 		}
 
 		if (touchButton.isTouched()
@@ -55,5 +62,9 @@ public class GameInput {
 
 	public InputButton getEscapeButton() {
 		return escapeButton;
+	}
+	
+	public InputButton getAButton() {
+		return aButton;
 	}
 }
