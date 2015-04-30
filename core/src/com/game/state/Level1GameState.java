@@ -10,10 +10,12 @@ import com.game.entity.EntityFactory;
 import com.game.input.GameInput;
 import com.game.map.Map;
 import com.game.resources.MapLevels;
+import com.game.system.AttackSystem;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.PlayerAISystem;
 import com.game.system.SpriteRenderSystem;
+import com.game.system.StateSystem;
 
 public class Level1GameState extends GameStateAdapter {
 
@@ -39,9 +41,11 @@ public class Level1GameState extends GameStateAdapter {
 		world = new World(); // World is part of the artemis framework
 		world.setTerrain(new Map(MapLevels.LVL1_MAP_TMX));
 		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new SpriteRenderSystem(camera));
-		world.setSystem(new PlayerAISystem(camera));
+		world.setSystem(new SpriteRenderSystem(camera));	
 		world.setSystem(new MovementSystem(camera));
+		world.setSystem(new AttackSystem(camera));
+		world.setSystem(new StateSystem());
+		world.setSystem(new PlayerAISystem(camera));
 		world.initialize();
 
 		EntityFactory.createHero(world).addToWorld();		

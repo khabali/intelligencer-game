@@ -1,10 +1,10 @@
-package com.game.component;
+package com.game.weapon;
 
 import com.artemis.Component;
 
-public abstract class WeaponComponent extends Component {
+public abstract class Weapon {
 	
-	public int animationCode;
+	public String name;
 	public int damage;
 	public boolean isActive;
 	

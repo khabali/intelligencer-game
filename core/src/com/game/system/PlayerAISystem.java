@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.game.World;
+import com.game.component.AttackComponent;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PlayerComponent;
@@ -28,23 +29,22 @@ public class PlayerAISystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
 	@Mapper ComponentMapper<DirectionComponent> directionComponentMapper;
 	@Mapper ComponentMapper<SpriteComponent> spriteComponentMapper;
+	@Mapper ComponentMapper<AttackComponent> attackComponentMapper;
 	
 	private StateComponent state;
 	private MovementComponent movement;
 	private PositionComponent position;
 	private DirectionComponent direction;
 	private SpriteComponent sprite;
+	private AttackComponent attack;
 	
 	private OrthographicCamera camera;
 	private Map map;
 	
-	private float walkingVelocity = 2.1f;
-	private float runningVelocity = 5.5f;
-	
 	private Entity targetToKill = null;
 
 	public PlayerAISystem(OrthographicCamera camera) {
-		super(Aspect.getAspectForAll(PlayerComponent.class));
+		super(Aspect.getAspectForAll(PlayerComponent.class, MovementComponent.class));
 		this.camera = camera;
 	}
 	
@@ -60,30 +60,12 @@ public class PlayerAISystem extends EntityProcessingSystem {
 			state = stateComponentMapper.get(e);
 			movement = movementComponentMapper.get(e);
 			position = positionComponentMapper.get(e);
-			direction = directionComponentMapper.get(e);
-			sprite = spriteComponentMapper.get(e);
-			
-			if (!movement.isMoving) { // if true, means caracter arrived
-				if (targetToKill != null) { // if true, caracter is in front of target to kill
-					killTarget();
-				}else {
-					if (state.state == State.Fire) {
-						// fire animation should be played once before resetting to idle
-						if (sprite.animationFinished) state.setState(State.Idle);
-					}else {
-						state.setState(State.Idle);
-					}
-				}
-			}
+			//direction = directionComponentMapper.get(e);
+			//sprite = spriteComponentMapper.get(e);
+			attack = attackComponentMapper.get(e);
+
 			processInput();		
 		}	
-	}
-	
-	private void killTarget() {
-		state.setState(State.Fire);
-		direction.direction = targetToKill.getComponent(DirectionComponent.class).direction;
-		//targetToKill.deleteFromWorld();
-		targetToKill = null;
 	}
 	
 	private void processInput() {
@@ -94,15 +76,8 @@ public class PlayerAISystem extends EntityProcessingSystem {
 			Vector2 v2 = map.screenToMap(v.x, v.y);
 			int row = (int)v2.x;
 			int col = (int)v2.y;
-			targetToKill = ((World)this.world).getEntityAt(row, col);
-			movement.doMoveFromTo((int)position.rowPos, (int)position.colPos, row, col);
-			if (touch.count == 1) {
-				state.setState(State.Walk);
-				movement.velocity = walkingVelocity;
-			}else {
-				state.setState(State.Run);
-				movement.velocity = runningVelocity;
-			}
+			attack.targetToKill = ((World)this.world).getEntityAt(row, col);
+			movement.doMoveFromTo((int)position.rowPos, (int)position.colPos, row, col, touch.count > 1);
 		}
 	}
 

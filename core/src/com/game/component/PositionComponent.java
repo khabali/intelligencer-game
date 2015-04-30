@@ -18,4 +18,8 @@ public class PositionComponent extends Component {
 	public void setColPos(float col) {
 		this.colPos = col;
 	}
+	
+	public boolean equals(PositionComponent pos) {
+		return rowPos == pos.rowPos && colPos == pos.colPos;
+	}
 }

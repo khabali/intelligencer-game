@@ -37,6 +37,9 @@ public class MovementSystem extends EntityProcessingSystem {
 	private DirectionComponent directionComponent;
 	private SpriteComponent spriteComponent;
 	private StateComponent stateComponent;
+	
+	private float walkingVelocity = 2.1f;
+	private float runningVelocity = 5.5f;
 
 	public MovementSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, SpriteComponent.class, StateComponent.class));
@@ -66,13 +69,18 @@ public class MovementSystem extends EntityProcessingSystem {
 			if (movementComponent.isMoving) {
 				// next move
 				nextStep();
+				if (stateComponent.state == State.Run) {
+					movementComponent.velocity = runningVelocity;
+				}else {
+					movementComponent.velocity = walkingVelocity;
+				}
 			}	
 			// calculate x and y from row and column
 			int spriteWidth = spriteComponent.spriteWidth(directionComponent.direction, stateComponent.state);
 			Vector2 v = map.mapToScreen(positionComponent.rowPos, positionComponent.colPos, spriteWidth);
 			positionComponent.x = v.x;
 			positionComponent.y = v.y;
-		}		
+		}
 	}
 	
 	private void changeSide() {
@@ -108,26 +116,8 @@ public class MovementSystem extends EntityProcessingSystem {
 		}
 	}
 	
-	/*
-	private void processInput() {
-		TouchButton touch = GameInput.getInstance().getTouchButton();
-		if (touch.isTouched() || touch.isDoubleTouched()) {
-			Vector2 pos = touch.position;
-			Vector3 v = camera.unproject(new Vector3(pos.x, pos.y, 0));
-			Vector2 v2 = map.screenToMap(v.x, v.y);
-			int row = (int)v2.x;
-			int col = (int)v2.y;
-			System.out.println("do move " + row + "," + col);
-			//clickMovPos = new Vector2(row, col);
-			doMove(row, col);
-		}
-	}
-	*/
-	
 	public void nextStep() {
 		float deltaTime= Gdx.graphics.getDeltaTime();
-		System.out.println("target rowpos: " + positionComponent.rowPos + ", colpos: " + positionComponent.colPos);
-		System.out.println("target targetrow: " + movementComponent.targetRow + ", targetcol: " + movementComponent.targetCol);
 		if (positionComponent.rowPos == movementComponent.targetRow && positionComponent.colPos == movementComponent.targetCol) {
 			Vector2 next= movementComponent.pathFinder.nextStep();
 			if (next!= null) {
