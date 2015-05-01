@@ -3,12 +3,25 @@ package com.game.component;
 import com.artemis.Component;
 
 public class PositionComponent extends Component {
-	public float x, y;
+
+	/**
+	 * the default position (start position)
+	 */
+	public float defaultRow, defaultCol;
+	
+	/**
+	 * Actual position
+	 */
 	public float rowPos, colPos;
 
 	public PositionComponent(int row, int col) {
-		this.rowPos = row;
-		this.colPos = -col;
+		this.rowPos = this.defaultRow =  row;
+		this.colPos = this.defaultCol = -col;
+	}
+	
+	public void setDefaultPos(float defaultRow, float defaultCol) {
+		this.defaultRow = defaultRow;
+		this.defaultCol = defaultCol;
 	}
 
 	public void setRowPos(float row) {

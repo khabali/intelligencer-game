@@ -21,6 +21,7 @@ public class MovementComponent extends Component {
 		pathFinder = new PathFinder(terrain);
 	}
 	
+	
 	public void setTarget(int row, int col) {
 		targetRow = row;
 		targetCol = col;
@@ -37,7 +38,9 @@ public class MovementComponent extends Component {
 	
 	public void doMoveFromTo(int row, int col, int targetRow, int targetCol, boolean doRun) {
 		if (isMoving) doStop();
+		
 		pathFinder.aStar(col, row, targetCol, targetRow);
+		
 		//init target to current position, astar need it this way
 		setTarget(row, col);
 		isMoving = true;

@@ -29,8 +29,6 @@ public class MovementSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<SpriteComponent> spriteComponentMapper;
 	@Mapper ComponentMapper<StateComponent> stateComponentMapper;
 	
-	private OrthographicCamera camera;
-	private Map map;
 	
 	private MovementComponent movementComponent;
 	private PositionComponent positionComponent;
@@ -41,15 +39,11 @@ public class MovementSystem extends EntityProcessingSystem {
 	private float walkingVelocity = 2.1f;
 	private float runningVelocity = 5.5f;
 
-	public MovementSystem(OrthographicCamera camera) {
+	public MovementSystem() {
 		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, SpriteComponent.class, StateComponent.class));
-		this.camera = camera;
 	}
 	
-	@Override
-	protected void initialize() {
-		this.map = ((Map)((World)this.world).getTerrain());
-	}
+
 
 	@Override
 	// process only entities that have a movement a position a direction a sprite and a state
@@ -75,11 +69,6 @@ public class MovementSystem extends EntityProcessingSystem {
 					movementComponent.velocity = walkingVelocity;
 				}
 			}	
-			// calculate x and y from row and column
-			int spriteWidth = spriteComponent.spriteWidth(directionComponent.direction, stateComponent.state);
-			Vector2 v = map.mapToScreen(positionComponent.rowPos, positionComponent.colPos, spriteWidth);
-			positionComponent.x = v.x;
-			positionComponent.y = v.y;
 		}
 	}
 	

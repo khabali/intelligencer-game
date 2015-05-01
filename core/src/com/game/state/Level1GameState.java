@@ -1,6 +1,5 @@
 package com.game.state;
 
-import com.artemis.Entity;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -11,6 +10,7 @@ import com.game.input.GameInput;
 import com.game.map.Map;
 import com.game.resources.MapLevels;
 import com.game.system.AttackSystem;
+import com.game.system.AIEnemiesMovementSystem;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.PlayerAISystem;
@@ -40,15 +40,18 @@ public class Level1GameState extends GameStateAdapter {
 
 		world = new World(); // World is part of the artemis framework
 		world.setTerrain(new Map(MapLevels.LVL1_MAP_TMX));
-		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new SpriteRenderSystem(camera));	
-		world.setSystem(new MovementSystem(camera));
+		world.setSystem(new MovementSystem());
 		world.setSystem(new AttackSystem(camera));
 		world.setSystem(new StateSystem());
 		world.setSystem(new PlayerAISystem(camera));
+		world.setSystem(new AIEnemiesMovementSystem());
+		
+		//
+		world.setSystem(new MapRenderSystem(camera));
+		world.setSystem(new SpriteRenderSystem(camera));	
 		world.initialize();
 
-		EntityFactory.createHero(world).addToWorld();		
+		EntityFactory.createVillager(world).addToWorld();		
 		EntityFactory.createArcher(world).addToWorld();
 
 	}

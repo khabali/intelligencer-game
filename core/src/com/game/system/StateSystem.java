@@ -35,7 +35,7 @@ public class StateSystem extends EntityProcessingSystem {
 	@Override
 	// process entities having state component
 	protected void process(Entity e) {
-		if (stateComponentMapper.has(e)) {
+		if (stateComponentMapper.has(e) && movementComponentMapper.has(e)) {
 			state = stateComponentMapper.get(e);
 			movement = movementComponentMapper.get(e);
 			attack = attackComponentMapper.get(e);

@@ -1,6 +1,5 @@
 package com.game.weapon;
 
-import com.artemis.Component;
 
 public abstract class Weapon {
 	
