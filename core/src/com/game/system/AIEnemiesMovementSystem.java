@@ -1,7 +1,5 @@
 package com.game.system;
 
-import javax.crypto.spec.PSource;
-
 import com.artemis.Aspect;
 import com.artemis.ComponentMapper;
 import com.artemis.Entity;
@@ -23,8 +21,7 @@ public class AIEnemiesMovementSystem extends EntityProcessingSystem {
 	ComponentMapper<MovementComponent> movementCM;
 
 	public AIEnemiesMovementSystem() {
-		super(Aspect.getAspectForAll(AIMovementComponent.class,
-				PositionComponent.class, MovementComponent.class));
+		super(Aspect.getAspectForAll(AIMovementComponent.class, PositionComponent.class, MovementComponent.class));
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import com.game.World;
 import com.game.map.Map;
 
 public class MapRenderSystem extends VoidEntitySystem {
-	private final String tag = getClass().getName();
+	private static final String tag = "MapRenderSystem";
 	private IsometricTiledMapRenderer isometricTiledMapRenderer;
 	private OrthographicCamera camera;
 

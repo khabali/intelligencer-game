@@ -13,7 +13,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.game.World;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
-import com.game.component.AIMovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
 import com.game.component.State;

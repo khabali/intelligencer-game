@@ -6,17 +6,10 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
 import com.game.World;
 import com.game.component.AttackComponent;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
-import com.game.component.PositionComponent;
-import com.game.component.State;
-import com.game.component.StateComponent;
-import com.game.input.GameInput;
-import com.game.input.TouchButton;
 import com.game.map.Map;
 
 public class AttackSystem extends EntityProcessingSystem {

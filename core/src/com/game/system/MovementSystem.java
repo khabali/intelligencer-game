@@ -6,10 +6,7 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
-import com.game.World;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
@@ -17,12 +14,11 @@ import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
 import com.game.component.State;
 import com.game.component.StateComponent;
-import com.game.input.GameInput;
-import com.game.input.InputButton;
-import com.game.input.TouchButton;
-import com.game.map.Map;
 
 public class MovementSystem extends EntityProcessingSystem {
+	
+	private static final String tag = "MovementSystem";
+	
 	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
 	@Mapper ComponentMapper<MovementComponent> movementComponentMapper;
 	@Mapper ComponentMapper<DirectionComponent> directionComponentMapper;
@@ -33,14 +29,13 @@ public class MovementSystem extends EntityProcessingSystem {
 	private MovementComponent movementComponent;
 	private PositionComponent positionComponent;
 	private DirectionComponent directionComponent;
-	private SpriteComponent spriteComponent;
 	private StateComponent stateComponent;
 	
 	private float walkingVelocity = 2.1f;
 	private float runningVelocity = 5.5f;
 
 	public MovementSystem() {
-		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, SpriteComponent.class, StateComponent.class));
+		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, StateComponent.class));
 	}
 	
 
@@ -56,7 +51,7 @@ public class MovementSystem extends EntityProcessingSystem {
 			positionComponent = positionComponentMapper.getSafe(e);
 			movementComponent = movementComponentMapper.getSafe(e);		
 			directionComponent = directionComponentMapper.getSafe(e);
-			spriteComponent = spriteComponentMapper.getSafe(e);
+			spriteComponentMapper.getSafe(e);
 			stateComponent = stateComponentMapper.getSafe(e);
 			
 			// Moving the object
@@ -112,7 +107,7 @@ public class MovementSystem extends EntityProcessingSystem {
 			if (next!= null) {
 				movementComponent.targetCol = (int) next.x;
 				movementComponent.targetRow = (int) next.y;
-				System.out.println("target col: " + movementComponent.targetCol + ", row: " + movementComponent.targetRow);
+				//Gdx.app.debug(tag, "target col: " + movementComponent.targetCol + ", row: " + movementComponent.targetRow);
 			}else { // means arrived
 				movementComponent.doStop();
 				return;

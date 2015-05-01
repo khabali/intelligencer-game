@@ -5,17 +5,11 @@ import com.artemis.ComponentMapper;
 import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
-import com.game.World;
 import com.game.component.AttackComponent;
 import com.game.component.MovementComponent;
-import com.game.component.PlayerComponent;
 import com.game.component.SpriteComponent;
 import com.game.component.State;
 import com.game.component.StateComponent;
-import com.game.input.GameInput;
-import com.game.input.TouchButton;
 
 public class StateSystem extends EntityProcessingSystem {
 	@Mapper ComponentMapper<StateComponent> stateComponentMapper;

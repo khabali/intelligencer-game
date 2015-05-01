@@ -3,7 +3,7 @@ package com.game.input;
 
 public class GameInput {
 
-	private final String tag = getClass().getName();
+	private static final  String tag = "GameInput";
 
 	private static GameInput _instance;
 
