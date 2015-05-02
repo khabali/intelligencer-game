@@ -10,6 +10,7 @@ import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PlayerComponent;
 import com.game.component.PositionComponent;
+import com.game.component.RadarComponent;
 import com.game.component.SpriteComponent;
 import com.game.component.State;
 import com.game.component.StateComponent;
@@ -28,6 +29,8 @@ public class EntityFactory {
 		MovementComponent movementComponent = new MovementComponent(world.getTerrain(), 2.1f);
 		movementComponent.setTarget(8, -6);
 		e.addComponent(movementComponent);
+		
+		e.addComponent(new RadarComponent());
 		e.addComponent(new AIMovementComponent());
 		e.addComponent(new StateComponent(State.Idle));
 		e.addComponent(new DirectionComponent(Direction.FRONT));

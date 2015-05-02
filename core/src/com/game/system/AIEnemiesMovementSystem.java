@@ -24,6 +24,7 @@ public class AIEnemiesMovementSystem extends EntityProcessingSystem {
 	public AIEnemiesMovementSystem() {
 		super(Aspect.getAspectForAll(AIMovementComponent.class, PositionComponent.class, MovementComponent.class));
 	}
+	
 
 	@Override
 	protected void process(Entity e) {
@@ -32,22 +33,30 @@ public class AIEnemiesMovementSystem extends EntityProcessingSystem {
 			AIMovementComponent _AImovement = _AIMovementCM.get(e);
 			PositionComponent position = positionCM.get(e);
 			MovementComponent movement = movementCM.get(e);
-			
+			int walksCount = 0;
 			if (!movement.isMoving) {
 				
-				watingTime += Gdx.graphics.getDeltaTime();
-				Gdx.app.debug(tag, "movingTime "+watingTime);
+				watingTime += Gdx.graphics.getDeltaTime();// Acumulate wating time
+				//Gdx.app.debug(tag, "movingTime "+watingTime);
 				
-				if(watingTime >= _AImovement.waitingBeforRestart){
-					watingTime = 0.0f;
+				if(watingTime >= _AImovement.waitingBeforRestart){ //start moving
+					watingTime = 0.0f; // Reset the wating time we are moving
 					//
 					int startCol = (int) position.defaultCol;
 					int startRow = (int) position.defaultRow;
-	
+					//Gdx.app.debug(tag, "start row : " + startRow + " col : " + startCol);
 					//
 					int targetCol = movement.targetCol;
 					int targetRow = movement.targetRow;
+					//Gdx.app.debug(tag, "target row : " + targetRow + " col : " + targetCol);
+					
 					movement.doMoveFromTo(startRow, startCol, targetRow, targetCol,	false);
+					walksCount++;
+					if(walksCount>0){
+						//position.setDefaultPos(targetRow, targetCol);
+						//movement.setTarget(startRow, startCol);
+						walksCount=0;
+					}
 				}
 			}
 		}

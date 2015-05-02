@@ -1,5 +1,6 @@
 package com.game.state;
 
+import com.artemis.Aspect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -14,6 +15,7 @@ import com.game.system.AIEnemiesMovementSystem;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.PlayerAISystem;
+import com.game.system.RadarSystem;
 import com.game.system.SpriteRenderSystem;
 import com.game.system.StateSystem;
 
@@ -46,9 +48,17 @@ public class Level1GameState extends GameStateAdapter {
 		world.setSystem(new PlayerAISystem(camera));
 		world.setSystem(new AIEnemiesMovementSystem());
 		
+		
+		
 		//
 		world.setSystem(new MapRenderSystem(camera));
-		world.setSystem(new SpriteRenderSystem(camera));	
+		
+		//
+		world.setSystem(new RadarSystem(camera));
+		
+		//
+		world.setSystem(new SpriteRenderSystem(camera));
+		
 		world.initialize();
 
 		EntityFactory.createVillager(world).addToWorld();		
