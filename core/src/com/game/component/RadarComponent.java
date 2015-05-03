@@ -27,7 +27,7 @@ public class RadarComponent extends Component {
 	public void draw(float x, float y, Matrix4 projectionMatrix, Color color,
 			Direction direction) {
 		
-		Gdx.app.debug(tag, "Direction : " + direction.name());
+		//Gdx.app.debug(tag, "Direction : " + direction.name());
 		//activate transparency
 		Gdx.gl.glEnable(GL20.GL_BLEND);
 		Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
@@ -58,7 +58,7 @@ public class RadarComponent extends Component {
 		}
 		
 		if(Direction.FRONTLEFT == dir){
-			return -90;
+			return 180;
 		}
 		
 		if(Direction.FRONTRIGHT == dir){
@@ -66,12 +66,12 @@ public class RadarComponent extends Component {
 		}
 		
 		if(Direction.RIGHT == dir){
-			return 135;
+			return -45;
 		}
 	
 		
 		if(Direction.BACKRIGHT == dir){
-			return 90;
+			return 0;
 		}
 		
 		if(Direction.BACK == dir){
@@ -83,7 +83,7 @@ public class RadarComponent extends Component {
 		}
 		
 		if(Direction.LEFT == dir){
-			return -45;
+			return -135;
 		}
 		
 		return 0;
