@@ -5,7 +5,6 @@ import com.artemis.ComponentMapper;
 import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -63,14 +62,15 @@ public class RadarSystem extends EntityProcessingSystem {
 			Color radarColor = Color.RED;
 			
 			//ELSE 
-			radarColor = Color.CYAN;
+			radarColor = Color.GREEN;
 			
 			//calculate center position to draw radar
 			int spriteWidth = cSprite.spriteWidth(cDirection.direction, cState.state);
-			Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos, cRadar.radius);
+			Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos, spriteWidth);
+			
 			
 			// draw radar circle
-			cRadar.draw(v.x +(spriteWidth / 2), v.y + (spriteWidth /2), camera.combined, radarColor);
+			cRadar.draw(v.x +(spriteWidth / 2), v.y + (spriteWidth /2), camera.combined, radarColor, cDirection.direction);
 		}
 		
 	}
