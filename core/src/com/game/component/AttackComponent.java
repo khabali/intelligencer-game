@@ -16,6 +16,11 @@ public class AttackComponent extends Component {
 		weapons.add(w);
 	}
 	
+	public void registerActivateWeapon(Weapon w) {
+		weapons.add(w);
+		activateWeapon(w);
+	}
+	
 	public void unregisterWeapon(Weapon w) {
 		weapons.remove(w);
 	}

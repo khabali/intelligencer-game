@@ -41,12 +41,12 @@ public class RadarComponent extends Component {
 		this.shapeRender.end();
 		
 		Gdx.gl.glDisable(GL20.GL_BLEND);
-		
+		/*
 		this.shapeRender.begin(ShapeType.Line);
 		this.shapeRender.setColor(color);
 		this.shapeRender.arc(x, y, visionFieldLenght, getStart(direction), visionFieldDegree, visionFieldLenght);
 		this.shapeRender.circle(x, y, 2);
-		this.shapeRender.end();
+		this.shapeRender.end();*/
 		
 		
 	}

@@ -12,53 +12,44 @@ import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
-import com.game.component.State;
 import com.game.component.StateComponent;
 
 public class MovementSystem extends EntityProcessingSystem {
-	
-	private static final String tag = "MovementSystem";
-	
 	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
 	@Mapper ComponentMapper<MovementComponent> movementComponentMapper;
 	@Mapper ComponentMapper<DirectionComponent> directionComponentMapper;
 	@Mapper ComponentMapper<SpriteComponent> spriteComponentMapper;
-	@Mapper ComponentMapper<StateComponent> stateComponentMapper;
 	
-	
+	private static final String tag = "MovementSystem";
+		
 	private MovementComponent movementComponent;
 	private PositionComponent positionComponent;
 	private DirectionComponent directionComponent;
-	private StateComponent stateComponent;
 	
 	private float walkingVelocity = 2.1f;
 	private float runningVelocity = 5.5f;
 
 	public MovementSystem() {
-		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class, StateComponent.class));
+		super(Aspect.getAspectForAll(PositionComponent.class, MovementComponent.class, DirectionComponent.class));
 	}
 	
 
 
 	@Override
-	// process only entities that have a movement a position a direction a sprite and a state
+	// process only entities that have a movement a position a direction
 	protected void process(Entity e) {
 		if (movementComponentMapper.has(e) && 
 				positionComponentMapper.has(e) && 
-				directionComponentMapper.has(e) &&
-				spriteComponentMapper.has(e) &&
-				stateComponentMapper.has(e)) {
+				directionComponentMapper.has(e)) {
 			positionComponent = positionComponentMapper.getSafe(e);
 			movementComponent = movementComponentMapper.getSafe(e);		
 			directionComponent = directionComponentMapper.getSafe(e);
-			spriteComponentMapper.getSafe(e);
-			stateComponent = stateComponentMapper.getSafe(e);
 			
 			// Moving the object
 			if (movementComponent.isMoving) {
 				// next move
 				nextStep();
-				if (stateComponent.state == State.Run) {
+				if (movementComponent.isRunning) {
 					movementComponent.velocity = runningVelocity;
 				}else {
 					movementComponent.velocity = walkingVelocity;

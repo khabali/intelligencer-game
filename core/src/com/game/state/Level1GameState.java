@@ -17,7 +17,8 @@ import com.game.system.MovementSystem;
 import com.game.system.PlayerAISystem;
 import com.game.system.RadarSystem;
 import com.game.system.SpriteRenderSystem;
-import com.game.system.StateSystem;
+import com.game.system.StateSystem.PlayerStateSystem;
+import com.game.system.StateSystem.SoldierStateSystem;
 
 public class Level1GameState extends GameStateAdapter {
 
@@ -44,8 +45,9 @@ public class Level1GameState extends GameStateAdapter {
 		world.setTerrain(new Map(MapLevels.LVL1_MAP_TMX));
 		world.setSystem(new MovementSystem());
 		world.setSystem(new AttackSystem(camera));
-		world.setSystem(new StateSystem());
 		world.setSystem(new PlayerAISystem(camera));
+		world.setSystem(new PlayerStateSystem());
+		world.setSystem(new SoldierStateSystem());
 		world.setSystem(new AIEnemiesMovementSystem());
 		
 		

@@ -12,16 +12,17 @@ import com.game.World;
 import com.game.component.AttackComponent;
 import com.game.component.DirectionComponent;
 import com.game.component.MovementComponent;
-import com.game.component.PlayerComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
 import com.game.component.StateComponent;
+import com.game.component.tag.PlayerComponentTag;
+import com.game.entity.state.PlayerEntityState;
 import com.game.input.GameInput;
 import com.game.input.TouchButton;
 import com.game.map.Map;
 
 public class PlayerAISystem extends EntityProcessingSystem {
-	@Mapper ComponentMapper<PlayerComponent> playerComponentMapper;
+	@Mapper ComponentMapper<PlayerComponentTag> playerComponentMapper;
 	@Mapper ComponentMapper<StateComponent> stateComponentMapper;
 	@Mapper ComponentMapper<MovementComponent> movementComponentMapper;
 	@Mapper ComponentMapper<PositionComponent> positionComponentMapper;
@@ -42,7 +43,7 @@ public class PlayerAISystem extends EntityProcessingSystem {
 	private Entity targetToKill = null;
 
 	public PlayerAISystem(OrthographicCamera camera) {
-		super(Aspect.getAspectForAll(PlayerComponent.class, MovementComponent.class));
+		super(Aspect.getAspectForAll(PlayerComponentTag.class));
 		this.camera = camera;
 	}
 	
@@ -62,7 +63,8 @@ public class PlayerAISystem extends EntityProcessingSystem {
 			//sprite = spriteComponentMapper.get(e);
 			attack = attackComponentMapper.get(e);
 
-			processInput();		
+			processInput();
+			//stateControl();
 		}	
 	}
 	
@@ -78,6 +80,5 @@ public class PlayerAISystem extends EntityProcessingSystem {
 			movement.doMoveFromTo((int)position.rowPos, (int)position.colPos, row, col, touch.count > 1);
 		}
 	}
-
 
 }

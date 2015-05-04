@@ -1,18 +1,14 @@
 package com.game.component;
 
 import com.artemis.Component;
+import com.game.entity.state.IEntityState;
 
 public class StateComponent extends Component {
 	
-	public State state;
+	public IEntityState currentState;
 	
-	public StateComponent(State st) {
-		this.state = st;
+	public StateComponent(IEntityState cur) {
+		currentState = cur;
 	}
-	
-	public void setState(State st) {
-		this.state = st;
-	}
-	
 
 }

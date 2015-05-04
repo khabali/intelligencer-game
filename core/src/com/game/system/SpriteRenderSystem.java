@@ -15,7 +15,6 @@ import com.game.component.Direction;
 import com.game.component.DirectionComponent;
 import com.game.component.PositionComponent;
 import com.game.component.SpriteComponent;
-import com.game.component.State;
 import com.game.component.StateComponent;
 import com.game.map.Map;
 
@@ -40,8 +39,7 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 
 	public SpriteRenderSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(SpriteComponent.class,
-				PositionComponent.class, StateComponent.class,
-				DirectionComponent.class));
+				PositionComponent.class, StateComponent.class));
 		this.camera = camera;
 	}
 
@@ -66,23 +64,22 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 			// get obligatory components
 			SpriteComponent sprite = spriteComponentMapper.getSafe(e);
 			PositionComponent position = positionComponentMapper.getSafe(e);
-			// set default state and direction
+			StateComponent state = stateComponentMapper.get(e);
+			// set default direction
 			Direction dir = Direction.NONE;
-			State stat = State.none;
 			// get entity state and direction if any
 			if (directionComponentMapper.has(e)) dir = directionComponentMapper.get(e).direction;
-			if (stateComponentMapper.has(e)) stat = stateComponentMapper.get(e).state;
 			// do we need to reload sprites?
-			if (sprite.isAnimationChanged(dir, stat)) {
+			if (sprite.isAnimationChanged(dir, state.currentState)) {
 				frameTime = 0; // reinitialise frame counter
 				// load new animation regions
 				//animation = new Animation(0.090f, sprite.getSprites(dir, stat));
 			}
-			animation = new Animation(0.090f, sprite.getSprites(dir, stat));
+			animation = new Animation(0.090f, sprite.getSprites(dir, state.currentState));
 			frameTime += Gdx.graphics.getDeltaTime();
 			
 			// calculate x and y from row and column
-			int spriteWidth = sprite.spriteWidth(dir, stat);
+			int spriteWidth = sprite.spriteWidth(dir, state.currentState);
 			Vector2 v = map.mapToScreen(position.rowPos, position.colPos, spriteWidth);
 			batch.draw(animation.getKeyFrame(frameTime, true),  v.x,  v.y);
 			
