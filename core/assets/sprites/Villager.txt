@@ -2,896 +2,896 @@ Villager.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-BACK/villager_Idle
+BACK/villager_IDLE
   rotate: false
   xy: 760, 292
   size: 58, 144
   orig: 225, 198
   offset: 88, 54
   index: 40000
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 287, 588
   size: 46, 148
   orig: 91, 163
   offset: 28, 15
   index: 40000
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1061, 588
   size: 46, 150
   orig: 91, 163
   offset: 28, 12
   index: 40001
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 337, 740
   size: 46, 152
   orig: 91, 163
   offset: 28, 8
   index: 40002
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1054, 740
   size: 46, 154
   orig: 91, 163
   offset: 28, 5
   index: 40003
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1152, 740
   size: 46, 155
   orig: 91, 163
   offset: 28, 5
   index: 40004
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 2, 740
   size: 46, 151
   orig: 91, 163
   offset: 28, 10
   index: 40005
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 161, 439
   size: 47, 146
   orig: 91, 163
   offset: 27, 16
   index: 40006
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 910, 439
   size: 48, 147
   orig: 91, 163
   offset: 26, 16
   index: 40007
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1167, 588
   size: 48, 150
   orig: 91, 163
   offset: 26, 12
   index: 40008
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 855, 740
   size: 48, 153
   orig: 91, 163
   offset: 25, 8
   index: 40009
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1102, 740
   size: 48, 155
   orig: 91, 163
   offset: 25, 5
   index: 40010
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1200, 740
   size: 48, 156
   orig: 91, 163
   offset: 25, 3
   index: 40011
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 905, 740
   size: 48, 154
   orig: 91, 163
   offset: 25, 6
   index: 40012
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 903, 588
   size: 48, 150
   orig: 91, 163
   offset: 26, 12
   index: 40013
-BACK/villager_Walk
+BACK/villager_WALK
   rotate: false
   xy: 1193, 292
   size: 49, 145
   orig: 91, 163
   offset: 26, 18
   index: 40014
-BACKLEFT/villager_Idle
+BACKLEFT/villager_IDLE
   rotate: false
   xy: 1013, 439
   size: 48, 147
   orig: 225, 198
   offset: 91, 50
   index: 50000
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 231, 588
   size: 54, 148
   orig: 91, 163
   offset: 17, 14
   index: 50000
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 845, 588
   size: 56, 150
   orig: 91, 163
   offset: 15, 11
   index: 50001
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 953, 588
   size: 56, 150
   orig: 91, 163
   offset: 14, 9
   index: 50002
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 559, 740
   size: 56, 152
   orig: 91, 163
   offset: 14, 7
   index: 50003
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 799, 740
   size: 54, 153
   orig: 91, 163
   offset: 16, 6
   index: 50004
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 282, 740
   size: 53, 151
   orig: 91, 163
   offset: 18, 10
   index: 50005
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 960, 439
   size: 51, 147
   orig: 91, 163
   offset: 20, 15
   index: 50006
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 761, 146
   size: 48, 143
   orig: 91, 163
   offset: 23, 19
   index: 50007
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 1065, 292
   size: 57, 145
   orig: 91, 163
   offset: 14, 17
   index: 50008
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 1124, 292
   size: 67, 145
   orig: 91, 163
   offset: 7, 15
   index: 50009
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 835, 439
   size: 73, 147
   orig: 91, 163
   offset: 6, 12
   index: 50010
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 156, 588
   size: 73, 148
   orig: 91, 163
   offset: 10, 11
   index: 50011
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 263, 439
   size: 64, 146
   orig: 91, 163
   offset: 15, 13
   index: 50012
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 595, 292
   size: 50, 144
   orig: 91, 163
   offset: 21, 17
   index: 50013
-BACKLEFT/villager_Walk
+BACKLEFT/villager_WALK
   rotate: false
   xy: 210, 439
   size: 51, 146
   orig: 91, 163
   offset: 20, 16
   index: 50014
-BACKRIGHT/villager_Idle
+BACKRIGHT/villager_IDLE
   rotate: false
   xy: 782, 439
   size: 51, 147
   orig: 225, 198
   offset: 93, 50
   index: 30000
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 707, 292
   size: 51, 144
   orig: 91, 163
   offset: 27, 18
   index: 30000
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 418, 292
   size: 53, 144
   orig: 91, 163
   offset: 22, 17
   index: 30001
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 473, 292
   size: 66, 144
   orig: 91, 163
   offset: 17, 15
   index: 30002
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 876, 292
   size: 70, 145
   orig: 91, 163
   offset: 12, 13
   index: 30003
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 1173, 439
   size: 66, 147
   orig: 91, 163
   offset: 11, 12
   index: 30004
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 647, 292
   size: 58, 144
   orig: 91, 163
   offset: 19, 16
   index: 30005
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 541, 292
   size: 52, 144
   orig: 91, 163
   offset: 28, 17
   index: 30006
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 335, 588
   size: 52, 148
   orig: 91, 163
   offset: 30, 14
   index: 30007
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 1109, 588
   size: 56, 150
   orig: 91, 163
   offset: 28, 11
   index: 30008
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 50, 740
   size: 60, 151
   orig: 91, 163
   offset: 25, 9
   index: 30009
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 669, 740
   size: 62, 153
   orig: 91, 163
   offset: 23, 6
   index: 30010
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 733, 740
   size: 64, 153
   orig: 91, 163
   offset: 21, 5
   index: 30011
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 385, 740
   size: 59, 152
   orig: 91, 163
   offset: 25, 7
   index: 30012
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 677, 588
   size: 53, 149
   orig: 91, 163
   offset: 30, 11
   index: 30013
-BACKRIGHT/villager_Walk
+BACKRIGHT/villager_WALK
   rotate: false
   xy: 557, 439
   size: 51, 146
   orig: 91, 163
   offset: 30, 16
   index: 30014
-FRONT/villager_Idle
+FRONT/villager_IDLE
   rotate: false
   xy: 2, 439
   size: 58, 145
   orig: 225, 198
   offset: 86, 47
   index: 0
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 216, 292
   size: 50, 144
   orig: 91, 163
   offset: 23, 13
   index: 0
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 440, 588
   size: 50, 149
   orig: 91, 163
   offset: 23, 7
   index: 1
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 446, 740
   size: 50, 152
   orig: 91, 163
   offset: 23, 2
   index: 2
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 617, 740
   size: 50, 152
   orig: 91, 163
   offset: 23, 2
   index: 3
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 389, 588
   size: 49, 149
   orig: 91, 163
   offset: 24, 5
   index: 4
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 1063, 439
   size: 49, 147
   orig: 91, 163
   offset: 24, 9
   index: 5
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 969, 146
   size: 49, 144
   orig: 91, 163
   offset: 24, 13
   index: 6
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 1020, 146
   size: 48, 144
   orig: 91, 163
   offset: 25, 13
   index: 7
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 232, 740
   size: 48, 151
   orig: 91, 163
   offset: 25, 6
   index: 8
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 955, 740
   size: 48, 154
   orig: 91, 163
   offset: 25, 1
   index: 9
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 1005, 740
   size: 47, 154
   orig: 91, 163
   offset: 26, 0
   index: 10
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 1011, 588
   size: 48, 150
   orig: 91, 163
   offset: 25, 3
   index: 11
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 105, 588
   size: 49, 148
   orig: 91, 163
   offset: 24, 6
   index: 12
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 610, 439
   size: 49, 146
   orig: 91, 163
   offset: 24, 10
   index: 13
-FRONT/villager_Walk
+FRONT/villager_WALK
   rotate: false
   xy: 354, 146
   size: 50, 143
   orig: 91, 163
   offset: 23, 14
   index: 14
-FRONTLEFT/villager_Idle
+FRONTLEFT/villager_IDLE
   rotate: false
   xy: 2, 588
   size: 51, 147
   orig: 225, 198
   offset: 88, 46
   index: 70000
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 463, 146
   size: 51, 143
   orig: 91, 163
   offset: 20, 15
   index: 70000
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 586, 146
   size: 55, 143
   orig: 91, 163
   offset: 16, 14
   index: 70001
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 948, 292
   size: 66, 145
   orig: 91, 163
   offset: 8, 10
   index: 70002
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 1070, 146
   size: 70, 144
   orig: 91, 163
   offset: 9, 10
   index: 70003
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 516, 146
   size: 68, 143
   orig: 91, 163
   offset: 13, 12
   index: 70004
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 701, 2
   size: 54, 141
   orig: 91, 163
   offset: 19, 15
   index: 70005
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 1061, 2
   size: 53, 141
   orig: 91, 163
   offset: 18, 16
   index: 70006
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 62, 439
   size: 55, 146
   orig: 91, 163
   offset: 16, 12
   index: 70007
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 787, 588
   size: 56, 150
   orig: 91, 163
   offset: 15, 7
   index: 70008
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 498, 740
   size: 59, 152
   orig: 91, 163
   offset: 14, 4
   index: 70009
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 112, 740
   size: 61, 151
   orig: 91, 163
   offset: 13, 4
   index: 70010
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 492, 588
   size: 60, 149
   orig: 91, 163
   offset: 13, 5
   index: 70011
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 1114, 439
   size: 57, 147
   orig: 91, 163
   offset: 14, 8
   index: 70012
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 329, 439
   size: 56, 146
   orig: 91, 163
   offset: 15, 10
   index: 70013
-FRONTLEFT/villager_Walk
+FRONTLEFT/villager_WALK
   rotate: false
   xy: 820, 292
   size: 54, 145
   orig: 91, 163
   offset: 17, 13
   index: 70014
-FRONTRIGHT/villager_Idle
+FRONTRIGHT/villager_IDLE
   rotate: false
   xy: 55, 588
   size: 48, 147
   orig: 225, 198
   offset: 93, 46
   index: 10000
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 504, 439
   size: 51, 146
   orig: 91, 163
   offset: 30, 12
   index: 10000
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 732, 588
   size: 53, 149
   orig: 91, 163
   offset: 30, 8
   index: 10001
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 175, 740
   size: 55, 151
   orig: 91, 163
   offset: 29, 4
   index: 10002
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 615, 588
   size: 60, 149
   orig: 91, 163
   offset: 24, 5
   index: 10003
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 554, 588
   size: 59, 149
   orig: 91, 163
   offset: 23, 6
   index: 10004
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 730, 439
   size: 50, 147
   orig: 91, 163
   offset: 30, 9
   index: 10005
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 1016, 292
   size: 47, 145
   orig: 91, 163
   offset: 30, 12
   index: 10006
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 256, 146
   size: 46, 143
   orig: 91, 163
   offset: 28, 15
   index: 10007
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 319, 292
   size: 55, 144
   orig: 91, 163
   offset: 22, 13
   index: 10008
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 661, 439
   size: 67, 147
   orig: 91, 163
   offset: 17, 9
   index: 10009
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 387, 439
   size: 73, 146
   orig: 91, 163
   offset: 12, 9
   index: 10010
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 143, 292
   size: 71, 144
   orig: 91, 163
   offset: 9, 10
   index: 10011
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 1192, 2
   size: 62, 142
   orig: 91, 163
   offset: 13, 13
   index: 10012
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 82, 2
   size: 52, 140
   orig: 91, 163
   offset: 22, 16
   index: 10013
-FRONTRIGHT/villager_Walk
+FRONTRIGHT/villager_WALK
   rotate: false
   xy: 304, 146
   size: 48, 143
   orig: 91, 163
   offset: 30, 15
   index: 10014
-LEFT/villager_Idle
+LEFT/villager_IDLE
   rotate: false
   xy: 462, 439
   size: 40, 146
   orig: 225, 198
   offset: 94, 49
   index: 60000
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 268, 292
   size: 49, 144
   orig: 91, 163
   offset: 18, 16
   index: 60000
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 406, 146
   size: 55, 143
   orig: 91, 163
   offset: 13, 16
   index: 60001
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 985, 2
   size: 74, 141
   orig: 91, 163
   offset: 2, 16
   index: 60002
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 219, 2
   size: 79, 140
   orig: 91, 163
   offset: 4, 16
   index: 60003
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 384, 2
   size: 75, 141
   orig: 91, 163
   offset: 10, 16
   index: 60004
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 2, 146
   size: 55, 142
   orig: 91, 163
   offset: 18, 16
   index: 60005
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 1194, 146
   size: 43, 144
   orig: 91, 163
   offset: 24, 16
   index: 60006
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 95, 292
   size: 46, 144
   orig: 91, 163
   offset: 21, 16
   index: 60007
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 702, 146
   size: 57, 143
   orig: 91, 163
   offset: 11, 16
   index: 60008
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 1116, 2
   size: 74, 142
   orig: 91, 163
   offset: 2, 16
   index: 60009
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 540, 2
   size: 83, 141
   orig: 91, 163
   offset: 0, 16
   index: 60010
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 300, 2
   size: 82, 140
   orig: 91, 163
   offset: 6, 16
   index: 60011
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 914, 2
   size: 69, 141
   orig: 91, 163
   offset: 13, 16
   index: 60012
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 811, 146
   size: 49, 143
   orig: 91, 163
   offset: 21, 16
   index: 60013
-LEFT/villager_Walk
+LEFT/villager_WALK
   rotate: false
   xy: 50, 292
   size: 43, 144
   orig: 91, 163
   offset: 24, 16
   index: 60014
-RIGHT/villager_Idle
+RIGHT/villager_IDLE
   rotate: false
   xy: 119, 439
   size: 40, 146
   orig: 225, 198
   offset: 100, 49
   index: 20000
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 1142, 146
   size: 50, 144
   orig: 91, 163
   offset: 30, 16
   index: 20000
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 862, 146
   size: 61, 143
   orig: 91, 163
   offset: 23, 16
   index: 20001
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 625, 2
   size: 74, 141
   orig: 91, 163
   offset: 15, 16
   index: 20002
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 2, 2
   size: 78, 140
   orig: 91, 163
   offset: 9, 16
   index: 20003
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 461, 2
   size: 77, 141
   orig: 91, 163
   offset: 7, 16
   index: 20004
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 59, 146
   size: 61, 142
   orig: 91, 163
   offset: 19, 16
   index: 20005
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 925, 146
   size: 42, 143
   orig: 91, 163
   offset: 31, 16
   index: 20006
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 2, 292
   size: 46, 144
   orig: 91, 163
   offset: 31, 16
   index: 20007
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 643, 146
   size: 57, 143
   orig: 91, 163
   offset: 23, 16
   index: 20008
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 179, 146
   size: 75, 142
   orig: 91, 163
   offset: 15, 16
   index: 20009
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 829, 2
   size: 83, 141
   orig: 91, 163
   offset: 8, 16
   index: 20010
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 136, 2
   size: 81, 140
   orig: 91, 163
   offset: 4, 16
   index: 20011
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 757, 2
   size: 70, 141
   orig: 91, 163
   offset: 10, 16
   index: 20012
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 122, 146
   size: 55, 142
   orig: 91, 163
   offset: 22, 16
   index: 20013
-RIGHT/villager_Walk
+RIGHT/villager_WALK
   rotate: false
   xy: 376, 292
   size: 40, 144

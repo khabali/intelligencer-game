@@ -66,18 +66,23 @@ public class Map implements Terrain {
 		float mapx = ((x / tileWidthHalf + y / tileHeightHalf) / 2);
 		float mapy = ((y / tileHeightHalf - (x / tileWidthHalf)) / 2);
 		mapy -= 1;
-		return new Vector2((int)mapx, (int)mapy);
+
+		if (outOfBounds(mapx, mapy)) return null;
+		else return new Vector2((int)mapx, (int)mapy);
 	}
 	
-	public Vector2 mapToScreen(float row, float col, int spriteWidth) {
+	public Vector2 mapToScreen(float row, float col) {
 		Vector2 v = new Vector2();
-		v.x = (row-col) * getTileHeight() - (spriteWidth - getTileWidth()) / 2;
+		v.x = (row-col) * getTileHeight() + getTileWidth() / 2;
 		v.y = (row + col) * (getTileHeight() / 2);
+		v.x -= getTileHeight();
+		v.y += getTileHeight()/2;
 		return v;
 	}
 
 	@Override
 	public boolean passable(int x, int y) {
+		if (outOfBounds(x, y)) return false;
 		if (grassLayer.getCell(Math.abs(y), x) == null) return true;
 		return !grassLayer.getCell(Math.abs(y), x).getTile().getProperties().containsKey("blocked");
 	}
@@ -85,6 +90,10 @@ public class Map implements Terrain {
 	@Override
 	public int cost(int x, int y) {
 		return 1;
+	}
+	
+	public boolean outOfBounds(float x, float y) {
+		return -y < 0 || x < 0 || x > getWidth() || -y > getHeight();
 	}
 
 }

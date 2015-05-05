@@ -2,3864 +2,3864 @@ archer.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2326, 1641
   size: 161, 187
   orig: 208, 268
   offset: 26, 14
   index: 40000
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 252, 1748
   size: 161, 187
   orig: 208, 268
   offset: 28, 14
   index: 40001
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 415, 1752
   size: 162, 187
   orig: 208, 268
   offset: 30, 14
   index: 40002
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 703, 1767
   size: 162, 187
   orig: 208, 268
   offset: 32, 14
   index: 40003
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2411, 3428
   size: 151, 237
   orig: 208, 268
   offset: 44, 14
   index: 40004
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2489, 1644
   size: 135, 187
   orig: 208, 268
   offset: 70, 14
   index: 40005
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2335, 2602
   size: 98, 196
   orig: 208, 268
   offset: 79, 14
   index: 40006
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 1316, 2559
   size: 91, 195
   orig: 208, 268
   offset: 79, 14
   index: 40007
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2779, 3017
   size: 88, 205
   orig: 208, 268
   offset: 79, 14
   index: 40008
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 1560, 3168
   size: 63, 218
   orig: 208, 268
   offset: 80, 14
   index: 40009
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2, 3308
   size: 68, 222
   orig: 208, 268
   offset: 80, 14
   index: 40010
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 1450, 3385
   size: 71, 231
   orig: 208, 268
   offset: 80, 14
   index: 40011
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 1953, 3412
   size: 74, 232
   orig: 208, 268
   offset: 80, 14
   index: 40012
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 2029, 3416
   size: 74, 232
   orig: 208, 268
   offset: 80, 14
   index: 40013
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 3295, 3337
   size: 93, 225
   orig: 208, 268
   offset: 79, 14
   index: 40014
-BACK/Archer_Fire
+BACK/Archer_ATTACK_knife
   rotate: false
   xy: 3308, 1753
   size: 153, 187
   orig: 208, 268
   offset: 47, 14
   index: 40015
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 316, 823
   size: 105, 183
   orig: 208, 268
   offset: 43, 19
   index: 50000
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2915, 1104
   size: 115, 183
   orig: 208, 268
   offset: 43, 19
   index: 50001
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2034, 1078
   size: 110, 183
   orig: 208, 268
   offset: 44, 19
   index: 50002
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 3197, 1121
   size: 112, 183
   orig: 208, 268
   offset: 44, 19
   index: 50003
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2684, 3445
   size: 110, 245
   orig: 208, 268
   offset: 49, 19
   index: 50004
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2869, 3017
   size: 93, 205
   orig: 208, 268
   offset: 63, 19
   index: 50005
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 290, 3111
   size: 78, 210
   orig: 208, 268
   offset: 72, 19
   index: 50006
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 133, 3108
   size: 69, 207
   orig: 208, 268
   offset: 79, 19
   index: 50007
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1625, 3176
   size: 78, 217
   orig: 208, 268
   offset: 75, 19
   index: 50008
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1705, 3178
   size: 85, 216
   orig: 208, 268
   offset: 64, 19
   index: 50009
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2176, 3200
   size: 88, 219
   orig: 208, 268
   offset: 65, 19
   index: 50010
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1523, 3388
   size: 92, 231
   orig: 208, 268
   offset: 62, 19
   index: 50011
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1859, 3412
   size: 92, 231
   orig: 208, 268
   offset: 62, 19
   index: 50012
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2105, 3421
   size: 92, 231
   orig: 208, 268
   offset: 62, 19
   index: 50013
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2313, 3426
   size: 96, 236
   orig: 208, 268
   offset: 58, 19
   index: 50014
-BACKLEFT/Archer_Fire
+BACKLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1629, 2182
   size: 109, 191
   orig: 208, 268
   offset: 49, 19
   index: 50015
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 523, 1951
   size: 130, 189
   orig: 208, 268
   offset: 52, 12
   index: 30000
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3170, 2057
   size: 130, 190
   orig: 208, 268
   offset: 53, 12
   index: 30001
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 237, 2127
   size: 129, 190
   orig: 208, 268
   offset: 56, 12
   index: 30002
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 368, 2131
   size: 126, 190
   orig: 208, 268
   offset: 59, 12
   index: 30003
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 355, 3333
   size: 117, 224
   orig: 208, 268
   offset: 67, 12
   index: 30004
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3302, 2132
   size: 140, 190
   orig: 208, 268
   offset: 67, 12
   index: 30005
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 655, 1956
   size: 129, 189
   orig: 208, 268
   offset: 68, 12
   index: 30006
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1106, 1972
   size: 134, 189
   orig: 208, 268
   offset: 68, 12
   index: 30007
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 860, 1963
   size: 128, 189
   orig: 208, 268
   offset: 69, 12
   index: 30008
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3343, 3126
   size: 104, 209
   orig: 208, 268
   offset: 70, 12
   index: 30009
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1458, 3168
   size: 100, 215
   orig: 208, 268
   offset: 70, 12
   index: 30010
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 798, 3356
   size: 102, 227
   orig: 208, 268
   offset: 70, 12
   index: 30011
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 902, 3358
   size: 102, 227
   orig: 208, 268
   offset: 70, 12
   index: 30012
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1006, 3360
   size: 102, 227
   orig: 208, 268
   offset: 70, 12
   index: 30013
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3134, 3038
   size: 108, 206
   orig: 208, 268
   offset: 70, 12
   index: 30014
-BACKRIGHT/Archer_Fire
+BACKRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2318, 1830
   size: 128, 188
   orig: 208, 268
   offset: 70, 12
   index: 30015
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 3297, 2324
   size: 162, 192
   orig: 208, 268
   offset: 21, 17
   index: 0
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1196, 2363
   size: 162, 192
   orig: 208, 268
   offset: 19, 17
   index: 1
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1360, 2365
   size: 162, 192
   orig: 208, 268
   offset: 17, 17
   index: 2
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 591, 2339
   size: 160, 192
   orig: 208, 268
   offset: 16, 17
   index: 3
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1110, 3371
   size: 146, 228
   orig: 208, 268
   offset: 16, 17
   index: 4
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 3015, 2245
   size: 129, 192
   orig: 208, 268
   offset: 6, 17
   index: 5
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1882, 1997
   size: 95, 192
   orig: 208, 268
   offset: 34, 17
   index: 6
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 553, 2729
   size: 90, 197
   orig: 208, 268
   offset: 39, 12
   index: 7
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1966, 2989
   size: 81, 202
   orig: 208, 268
   offset: 48, 17
   index: 8
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 3403, 2714
   size: 57, 209
   orig: 208, 268
   offset: 72, 17
   index: 9
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 2110, 3197
   size: 64, 218
   orig: 208, 268
   offset: 64, 16
   index: 10
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 2895, 3224
   size: 67, 229
   orig: 208, 268
   offset: 62, 10
   index: 11
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 3390, 3337
   size: 70, 229
   orig: 208, 268
   offset: 59, 10
   index: 12
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 1379, 3373
   size: 69, 229
   orig: 208, 268
   offset: 59, 10
   index: 13
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 204, 3111
   size: 84, 207
   orig: 208, 268
   offset: 45, 14
   index: 14
-FRONT/Archer_Fire
+FRONT/Archer_ATTACK_knife
   rotate: false
   xy: 3146, 2249
   size: 149, 192
   orig: 208, 268
   offset: 12, 17
   index: 15
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1315, 1980
   size: 131, 189
   orig: 208, 268
   offset: 27, 18
   index: 70000
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1448, 1982
   size: 130, 189
   orig: 208, 268
   offset: 26, 18
   index: 70001
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 645, 2734
   size: 128, 197
   orig: 208, 268
   offset: 25, 18
   index: 70002
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 496, 2142
   size: 124, 190
   orig: 208, 268
   offset: 25, 17
   index: 70003
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2564, 3443
   size: 118, 243
   orig: 208, 268
   offset: 28, 17
   index: 70004
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1048, 2355
   size: 146, 193
   orig: 208, 268
   offset: 1, 20
   index: 70005
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2292, 2800
   size: 135, 198
   orig: 208, 268
   offset: 11, 20
   index: 70006
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1231, 2955
   size: 137, 200
   orig: 208, 268
   offset: 8, 20
   index: 70007
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1792, 3190
   size: 130, 216
   orig: 208, 268
   offset: 15, 20
   index: 70008
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1281, 3157
   size: 104, 213
   orig: 208, 268
   offset: 40, 20
   index: 70009
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2673, 3221
   size: 103, 220
   orig: 208, 268
   offset: 41, 20
   index: 70010
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 474, 3340
   size: 106, 225
   orig: 208, 268
   offset: 38, 20
   index: 70011
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 582, 3345
   size: 106, 225
   orig: 208, 268
   offset: 38, 20
   index: 70012
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 690, 3348
   size: 106, 225
   orig: 208, 268
   offset: 38, 20
   index: 70013
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 72, 3317
   size: 108, 222
   orig: 208, 268
   offset: 36, 20
   index: 70014
-FRONTLEFT/Archer_Fire
+FRONTLEFT/Archer_ATTACK_knife
   rotate: false
   xy: 622, 2147
   size: 130, 190
   orig: 208, 268
   offset: 14, 18
   index: 70015
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3144, 2837
   size: 105, 199
   orig: 208, 268
   offset: 61, 9
   index: 10000
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 136, 2907
   size: 114, 199
   orig: 208, 268
   offset: 52, 9
   index: 10001
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3251, 2912
   size: 108, 199
   orig: 208, 268
   offset: 57, 9
   index: 10002
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 775, 2736
   size: 110, 197
   orig: 208, 268
   offset: 54, 11
   index: 10003
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1924, 3193
   size: 104, 217
   orig: 208, 268
   offset: 53, 15
   index: 10004
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2527, 3001
   size: 83, 204
   orig: 208, 268
   offset: 59, 4
   index: 10005
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2612, 3009
   size: 70, 206
   orig: 208, 268
   offset: 62, 2
   index: 10006
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2964, 3032
   size: 64, 206
   orig: 208, 268
   offset: 62, 1
   index: 10007
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2435, 2602
   size: 71, 196
   orig: 208, 268
   offset: 62, 11
   index: 10008
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 388, 2922
   size: 86, 199
   orig: 208, 268
   offset: 62, 18
   index: 10009
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1074, 3147
   size: 88, 211
   orig: 208, 268
   offset: 59, 18
   index: 10010
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 182, 3320
   size: 90, 222
   orig: 208, 268
   offset: 58, 13
   index: 10011
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2581, 3217
   size: 90, 221
   orig: 208, 268
   offset: 58, 13
   index: 10012
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3203, 3322
   size: 90, 222
   orig: 208, 268
   offset: 58, 13
   index: 10013
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3243, 564
   size: 91, 189
   orig: 208, 268
   offset: 58, 18
   index: 10014
-FRONTRIGHT/Archer_Fire
+FRONTRIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 619, 2933
   size: 106, 199
   orig: 208, 268
   offset: 52, 8
   index: 10015
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 3118, 2443
   size: 80, 194
   orig: 208, 268
   offset: 71, 10
   index: 60000
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 3200, 2443
   size: 79, 194
   orig: 208, 268
   offset: 71, 10
   index: 60001
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1625, 2973
   size: 79, 201
   orig: 208, 268
   offset: 71, 11
   index: 60002
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1548, 2176
   size: 79, 193
   orig: 208, 268
   offset: 71, 11
   index: 60003
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2796, 3445
   size: 81, 252
   orig: 208, 268
   offset: 69, 15
   index: 60004
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 3244, 3113
   size: 97, 207
   orig: 208, 268
   offset: 53, 22
   index: 60005
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 804, 3144
   size: 111, 210
   orig: 208, 268
   offset: 39, 22
   index: 60006
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 370, 3123
   size: 119, 208
   orig: 208, 268
   offset: 30, 22
   index: 60007
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 3083, 3246
   size: 118, 221
   orig: 208, 268
   offset: 31, 22
   index: 60008
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1164, 3157
   size: 115, 212
   orig: 208, 268
   offset: 34, 22
   index: 60009
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2778, 3224
   size: 115, 219
   orig: 208, 268
   offset: 35, 22
   index: 60010
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1258, 3372
   size: 119, 228
   orig: 208, 268
   offset: 31, 22
   index: 60011
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1617, 3396
   size: 119, 228
   orig: 208, 268
   offset: 31, 22
   index: 60012
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 1738, 3408
   size: 119, 228
   orig: 208, 268
   offset: 31, 22
   index: 60013
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2199, 3424
   size: 112, 234
   orig: 208, 268
   offset: 37, 22
   index: 60014
-LEFT/Archer_Fire
+LEFT/Archer_ATTACK_knife
   rotate: false
   xy: 2, 2502
   size: 93, 194
   orig: 208, 268
   offset: 57, 17
   index: 60015
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2216, 2796
   size: 74, 198
   orig: 208, 268
   offset: 63, 7
   index: 20000
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 476, 2922
   size: 74, 199
   orig: 208, 268
   offset: 63, 6
   index: 20001
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1092, 2945
   size: 73, 200
   orig: 208, 268
   offset: 64, 5
   index: 20002
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 3361, 2925
   size: 73, 199
   orig: 208, 268
   offset: 64, 6
   index: 20003
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2504, 3207
   size: 75, 219
   orig: 208, 268
   offset: 64, 10
   index: 20004
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 727, 2935
   size: 95, 199
   orig: 208, 268
   offset: 64, 6
   index: 20005
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1740, 2188
   size: 105, 191
   orig: 208, 268
   offset: 64, 14
   index: 20006
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2626, 1645
   size: 114, 187
   orig: 208, 268
   offset: 64, 16
   index: 20007
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 896, 1586
   size: 116, 186
   orig: 208, 268
   offset: 65, 16
   index: 20008
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1560, 2570
   size: 115, 195
   orig: 208, 268
   offset: 65, 16
   index: 20009
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 491, 3129
   size: 115, 209
   orig: 208, 268
   offset: 62, 16
   index: 20010
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2266, 3204
   size: 117, 218
   orig: 208, 268
   offset: 62, 16
   index: 20011
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2385, 3206
   size: 117, 218
   orig: 208, 268
   offset: 62, 16
   index: 20012
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2964, 3244
   size: 117, 219
   orig: 208, 268
   offset: 62, 16
   index: 20013
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 1984, 1822
   size: 108, 188
   orig: 208, 268
   offset: 65, 16
   index: 20014
-RIGHT/Archer_Fire
+RIGHT/Archer_ATTACK_knife
   rotate: false
   xy: 2508, 2603
   size: 89, 196
   orig: 208, 268
   offset: 64, 7
   index: 20015
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 97, 2505
   size: 67, 194
   orig: 252, 250
   offset: 97, 38
   index: 40000
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 753, 2343
   size: 82, 193
   orig: 252, 250
   offset: 86, 49
   index: 40001
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1748, 2579
   size: 119, 195
   orig: 252, 250
   offset: 64, 54
   index: 40002
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 2291, 2211
   size: 131, 191
   orig: 252, 250
   offset: 58, 52
   index: 40003
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 822, 319
   size: 150, 162
   orig: 252, 250
   offset: 38, 41
   index: 40004
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 130, 302
   size: 138, 157
   orig: 252, 250
   offset: 48, 19
   index: 40005
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 2, 2116
   size: 115, 190
   orig: 252, 250
   offset: 69, 4
   index: 40006
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1334, 329
   size: 115, 171
   orig: 252, 250
   offset: 63, 4
   index: 40007
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 2887, 232
   size: 111, 145
   orig: 252, 250
   offset: 57, 3
   index: 40008
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1579, 197
   size: 107, 136
   orig: 252, 250
   offset: 57, 3
   index: 40009
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1130, 195
   size: 108, 131
   orig: 252, 250
   offset: 57, 3
   index: 40010
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1017, 193
   size: 111, 130
   orig: 252, 250
   offset: 57, 2
   index: 40011
-BACK/Archer_Death
+BACK/Archer_DEATH
   rotate: false
   xy: 1240, 195
   size: 104, 132
   orig: 252, 250
   offset: 56, 1
   index: 40012
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 990, 1970
   size: 114, 189
   orig: 252, 250
   offset: 53, 42
   index: 50000
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2187, 2208
   size: 102, 192
   orig: 252, 250
   offset: 63, 42
   index: 50001
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2684, 3015
   size: 93, 204
   orig: 252, 250
   offset: 70, 44
   index: 50002
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 3030, 3037
   size: 102, 205
   orig: 252, 250
   offset: 70, 42
   index: 50003
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2852, 1659
   size: 134, 187
   orig: 252, 250
   offset: 60, 27
   index: 50004
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 1451, 335
   size: 169, 167
   orig: 252, 250
   offset: 36, 8
   index: 50005
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 419, 1565
   size: 174, 185
   orig: 252, 250
   offset: 18, 5
   index: 50006
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 1145, 329
   size: 187, 165
   orig: 252, 250
   offset: 17, 5
   index: 50007
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2293, 226
   size: 194, 138
   orig: 252, 250
   offset: 19, 5
   index: 50008
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 823, 189
   size: 192, 128
   orig: 252, 250
   offset: 20, 6
   index: 50009
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 3193, 109
   size: 194, 125
   orig: 252, 250
   offset: 22, 4
   index: 50010
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2800, 106
   size: 196, 123
   orig: 252, 250
   offset: 23, 4
   index: 50011
-BACKLEFT/Archer_Death
+BACKLEFT/Archer_DEATH
   rotate: false
   xy: 2998, 107
   size: 193, 123
   orig: 252, 250
   offset: 24, 4
   index: 50012
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 3335, 831
   size: 120, 181
   orig: 252, 250
   offset: 64, 51
   index: 30000
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 1452, 1050
   size: 127, 182
   orig: 252, 250
   offset: 71, 50
   index: 30001
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 1486, 685
   size: 134, 180
   orig: 252, 250
   offset: 74, 49
   index: 30002
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 2445, 369
   size: 129, 173
   orig: 252, 250
   offset: 71, 50
   index: 30003
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 3194, 236
   size: 153, 150
   orig: 252, 250
   offset: 37, 43
   index: 30004
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 2681, 231
   size: 204, 141
   orig: 252, 250
   offset: 1, 27
   index: 30005
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 475, 314
   size: 205, 158
   orig: 252, 250
   offset: 10, 24
   index: 30006
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 2089, 212
   size: 202, 137
   orig: 252, 250
   offset: 14, 24
   index: 30007
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 2187, 93
   size: 195, 117
   orig: 252, 250
   offset: 18, 17
   index: 30008
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 428, 67
   size: 196, 110
   orig: 252, 250
   offset: 20, 17
   index: 30009
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 626, 72
   size: 203, 111
   orig: 252, 250
   offset: 17, 14
   index: 30010
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 831, 74
   size: 208, 113
   orig: 252, 250
   offset: 16, 12
   index: 30011
-BACKRIGHT/Archer_Death
+BACKRIGHT/Archer_DEATH
   rotate: false
   xy: 1566, 79
   size: 208, 116
   orig: 252, 250
   offset: 17, 10
   index: 30012
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1167, 2952
   size: 62, 200
   orig: 252, 250
   offset: 95, 33
   index: 0
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 967, 2353
   size: 79, 193
   orig: 252, 250
   offset: 86, 36
   index: 1
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 3336, 468
   size: 118, 179
   orig: 252, 250
   offset: 70, 42
   index: 2
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1752, 340
   size: 130, 170
   orig: 252, 250
   offset: 64, 40
   index: 3
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1059, 496
   size: 150, 176
   orig: 252, 250
   offset: 65, 33
   index: 4
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 682, 314
   size: 138, 160
   orig: 252, 250
   offset: 66, 23
   index: 5
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1462, 197
   size: 115, 135
   orig: 252, 250
   offset: 66, 14
   index: 6
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1346, 195
   size: 114, 132
   orig: 252, 250
   offset: 72, 8
   index: 7
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 303, 174
   size: 110, 128
   orig: 252, 250
   offset: 80, 5
   index: 8
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 2, 167
   size: 105, 126
   orig: 252, 250
   offset: 84, 3
   index: 9
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 2580, 105
   size: 107, 122
   orig: 252, 250
   offset: 82, 3
   index: 10
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 2689, 105
   size: 109, 122
   orig: 252, 250
   offset: 79, 3
   index: 11
-FRONT/Archer_Death
+FRONT/Archer_DEATH
   rotate: false
   xy: 1231, 78
   size: 102, 115
   orig: 252, 250
   offset: 86, 3
   index: 12
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1594, 2375
   size: 118, 193
   orig: 252, 250
   offset: 72, 40
   index: 70000
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1084, 1593
   size: 121, 186
   orig: 252, 250
   offset: 60, 44
   index: 70001
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 401, 1193
   size: 126, 182
   orig: 252, 250
   offset: 52, 41
   index: 70002
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 3053, 383
   size: 121, 175
   orig: 252, 250
   offset: 60, 37
   index: 70003
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 2046, 351
   size: 156, 172
   orig: 252, 250
   offset: 60, 30
   index: 70004
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 270, 307
   size: 203, 155
   orig: 252, 250
   offset: 48, 23
   index: 70005
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1688, 203
   size: 200, 135
   orig: 252, 250
   offset: 38, 16
   index: 70006
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1890, 211
   size: 197, 136
   orig: 252, 250
   offset: 36, 11
   index: 70007
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 109, 174
   size: 192, 126
   orig: 252, 250
   offset: 35, 8
   index: 70008
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 2384, 103
   size: 194, 121
   orig: 252, 250
   offset: 32, 8
   index: 70009
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1776, 85
   size: 201, 116
   orig: 252, 250
   offset: 27, 9
   index: 70010
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 1979, 93
   size: 206, 116
   orig: 252, 250
   offset: 23, 9
   index: 70011
-FRONTLEFT/Archer_Death
+FRONTLEFT/Archer_DEATH
   rotate: false
   xy: 2470, 2
   size: 206, 99
   orig: 252, 250
   offset: 21, 10
   index: 70012
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2200, 1827
   size: 116, 188
   orig: 252, 250
   offset: 87, 45
   index: 10000
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2646, 1458
   size: 101, 185
   orig: 252, 250
   offset: 94, 43
   index: 10001
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 1771, 512
   size: 94, 181
   orig: 252, 250
   offset: 92, 39
   index: 10002
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2576, 369
   size: 98, 173
   orig: 252, 250
   offset: 83, 36
   index: 10003
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 1622, 340
   size: 128, 168
   orig: 252, 250
   offset: 60, 34
   index: 10004
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 974, 328
   size: 169, 162
   orig: 252, 250
   offset: 45, 32
   index: 10005
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 415, 179
   size: 179, 126
   orig: 252, 250
   offset: 54, 28
   index: 10006
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 1041, 78
   size: 188, 113
   orig: 252, 250
   offset: 45, 24
   index: 10007
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2871, 2
   size: 193, 102
   orig: 252, 250
   offset: 35, 19
   index: 10008
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2678, 2
   size: 191, 101
   orig: 252, 250
   offset: 35, 16
   index: 10009
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 3066, 2
   size: 194, 103
   orig: 252, 250
   offset: 31, 12
   index: 10010
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 3262, 2
   size: 195, 105
   orig: 252, 250
   offset: 28, 9
   index: 10011
-FRONTRIGHT/Archer_Death
+FRONTRIGHT/Archer_DEATH
   rotate: false
   xy: 2, 60
   size: 196, 105
   orig: 252, 250
   offset: 27, 8
   index: 10012
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 795, 1212
   size: 160, 182
   orig: 252, 250
   offset: 38, 49
   index: 60000
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 2013, 1448
   size: 131, 184
   orig: 252, 250
   offset: 37, 48
   index: 60001
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 2742, 1653
   size: 108, 187
   orig: 252, 250
   offset: 49, 39
   index: 60002
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 887, 2744
   size: 96, 197
   orig: 252, 250
   offset: 68, 36
   index: 60003
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 127, 1553
   size: 133, 185
   orig: 252, 250
   offset: 65, 27
   index: 60004
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 3000, 236
   size: 192, 145
   orig: 252, 250
   offset: 36, 31
   index: 60005
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 596, 185
   size: 225, 127
   orig: 252, 250
   offset: 14, 37
   index: 60006
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 200, 64
   size: 226, 108
   orig: 252, 250
   offset: 10, 33
   index: 60007
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 2016, 2
   size: 221, 89
   orig: 252, 250
   offset: 11, 28
   index: 60008
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 1794, 2
   size: 220, 81
   orig: 252, 250
   offset: 11, 26
   index: 60009
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 1349, 2
   size: 220, 75
   orig: 252, 250
   offset: 11, 25
   index: 60010
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 1571, 2
   size: 221, 75
   orig: 252, 250
   offset: 11, 25
   index: 60011
-LEFT/Archer_Death
+LEFT/Archer_DEATH
   rotate: false
   xy: 901, 2
   size: 221, 70
   orig: 252, 250
   offset: 11, 24
   index: 60012
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 957, 1218
   size: 162, 182
   orig: 252, 250
   offset: 56, 49
   index: 20000
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 2, 1366
   size: 138, 183
   orig: 252, 250
   offset: 84, 47
   index: 20001
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 1211, 496
   size: 115, 179
   orig: 252, 250
   offset: 95, 43
   index: 20002
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 3349, 299
   size: 97, 167
   orig: 252, 250
   offset: 94, 41
   index: 20003
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 2, 302
   size: 126, 153
   orig: 252, 250
   offset: 57, 41
   index: 20004
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 2489, 229
   size: 190, 138
   orig: 252, 250
   offset: 24, 40
   index: 20005
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 1335, 79
   size: 229, 114
   orig: 252, 250
   offset: 9, 37
   index: 20006
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 2239, 2
   size: 229, 89
   orig: 252, 250
   offset: 11, 39
   index: 20007
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 1124, 2
   size: 223, 74
   orig: 252, 250
   offset: 13, 40
   index: 20008
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 677, 2
   size: 222, 68
   orig: 252, 250
   offset: 14, 39
   index: 20009
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 453, 2
   size: 222, 63
   orig: 252, 250
   offset: 14, 39
   index: 20010
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 228, 2
   size: 223, 60
   orig: 252, 250
   offset: 13, 37
   index: 20011
-RIGHT/Archer_Death
+RIGHT/Archer_DEATH
   rotate: false
   xy: 2, 2
   size: 224, 56
   orig: 252, 250
   offset: 12, 39
   index: 20012
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1524, 2371
   size: 68, 193
   orig: 187, 206
   offset: 62, 11
   index: 40000
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1714, 2381
   size: 68, 193
   orig: 187, 206
   offset: 62, 11
   index: 40001
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1784, 2384
   size: 69, 193
   orig: 187, 206
   offset: 62, 11
   index: 40002
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 166, 2513
   size: 68, 194
   orig: 187, 206
   offset: 62, 11
   index: 40003
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 236, 2513
   size: 69, 194
   orig: 187, 206
   offset: 62, 11
   index: 40004
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 307, 2517
   size: 69, 194
   orig: 187, 206
   offset: 62, 11
   index: 40005
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 378, 2517
   size: 68, 194
   orig: 187, 206
   offset: 62, 11
   index: 40006
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 3281, 2518
   size: 69, 194
   orig: 187, 206
   offset: 62, 11
   index: 40007
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 3352, 2518
   size: 69, 194
   orig: 187, 206
   offset: 62, 11
   index: 40008
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 448, 2528
   size: 68, 194
   orig: 187, 206
   offset: 62, 11
   index: 40009
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1855, 2384
   size: 69, 193
   orig: 187, 206
   offset: 62, 11
   index: 40010
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1926, 2396
   size: 68, 193
   orig: 187, 206
   offset: 62, 11
   index: 40011
-BACK/Archer_Idle
+BACK/Archer_IDLE
   rotate: false
   xy: 1996, 2396
   size: 68, 193
   orig: 187, 206
   offset: 62, 11
   index: 40012
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2448, 1833
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50000
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2573, 1834
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50001
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2988, 1661
   size: 123, 187
   orig: 187, 206
   offset: 13, 16
   index: 50002
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 3183, 1678
   size: 123, 187
   orig: 187, 206
   offset: 13, 16
   index: 50003
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2, 1737
   size: 123, 187
   orig: 187, 206
   offset: 13, 16
   index: 50004
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 127, 1740
   size: 123, 187
   orig: 187, 206
   offset: 13, 16
   index: 50005
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 579, 1762
   size: 122, 187
   orig: 187, 206
   offset: 13, 16
   index: 50006
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 867, 1774
   size: 122, 187
   orig: 187, 206
   offset: 13, 16
   index: 50007
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 991, 1781
   size: 123, 187
   orig: 187, 206
   offset: 13, 16
   index: 50008
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2698, 1842
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50009
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2823, 1848
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50010
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 2948, 1850
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50011
-BACKLEFT/Archer_Idle
+BACKLEFT/Archer_IDLE
   rotate: false
   xy: 3178, 1867
   size: 123, 188
   orig: 187, 206
   offset: 13, 15
   index: 50012
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 3218, 755
   size: 115, 181
   orig: 187, 206
   offset: 31, 22
   index: 30000
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 747, 840
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30001
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 1192, 859
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30002
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 1473, 867
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30003
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 1920, 883
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30004
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 2313, 903
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30005
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 2917, 921
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30006
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 3198, 938
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30007
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 2, 999
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30008
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 284, 1008
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30009
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 566, 1013
   size: 115, 181
   orig: 187, 206
   offset: 32, 22
   index: 30010
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 3315, 1014
   size: 116, 181
   orig: 187, 206
   offset: 31, 22
   index: 30011
-BACKRIGHT/Archer_Idle
+BACKRIGHT/Archer_IDLE
   rotate: false
   xy: 683, 1023
   size: 115, 181
   orig: 187, 206
   offset: 31, 22
   index: 30012
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2, 2896
   size: 65, 199
   orig: 187, 206
   offset: 59, 1
   index: 0
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 69, 2899
   size: 65, 199
   orig: 187, 206
   offset: 59, 1
   index: 1
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 1675, 2773
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 2
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2429, 2800
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 3
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2496, 2801
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 4
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2563, 2801
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 5
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2630, 2809
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 6
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2697, 2815
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 7
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2764, 2815
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 8
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2831, 2817
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 9
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 2898, 2817
   size: 65, 198
   orig: 187, 206
   offset: 59, 1
   index: 10
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 552, 2928
   size: 65, 199
   orig: 187, 206
   offset: 59, 1
   index: 11
-FRONT/Archer_Idle
+FRONT/Archer_IDLE
   rotate: false
   xy: 824, 2943
   size: 65, 199
   orig: 187, 206
   offset: 59, 1
   index: 12
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 985, 2746
   size: 114, 197
   orig: 187, 206
   offset: 41, 7
   index: 70000
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 2734, 2617
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70001
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 2851, 2619
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70002
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1169, 2753
   size: 115, 197
   orig: 187, 206
   offset: 40, 6
   index: 70003
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1286, 2756
   size: 115, 197
   orig: 187, 206
   offset: 40, 6
   index: 70004
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1558, 2767
   size: 115, 197
   orig: 187, 206
   offset: 40, 6
   index: 70005
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1742, 2776
   size: 115, 197
   orig: 187, 206
   offset: 40, 6
   index: 70006
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1859, 2788
   size: 115, 197
   orig: 187, 206
   offset: 40, 6
   index: 70007
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 2968, 2634
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70008
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 3085, 2639
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70009
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 141, 2709
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70010
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 258, 2713
   size: 115, 196
   orig: 187, 206
   offset: 40, 7
   index: 70011
-FRONTLEFT/Archer_Idle
+FRONTLEFT/Archer_IDLE
   rotate: false
   xy: 1976, 2790
   size: 114, 197
   orig: 187, 206
   offset: 41, 7
   index: 70012
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2146, 1450
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10000
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2271, 1453
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10001
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2396, 1455
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10002
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2521, 1458
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10003
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 1908, 1250
   size: 123, 183
   orig: 187, 206
   offset: 51, 16
   index: 10004
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 142, 1368
   size: 123, 183
   orig: 187, 206
   offset: 51, 16
   index: 10005
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 267, 1376
   size: 123, 183
   orig: 187, 206
   offset: 51, 16
   index: 10006
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 392, 1377
   size: 123, 183
   orig: 187, 206
   offset: 51, 16
   index: 10007
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 517, 1380
   size: 123, 183
   orig: 187, 206
   offset: 51, 16
   index: 10008
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2749, 1467
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10009
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2874, 1473
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10010
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2999, 1475
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10011
-FRONTRIGHT/Archer_Idle
+FRONTRIGHT/Archer_IDLE
   rotate: false
   xy: 2, 1551
   size: 123, 184
   orig: 187, 206
   offset: 51, 16
   index: 10012
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 986, 1035
   size: 163, 181
   orig: 187, 206
   offset: 2, 20
   index: 60000
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1121, 1225
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60001
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1285, 1227
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60002
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1579, 1236
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60003
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1743, 1245
   size: 163, 182
   orig: 187, 206
   offset: 1, 20
   index: 60004
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 2033, 1264
   size: 163, 182
   orig: 187, 206
   offset: 1, 20
   index: 60005
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 2304, 1269
   size: 163, 182
   orig: 187, 206
   offset: 1, 20
   index: 60006
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 2590, 1274
   size: 163, 182
   orig: 187, 206
   offset: 1, 20
   index: 60007
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 2913, 1289
   size: 163, 182
   orig: 187, 206
   offset: 1, 20
   index: 60008
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 767, 1396
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60009
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 931, 1402
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60010
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1095, 1409
   size: 162, 182
   orig: 187, 206
   offset: 2, 20
   index: 60011
-LEFT/Archer_Idle
+LEFT/Archer_IDLE
   rotate: false
   xy: 1287, 1044
   size: 163, 181
   orig: 187, 206
   offset: 2, 20
   index: 60012
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 1581, 1053
   size: 163, 181
   orig: 187, 206
   offset: 22, 20
   index: 20000
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 1746, 1062
   size: 163, 181
   orig: 187, 206
   offset: 22, 20
   index: 20001
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2146, 1081
   size: 162, 181
   orig: 187, 206
   offset: 23, 20
   index: 20002
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 1309, 862
   size: 162, 180
   orig: 187, 206
   offset: 23, 20
   index: 20003
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 1590, 871
   size: 163, 180
   orig: 187, 206
   offset: 23, 20
   index: 20004
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 1755, 880
   size: 163, 180
   orig: 187, 206
   offset: 23, 20
   index: 20005
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2148, 899
   size: 163, 180
   orig: 187, 206
   offset: 23, 20
   index: 20006
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2430, 904
   size: 163, 180
   orig: 187, 206
   offset: 23, 20
   index: 20007
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2595, 909
   size: 163, 180
   orig: 187, 206
   offset: 23, 20
   index: 20008
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 3034, 924
   size: 162, 180
   orig: 187, 206
   offset: 23, 20
   index: 20009
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2310, 1086
   size: 163, 181
   orig: 187, 206
   offset: 22, 20
   index: 20010
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 2590, 1091
   size: 163, 181
   orig: 187, 206
   offset: 22, 20
   index: 20011
-RIGHT/Archer_Idle
+RIGHT/Archer_IDLE
   rotate: false
   xy: 3032, 1106
   size: 163, 181
   orig: 187, 206
   offset: 22, 20
   index: 20012
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 2030, 3197
   size: 78, 217
   orig: 197, 226
   offset: 60, 3
   index: 40000
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 719, 3136
   size: 83, 210
   orig: 197, 226
   offset: 53, 4
   index: 40001
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 1403, 2756
   size: 84, 197
   orig: 197, 226
   offset: 50, 10
   index: 40002
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 786, 1956
   size: 72, 192
   orig: 197, 226
   offset: 61, 13
   index: 40003
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 1101, 2746
   size: 66, 197
   orig: 197, 226
   offset: 65, 13
   index: 40004
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 1387, 3157
   size: 69, 214
   orig: 197, 226
   offset: 64, 7
   index: 40005
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 274, 3323
   size: 79, 223
   orig: 197, 226
   offset: 56, 2
   index: 40006
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 917, 3146
   size: 79, 210
   orig: 197, 226
   offset: 56, 1
   index: 40007
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 3202, 2639
   size: 69, 196
   orig: 197, 226
   offset: 64, 9
   index: 40008
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 3389, 109
   size: 67, 188
   orig: 197, 226
   offset: 66, 17
   index: 40009
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 2, 2698
   size: 71, 196
   orig: 197, 226
   offset: 65, 14
   index: 40010
-BACK/Archer_Run
+BACK/Archer_RUN
   rotate: false
   xy: 998, 3146
   size: 74, 210
   orig: 197, 226
   offset: 64, 7
   index: 40011
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 2049, 2993
   size: 128, 202
   orig: 197, 226
   offset: 27, 16
   index: 50000
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 1869, 2591
   size: 139, 195
   orig: 197, 226
   offset: 21, 18
   index: 50001
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 1207, 1595
   size: 138, 186
   orig: 197, 226
   offset: 17, 20
   index: 50002
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 3308, 1381
   size: 127, 183
   orig: 197, 226
   offset: 17, 20
   index: 50003
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 1847, 2191
   size: 118, 191
   orig: 197, 226
   offset: 19, 17
   index: 50004
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 1706, 2975
   size: 129, 201
   orig: 197, 226
   offset: 19, 13
   index: 50005
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 2, 3100
   size: 129, 206
   orig: 197, 226
   offset: 23, 9
   index: 50006
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 1837, 2987
   size: 127, 201
   orig: 197, 226
   offset: 25, 10
   index: 50007
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 119, 2119
   size: 116, 190
   orig: 197, 226
   offset: 25, 16
   index: 50008
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 642, 1390
   size: 123, 183
   orig: 197, 226
   offset: 24, 22
   index: 50009
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 857, 2154
   size: 123, 190
   orig: 197, 226
   offset: 25, 20
   index: 50010
-BACKLEFT/Archer_Run
+BACKLEFT/Archer_RUN
   rotate: false
   xy: 967, 2945
   size: 123, 199
   orig: 197, 226
   offset: 26, 18
   index: 50011
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 608, 3134
   size: 109, 209
   orig: 197, 226
   offset: 30, 11
   index: 30000
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 2179, 2996
   size: 111, 202
   orig: 197, 226
   offset: 25, 11
   index: 30001
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 3063, 2053
   size: 105, 190
   orig: 197, 226
   offset: 27, 17
   index: 30002
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 316, 640
   size: 106, 181
   orig: 197, 226
   offset: 30, 23
   index: 30003
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 2, 1926
   size: 117, 188
   orig: 197, 226
   offset: 34, 22
   index: 30004
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 2092, 2794
   size: 122, 197
   orig: 197, 226
   offset: 37, 18
   index: 30005
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 1487, 2966
   size: 136, 200
   orig: 197, 226
   offset: 30, 15
   index: 30006
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 2010, 2593
   size: 138, 195
   orig: 197, 226
   offset: 26, 14
   index: 30007
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 529, 1196
   size: 129, 182
   orig: 197, 226
   offset: 25, 21
   index: 30008
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 2, 457
   size: 107, 176
   orig: 197, 226
   offset: 29, 26
   index: 30009
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 1650, 1991
   size: 115, 189
   orig: 197, 226
   offset: 24, 18
   index: 30010
-BACKRIGHT/Archer_Run
+BACKRIGHT/Archer_RUN
   rotate: false
   xy: 1370, 2955
   size: 115, 200
   orig: 197, 226
   offset: 25, 14
   index: 30011
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 891, 2943
   size: 74, 199
   orig: 197, 226
   offset: 60, 18
   index: 0
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 1409, 2559
   size: 79, 195
   orig: 197, 226
   offset: 62, 18
   index: 1
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2204, 351
   size: 81, 187
   orig: 197, 226
   offset: 63, 21
   index: 2
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 1014, 1586
   size: 68, 190
   orig: 197, 226
   offset: 64, 15
   index: 3
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2665, 2611
   size: 67, 196
   orig: 197, 226
   offset: 61, 14
   index: 4
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2292, 3000
   size: 71, 202
   orig: 197, 226
   offset: 59, 14
   index: 5
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2447, 3001
   size: 78, 203
   orig: 197, 226
   offset: 57, 14
   index: 6
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2365, 3000
   size: 80, 202
   orig: 197, 226
   offset: 56, 12
   index: 7
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 2965, 2832
   size: 69, 198
   orig: 197, 226
   offset: 60, 10
   index: 8
-FRONT/Archer_Run
+FRONT/Archer_RUN
   rotate: false
   xy: 3124, 1475
   size: 62, 193
   orig: 197, 226
   offset: 63, 13
   index: 9
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 3036, 2837
   size: 106, 198
   orig: 197, 226
   offset: 56, 19
   index: 70000
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 585, 2533
   size: 110, 194
   orig: 197, 226
   offset: 57, 19
   index: 70001
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 982, 2161
   size: 105, 190
   orig: 197, 226
   offset: 60, 17
   index: 70002
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2094, 1824
   size: 104, 188
   orig: 197, 226
   offset: 57, 16
   index: 70003
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 1767, 1997
   size: 113, 189
   orig: 197, 226
   offset: 43, 20
   index: 70004
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2066, 2398
   size: 117, 193
   orig: 197, 226
   offset: 37, 23
   index: 70005
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 229, 2319
   size: 126, 192
   orig: 197, 226
   offset: 31, 25
   index: 70006
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2424, 2214
   size: 134, 191
   orig: 197, 226
   offset: 30, 23
   index: 70007
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2295, 2020
   size: 130, 189
   orig: 197, 226
   offset: 38, 19
   index: 70008
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 1967, 2203
   size: 111, 191
   orig: 197, 226
   offset: 54, 16
   index: 70009
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2, 2308
   size: 115, 192
   orig: 197, 226
   offset: 54, 20
   index: 70010
-FRONTLEFT/Archer_Run
+FRONTLEFT/Archer_RUN
   rotate: false
   xy: 2256, 2404
   size: 113, 193
   orig: 197, 226
   offset: 55, 25
   index: 70011
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 518, 2528
   size: 65, 194
   orig: 197, 226
   offset: 62, 17
   index: 10
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2185, 2402
   size: 69, 193
   orig: 197, 226
   offset: 60, 23
   index: 11
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 1116, 1783
   size: 139, 187
   orig: 197, 226
   offset: 31, 28
   index: 10000
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 1538, 1605
   size: 148, 186
   orig: 197, 226
   offset: 27, 27
   index: 10001
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 1622, 690
   size: 142, 179
   orig: 197, 226
   offset: 35, 29
   index: 10002
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2922, 383
   size: 129, 174
   orig: 197, 226
   offset: 47, 31
   index: 10003
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2797, 554
   size: 121, 180
   orig: 197, 226
   offset: 55, 30
   index: 10004
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 240, 1937
   size: 133, 188
   orig: 197, 226
   offset: 44, 27
   index: 10005
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 252, 2911
   size: 134, 198
   orig: 197, 226
   offset: 39, 18
   index: 10006
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 697, 2538
   size: 135, 194
   orig: 197, 226
   offset: 35, 18
   index: 10007
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 1911, 1066
   size: 121, 182
   orig: 197, 226
   offset: 46, 23
   index: 10008
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2676, 374
   size: 119, 173
   orig: 197, 226
   offset: 47, 30
   index: 10009
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2797, 379
   size: 123, 173
   orig: 197, 226
   offset: 45, 35
   index: 10010
-FRONTRIGHT/Archer_Run
+FRONTRIGHT/Archer_RUN
   rotate: false
   xy: 2786, 736
   size: 130, 180
   orig: 197, 226
   offset: 39, 34
   index: 10011
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 375, 1941
   size: 146, 188
   orig: 197, 226
   offset: 27, 29
   index: 60000
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 1570, 1420
   size: 154, 183
   orig: 197, 226
   offset: 28, 30
   index: 60001
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 2483, 544
   size: 158, 177
   orig: 197, 226
   offset: 26, 30
   index: 60002
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 3176, 388
   size: 158, 174
   orig: 197, 226
   offset: 16, 30
   index: 60003
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 747, 660
   size: 152, 178
   orig: 197, 226
   offset: 7, 30
   index: 60004
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 262, 1562
   size: 155, 184
   orig: 197, 226
   offset: 3, 30
   index: 60005
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 1259, 1411
   size: 172, 182
   orig: 197, 226
   offset: 1, 33
   index: 60006
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 2151, 718
   size: 176, 179
   orig: 197, 226
   offset: 2, 33
   index: 60007
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 1328, 504
   size: 161, 176
   orig: 197, 226
   offset: 8, 31
   index: 60008
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 265, 464
   size: 159, 174
   orig: 197, 226
   offset: 18, 32
   index: 60009
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 119, 1001
   size: 163, 180
   orig: 197, 226
   offset: 19, 31
   index: 60010
-LEFT/Archer_Run
+LEFT/Archer_RUN
   rotate: false
   xy: 2902, 2040
   size: 159, 189
   orig: 197, 226
   offset: 22, 29
   index: 60011
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 2755, 1283
   size: 156, 182
   orig: 197, 226
   offset: 14, 32
   index: 20000
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 1050, 674
   size: 158, 178
   orig: 197, 226
   offset: 10, 34
   index: 20001
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 426, 474
   size: 159, 174
   orig: 197, 226
   offset: 8, 32
   index: 20002
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 1884, 349
   size: 160, 171
   orig: 197, 226
   offset: 17, 33
   index: 20003
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 2920, 560
   size: 156, 177
   orig: 197, 226
   offset: 32, 33
   index: 20004
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 1688, 1614
   size: 167, 186
   orig: 197, 226
   offset: 27, 29
   index: 20005
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 711, 1580
   size: 183, 185
   orig: 197, 226
   offset: 13, 29
   index: 20006
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 800, 1030
   size: 184, 180
   orig: 197, 226
   offset: 9, 29
   index: 20007
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 587, 476
   size: 162, 174
   orig: 197, 226
   offset: 22, 29
   index: 20008
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 2287, 366
   size: 156, 172
   orig: 197, 226
   offset: 16, 29
   index: 20009
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 3078, 564
   size: 163, 177
   orig: 197, 226
   offset: 11, 29
   index: 20010
-RIGHT/Archer_Run
+RIGHT/Archer_RUN
   rotate: false
   xy: 1726, 1429
   size: 161, 183
   orig: 197, 226
   offset: 12, 30
   index: 20011
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2371, 2407
   size: 71, 193
   orig: 185, 206
   offset: 57, 12
   index: 40000
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1347, 1595
   size: 74, 191
   orig: 185, 206
   offset: 55, 13
   index: 40001
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2075, 703
   size: 74, 189
   orig: 185, 206
   offset: 54, 12
   index: 40002
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2444, 2407
   size: 74, 193
   orig: 185, 206
   offset: 54, 7
   index: 40003
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2520, 2408
   size: 73, 193
   orig: 185, 206
   offset: 55, 7
   index: 40004
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1242, 1976
   size: 71, 192
   orig: 185, 206
   offset: 57, 10
   index: 40005
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 834, 2540
   size: 68, 194
   orig: 185, 206
   offset: 60, 10
   index: 40006
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1490, 2566
   size: 68, 195
   orig: 185, 206
   offset: 60, 10
   index: 40007
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 904, 2548
   size: 68, 194
   orig: 185, 206
   offset: 60, 10
   index: 40008
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1580, 1982
   size: 68, 192
   orig: 185, 206
   offset: 60, 11
   index: 40009
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2595, 2408
   size: 68, 193
   orig: 185, 206
   offset: 60, 8
   index: 40010
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 974, 2548
   size: 68, 194
   orig: 185, 206
   offset: 60, 6
   index: 40011
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 2665, 2416
   size: 68, 193
   orig: 185, 206
   offset: 60, 7
   index: 40012
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1044, 2550
   size: 69, 194
   orig: 185, 206
   offset: 60, 9
   index: 40013
-BACK/Archer_Walk
+BACK/Archer_WALK
   rotate: false
   xy: 1677, 2576
   size: 69, 195
   orig: 185, 206
   offset: 60, 10
   index: 40014
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 119, 2311
   size: 108, 192
   orig: 185, 206
   offset: 23, 11
   index: 50000
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 2080, 2205
   size: 105, 191
   orig: 185, 206
   offset: 25, 11
   index: 50001
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 1979, 2012
   size: 103, 189
   orig: 185, 206
   offset: 27, 11
   index: 50002
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 3073, 1863
   size: 103, 188
   orig: 185, 206
   offset: 27, 10
   index: 50003
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 1089, 2163
   size: 105, 190
   orig: 185, 206
   offset: 25, 9
   index: 50004
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 1196, 2170
   size: 107, 190
   orig: 185, 206
   offset: 23, 11
   index: 50005
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 2560, 2215
   size: 109, 191
   orig: 185, 206
   offset: 21, 12
   index: 50006
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 2671, 2223
   size: 114, 191
   orig: 185, 206
   offset: 21, 13
   index: 50007
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 121, 1929
   size: 117, 188
   orig: 185, 206
   offset: 23, 15
   index: 50008
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 3188, 1306
   size: 118, 184
   orig: 185, 206
   offset: 25, 17
   index: 50009
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 281, 1191
   size: 118, 183
   orig: 185, 206
   offset: 26, 17
   index: 50010
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 2469, 1270
   size: 119, 183
   orig: 185, 206
   offset: 24, 15
   index: 50011
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 3188, 1492
   size: 118, 184
   orig: 185, 206
   offset: 22, 15
   index: 50012
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 3303, 1942
   size: 115, 188
   orig: 185, 206
   offset: 21, 13
   index: 50013
-BACKLEFT/Archer_Walk
+BACKLEFT/Archer_WALK
   rotate: false
   xy: 2787, 2229
   size: 110, 191
   orig: 185, 206
   offset: 21, 12
   index: 50014
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 2918, 739
   size: 134, 180
   orig: 185, 206
   offset: 22, 24
   index: 30000
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 2329, 722
   size: 135, 179
   orig: 185, 206
   offset: 24, 23
   index: 30001
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1151, 1042
   size: 134, 181
   orig: 185, 206
   offset: 26, 19
   index: 30002
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 3311, 1197
   size: 134, 182
   orig: 185, 206
   offset: 26, 16
   index: 30003
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1433, 1418
   size: 135, 183
   orig: 185, 206
   offset: 24, 16
   index: 30004
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 660, 1206
   size: 133, 182
   orig: 185, 206
   offset: 22, 18
   index: 30005
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1491, 504
   size: 129, 179
   orig: 185, 206
   offset: 20, 23
   index: 30006
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1889, 1435
   size: 122, 183
   orig: 185, 206
   offset: 20, 20
   index: 30007
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1423, 1603
   size: 113, 186
   orig: 185, 206
   offset: 21, 17
   index: 30008
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1322, 1791
   size: 105, 187
   orig: 185, 206
   offset: 23, 14
   index: 30009
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 2084, 2014
   size: 103, 189
   orig: 185, 206
   offset: 24, 10
   index: 30010
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 2189, 2017
   size: 104, 189
   orig: 185, 206
   offset: 23, 9
   index: 30011
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1305, 2171
   size: 111, 190
   orig: 185, 206
   offset: 22, 9
   index: 30012
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1532, 1793
   size: 120, 187
   orig: 185, 206
   offset: 21, 14
   index: 30013
-BACKRIGHT/Archer_Walk
+BACKRIGHT/Archer_WALK
   rotate: false
   xy: 1449, 1234
   size: 128, 182
   orig: 185, 206
   offset: 21, 21
   index: 30014
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1489, 2763
   size: 67, 197
   orig: 185, 206
   offset: 58, 4
   index: 0
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1115, 2550
   size: 68, 194
   orig: 185, 206
   offset: 58, 5
   index: 1
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 2150, 2597
   size: 69, 195
   orig: 185, 206
   offset: 58, 2
   index: 2
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 2735, 2422
   size: 69, 193
   orig: 185, 206
   offset: 58, 2
   index: 3
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 3113, 1670
   size: 68, 191
   orig: 185, 206
   offset: 58, 5
   index: 4
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 2806, 2422
   size: 66, 193
   orig: 185, 206
   offset: 58, 4
   index: 5
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 2599, 2603
   size: 64, 196
   orig: 185, 206
   offset: 58, 4
   index: 6
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 75, 2701
   size: 64, 196
   orig: 185, 206
   offset: 58, 5
   index: 7
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1185, 2557
   size: 64, 194
   orig: 185, 206
   offset: 58, 6
   index: 8
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 375, 2713
   size: 63, 196
   orig: 185, 206
   offset: 58, 2
   index: 9
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 3273, 2714
   size: 63, 196
   orig: 185, 206
   offset: 58, 1
   index: 10
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1257, 1783
   size: 63, 191
   orig: 185, 206
   offset: 58, 4
   index: 11
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1787, 1802
   size: 63, 191
   orig: 185, 206
   offset: 58, 5
   index: 12
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 1251, 2557
   size: 63, 194
   orig: 185, 206
   offset: 58, 4
   index: 13
-FRONT/Archer_Walk
+FRONT/Archer_WALK
   rotate: false
   xy: 3338, 2714
   size: 63, 196
   orig: 185, 206
   offset: 58, 4
   index: 14
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 2427, 2023
   size: 132, 189
   orig: 185, 206
   offset: 28, 15
   index: 70000
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 1654, 1802
   size: 131, 187
   orig: 185, 206
   offset: 26, 16
   index: 70001
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 2561, 2024
   size: 131, 189
   orig: 185, 206
   offset: 24, 12
   index: 70002
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 1852, 1808
   size: 130, 187
   orig: 185, 206
   offset: 25, 12
   index: 70003
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 3308, 1566
   size: 131, 185
   orig: 185, 206
   offset: 26, 14
   index: 70004
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 1857, 1620
   size: 131, 186
   orig: 185, 206
   offset: 29, 15
   index: 70005
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 1418, 2173
   size: 128, 190
   orig: 185, 206
   offset: 34, 13
   index: 70006
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 2874, 2424
   size: 124, 193
   orig: 185, 206
   offset: 40, 11
   index: 70007
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 3000, 2439
   size: 116, 193
   orig: 185, 206
   offset: 47, 10
   index: 70008
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 440, 2724
   size: 111, 196
   orig: 185, 206
   offset: 51, 6
   index: 70009
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 2221, 2599
   size: 112, 195
   orig: 185, 206
   offset: 49, 5
   index: 70010
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 357, 2323
   size: 108, 192
   orig: 185, 206
   offset: 53, 7
   index: 70011
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 2899, 2231
   size: 114, 191
   orig: 185, 206
   offset: 48, 9
   index: 70012
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 467, 2334
   size: 122, 192
   orig: 185, 206
   offset: 41, 10
   index: 70013
-FRONTLEFT/Archer_Walk
+FRONTLEFT/Archer_WALK
   rotate: false
   xy: 837, 2346
   size: 128, 192
   orig: 185, 206
   offset: 34, 12
   index: 70014
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2198, 1264
   size: 104, 184
   orig: 185, 206
   offset: 57, 17
   index: 10000
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2694, 2032
   size: 103, 189
   orig: 185, 206
   offset: 57, 11
   index: 10001
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 754, 2150
   size: 101, 191
   orig: 185, 206
   offset: 57, 6
   index: 10002
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2799, 2038
   size: 101, 189
   orig: 185, 206
   offset: 57, 7
   index: 10003
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 1429, 1791
   size: 101, 187
   orig: 185, 206
   offset: 58, 9
   index: 10004
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 1990, 1634
   size: 103, 186
   orig: 185, 206
   offset: 58, 12
   index: 10005
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 3078, 1289
   size: 108, 184
   orig: 185, 206
   offset: 54, 16
   index: 10006
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2475, 1086
   size: 113, 182
   orig: 185, 206
   offset: 48, 19
   index: 10007
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 595, 1575
   size: 114, 185
   orig: 185, 206
   offset: 44, 15
   index: 10008
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2095, 1636
   size: 114, 186
   orig: 185, 206
   offset: 42, 12
   index: 10009
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2211, 1639
   size: 113, 186
   orig: 185, 206
   offset: 41, 11
   index: 10010
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 165, 1183
   size: 114, 183
   orig: 185, 206
   offset: 42, 13
   index: 10011
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 3336, 649
   size: 114, 180
   orig: 185, 206
   offset: 44, 16
   index: 10012
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 1210, 677
   size: 114, 180
   orig: 185, 206
   offset: 47, 19
   index: 10013
-FRONTRIGHT/Archer_Walk
+FRONTRIGHT/Archer_WALK
   rotate: false
   xy: 2037, 894
   size: 109, 182
   orig: 185, 206
   offset: 53, 19
   index: 10014
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2755, 1100
   size: 158, 181
   orig: 185, 206
   offset: 1, 21
   index: 60000
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2, 817
   size: 152, 180
   orig: 185, 206
   offset: 1, 21
   index: 60001
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 901, 669
   size: 147, 178
   orig: 185, 206
   offset: 1, 21
   index: 60002
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 1622, 512
   size: 147, 176
   orig: 185, 206
   offset: 1, 21
   index: 60003
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 1867, 522
   size: 152, 176
   orig: 185, 206
   offset: 1, 21
   index: 60004
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 1326, 682
   size: 158, 178
   orig: 185, 206
   offset: 1, 21
   index: 60005
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2466, 723
   size: 162, 179
   orig: 185, 206
   offset: 4, 22
   index: 60006
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 401, 1011
   size: 163, 180
   orig: 185, 206
   offset: 8, 22
   index: 60007
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 156, 819
   size: 158, 180
   orig: 185, 206
   offset: 15, 21
   index: 60008
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2630, 728
   size: 154, 179
   orig: 185, 206
   offset: 20, 21
   index: 60009
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2643, 549
   size: 152, 177
   orig: 185, 206
   offset: 22, 21
   index: 60010
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2021, 525
   size: 154, 176
   orig: 185, 206
   offset: 20, 21
   index: 60011
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2, 638
   size: 158, 177
   orig: 185, 206
   offset: 15, 21
   index: 60012
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 3054, 743
   size: 162, 179
   orig: 185, 206
   offset: 8, 21
   index: 60013
-LEFT/Archer_Walk
+LEFT/Archer_WALK
   rotate: false
   xy: 2, 1183
   size: 161, 181
   orig: 185, 206
   offset: 4, 21
   index: 60014
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 423, 829
   size: 160, 180
   orig: 185, 206
   offset: 23, 22
   index: 20000
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 1766, 700
   size: 156, 178
   orig: 185, 206
   offset: 28, 22
   index: 20001
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 162, 640
   size: 152, 177
   orig: 185, 206
   offset: 32, 21
   index: 20002
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 111, 461
   size: 152, 175
   orig: 185, 206
   offset: 32, 21
   index: 20003
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 2177, 540
   size: 155, 176
   orig: 185, 206
   offset: 28, 21
   index: 20004
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 424, 650
   size: 159, 177
   orig: 185, 206
   offset: 23, 21
   index: 20005
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 864, 849
   size: 162, 179
   orig: 185, 206
   offset: 17, 21
   index: 20006
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 585, 831
   size: 160, 180
   orig: 185, 206
   offset: 13, 21
   index: 20007
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 2760, 918
   size: 155, 180
   orig: 185, 206
   offset: 11, 21
   index: 20008
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 1924, 703
   size: 149, 178
   orig: 185, 206
   offset: 11, 21
   index: 20009
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 2334, 544
   size: 147, 176
   orig: 185, 206
   offset: 11, 21
   index: 20010
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 751, 483
   size: 149, 175
   orig: 185, 206
   offset: 11, 21
   index: 20011
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 902, 492
   size: 155, 175
   orig: 185, 206
   offset: 11, 22
   index: 20012
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 585, 652
   size: 160, 177
   orig: 185, 206
   offset: 13, 22
   index: 20013
-RIGHT/Archer_Walk
+RIGHT/Archer_WALK
   rotate: false
   xy: 1028, 854
   size: 162, 179

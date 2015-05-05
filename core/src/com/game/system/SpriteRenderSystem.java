@@ -80,8 +80,8 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 			
 			// calculate x and y from row and column
 			int spriteWidth = sprite.spriteWidth(dir, state.currentState);
-			Vector2 v = map.mapToScreen(position.rowPos, position.colPos, spriteWidth);
-			batch.draw(animation.getKeyFrame(frameTime, true),  v.x,  v.y);
+			Vector2 v = map.mapToScreen(position.rowPos, position.colPos);
+			batch.draw(animation.getKeyFrame(frameTime, true), v.x,  v.y);
 			
 			
 			// check if animation cycle is finished

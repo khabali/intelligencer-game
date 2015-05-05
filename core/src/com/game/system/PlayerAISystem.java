@@ -74,6 +74,9 @@ public class PlayerAISystem extends EntityProcessingSystem {
 			Vector2 pos = touch.position;
 			Vector3 v = camera.unproject(new Vector3(pos.x, pos.y, 0));
 			Vector2 v2 = map.screenToMap(v.x, v.y);
+
+			if (v2 == null) return; // out of map
+			
 			int row = (int)v2.x;
 			int col = (int)v2.y;
 			attack.targetToKill = ((World)this.world).getEntityAt(row, col);

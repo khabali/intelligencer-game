@@ -65,12 +65,11 @@ public class RadarSystem extends EntityProcessingSystem {
 			radarColor = Color.GREEN;
 			
 			//calculate center position to draw radar
-			int spriteWidth = cSprite.spriteWidth(cDirection.direction, cState.currentState);
-			Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos, spriteWidth);
+			Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos);
 			
 			
 			// draw radar circle
-			cRadar.draw(v.x +(spriteWidth / 2), v.y + (spriteWidth /2), camera.combined, radarColor, cDirection.direction);
+			cRadar.draw(v.x + map.getTileWidth()/2, v.y, camera.combined, radarColor, cDirection.direction);
 		}
 		
 	}
