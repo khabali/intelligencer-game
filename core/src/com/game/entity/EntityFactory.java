@@ -3,7 +3,7 @@ package com.game.entity;
 import com.artemis.Entity;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.game.World;
-import com.game.component.AIMovementComponent;
+import com.game.component.MovementAIComponent;
 import com.game.component.AttackComponent;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
@@ -32,7 +32,7 @@ public class EntityFactory {
 		e.addComponent(movementComponent);
 		
 		e.addComponent(new RadarComponent());
-		e.addComponent(new AIMovementComponent());
+		e.addComponent(new MovementAIComponent());
 		e.addComponent(new StateComponent(SoldierEntityState.IDLE));
 		e.addComponent(new DirectionComponent(Direction.FRONT));
 		return e;

@@ -6,23 +6,23 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.Gdx;
-import com.game.component.AIMovementComponent;
+import com.game.component.MovementAIComponent;
 import com.game.component.MovementComponent;
 import com.game.component.PositionComponent;
 
-public class AIEnemiesMovementSystem extends EntityProcessingSystem {
+public class EnemiesMovementAISystem extends EntityProcessingSystem {
 
 	private final String tag = getClass().getName();
 
-	@Mapper ComponentMapper<AIMovementComponent> _AIMovementCM;
+	@Mapper ComponentMapper<MovementAIComponent> _AIMovementCM;
 	@Mapper	ComponentMapper<PositionComponent> positionCM;
 	@Mapper	ComponentMapper<MovementComponent> movementCM;
 	
 	//
 	private float watingTime = 0.0f;
 
-	public AIEnemiesMovementSystem() {
-		super(Aspect.getAspectForAll(AIMovementComponent.class, PositionComponent.class, MovementComponent.class));
+	public EnemiesMovementAISystem() {
+		super(Aspect.getAspectForAll(MovementAIComponent.class, PositionComponent.class, MovementComponent.class));
 	}
 	
 
@@ -30,7 +30,7 @@ public class AIEnemiesMovementSystem extends EntityProcessingSystem {
 	protected void process(Entity e) {
 		if (_AIMovementCM.has(e)) {
 
-			AIMovementComponent _AImovement = _AIMovementCM.get(e);
+			MovementAIComponent _AImovement = _AIMovementCM.get(e);
 			PositionComponent position = positionCM.get(e);
 			MovementComponent movement = movementCM.get(e);
 			int walksCount = 0;

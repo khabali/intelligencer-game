@@ -11,7 +11,7 @@ import com.game.input.GameInput;
 import com.game.map.Map;
 import com.game.resources.MapLevels;
 import com.game.system.AttackSystem;
-import com.game.system.AIEnemiesMovementSystem;
+import com.game.system.EnemiesMovementAISystem;
 import com.game.system.MapRenderSystem;
 import com.game.system.MovementSystem;
 import com.game.system.PlayerAISystem;
@@ -48,7 +48,7 @@ public class Level1GameState extends GameStateAdapter {
 		world.setSystem(new PlayerAISystem(camera));
 		world.setSystem(new PlayerStateSystem());
 		world.setSystem(new SoldierStateSystem());
-		world.setSystem(new AIEnemiesMovementSystem());
+		world.setSystem(new EnemiesMovementAISystem());
 		
 		
 		

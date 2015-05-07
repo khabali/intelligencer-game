@@ -1,7 +1,5 @@
 package com.game.system;
 
-import java.awt.geom.Arc2D;
-
 import com.artemis.Aspect;
 import com.artemis.ComponentMapper;
 import com.artemis.Entity;
@@ -11,7 +9,6 @@ import com.artemis.utils.ImmutableBag;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.game.World;
 import com.game.component.DirectionComponent;
@@ -40,8 +37,7 @@ public class RadarSystem extends EntityProcessingSystem {
 	private Map map;
 
 	public RadarSystem(OrthographicCamera cam) {
-		super(Aspect.getAspectForAll(RadarComponent.class,
-				PositionComponent.class));
+		super(Aspect.getAspectForAll(RadarComponent.class, PositionComponent.class));
 		camera = cam;
 	}
 
@@ -59,37 +55,38 @@ public class RadarSystem extends EntityProcessingSystem {
 		RadarComponent cRadar = cmRadar.get(e);
 		PositionComponent cPosition = cmPosition.get(e);
 		DirectionComponent cDirection = cmDirection.get(e);
-
-		boolean isCollided = checkColision(e);
-
+		
+		// calculate center position to draw radar
+		Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos);
+		v.x = v.x + map.getTileWidth() / 2;
+		
+		cRadar.update(v, cDirection.direction);
 		Color radarColor = Color.GREEN;
-		if (isCollided) {
+		if (checkColision(e)) {
 			radarColor = Color.RED;
 		}
 
-		// calculate center position to draw radar
-		Vector2 v = map.mapToScreen(cPosition.rowPos, cPosition.colPos);
-
-		// draw radar circle
-		cRadar.draw(v.x + map.getTileWidth() / 2, v.y, camera.combined,
-				radarColor, cDirection.direction);
 		
 
+		// draw radar circle
+		cRadar.draw(camera.combined, radarColor, cDirection.direction);
 	}
 
 	private boolean checkColision(Entity e) {
 		
-		
-		
-		
-		ImmutableBag<Entity> etities = world.getSystem(PlayerAISystem.class).getActives();
-		for (int i = 0; i < etities.size(); i++) {
-			Entity ePlayer = etities.get(i);
-			PositionComponent playerPosition = ePlayer.getComponent(PositionComponent.class);
-			
-			//Gdx.app.debug(tag, "Player position : "+ playerPosition.colPos + "," + playerPosition.rowPos);	
+		if(cmRadar.has(e)){
+			ImmutableBag<Entity> etities = world.getSystem(PlayerAISystem.class).getActives();
+			for (int i = 0; i < etities.size(); i++) {
+				Entity ePlayer = etities.get(i);
+				PositionComponent cPlayerPosition = ePlayer.getComponent(PositionComponent.class);
+				Vector2 playerPosition = map.mapToScreen(cPlayerPosition.rowPos, cPlayerPosition.colPos);
+				RadarComponent cRadar = cmRadar.get(e);
+				if(cRadar.isCollided(playerPosition)){
+					Gdx.app.debug(tag, "Player spoted at position : "+ cPlayerPosition.colPos + "," + cPlayerPosition.rowPos);
+					return true;
+				}
+			}
 		}
-		
 		return false;
 	}
 
