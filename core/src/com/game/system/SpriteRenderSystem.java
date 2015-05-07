@@ -6,10 +6,16 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Shape;
 import com.game.World;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
@@ -78,11 +84,15 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 			animation = new Animation(0.090f, sprite.getSprites(dir, state.currentState));
 			frameTime += Gdx.graphics.getDeltaTime();
 			
+				
+			
 			// calculate x and y from row and column
 			int spriteWidth = sprite.spriteWidth(dir, state.currentState);
 			Vector2 v = map.mapToScreen(position.rowPos, position.colPos);
+		
 			batch.draw(animation.getKeyFrame(frameTime, true), v.x,  v.y);
 			
+
 			
 			// check if animation cycle is finished
 			if (animation.isAnimationFinished(frameTime)) {
