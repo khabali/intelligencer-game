@@ -136,7 +136,7 @@ public class RadarComponent extends Component {
 			start = -135;
 		}
 
-		return start + (visionFieldDegree / 2);
+		return start;
 	}
 
 }
