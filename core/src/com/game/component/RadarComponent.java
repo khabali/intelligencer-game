@@ -9,12 +9,17 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Matrix4;
+import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
 public class RadarComponent extends Component {
 
 	private static final String tag = "RadarComponent";
+	
+	// For debug
+	private boolean debug = true;
+	float[] debugVertices = new float[6];
 
 	private Vector2 originePosition = new Vector2();
 	private int visionFieldLenght = 250;
@@ -26,7 +31,7 @@ public class RadarComponent extends Component {
 
 	// Colision shape
 	private Array<Vector2> vertices;
-
+	
 	public RadarComponent() {
 		this.shapeRender = new ShapeRenderer();
 	}
@@ -37,20 +42,28 @@ public class RadarComponent extends Component {
 		// update shape for collision
 		// this algorith is the same for drawing the radar zone
 		// #check this.shapeRender.arc(...)
-		float theta = (2 * MathUtils.PI * (visionFieldDegree / 360.0f)) / 1;
+		float theta = (2 * MathUtils.PI * (visionFieldDegree / 360.0f));
 		float cos = MathUtils.cos(theta);
 		float sin = MathUtils.sin(theta);
 		float cx = visionFieldLenght * MathUtils.cos(getStart(direction) * MathUtils.degreesToRadians);
 		float cy = visionFieldLenght * MathUtils.sin(getStart(direction) * MathUtils.degreesToRadians);
-
+		
+		
+		
 		vertices = new Array<Vector2>();
 		vertices.add(v);
+		debugVertices[0] = v.x;
+		debugVertices[1] = v.y;
 		vertices.add(new Vector2(v.x+cx, v.y+cy));
+		debugVertices[2] = v.x + cx;
+		debugVertices[3] = v.y + cy;
 		//
 		float temp = cx;
 		cx = cos * cx - sin * cy;
 		cy = sin * temp + cos * cy;
 		vertices.add(new Vector2(v.x+cx, v.y+cy));
+		debugVertices[4] = v.x + cx;
+		debugVertices[5] = v.y + cy;
 	}
 
 	public void draw(Matrix4 projectionMatrix, Color color, Direction direction) {
@@ -67,7 +80,14 @@ public class RadarComponent extends Component {
 		this.shapeRender.arc(originePosition.x, originePosition.y, visionFieldLenght, getStart(direction), visionFieldDegree, 15);
 		this.shapeRender.end();
 		Gdx.gl.glDisable(GL20.GL_BLEND);
-	}
+		
+		if(debug){
+			this.shapeRender.begin(ShapeType.Line);
+			this.shapeRender.setColor(Color.ORANGE);
+			this.shapeRender.polygon(debugVertices);
+			this.shapeRender.end();
+		}
+    }
 
 	/**
 	 * Check if a Vector2 is in the radar zone
