@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Matrix4;
-import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
@@ -22,6 +21,7 @@ public class RadarComponent extends Component {
 	float[] debugVertices = new float[6];
 
 	private Vector2 originePosition = new Vector2();
+	private Direction direction;
 	private int visionFieldLenght = 250;
 	private int visionFieldDegree = 80;
 	public boolean draw = false;
@@ -38,6 +38,7 @@ public class RadarComponent extends Component {
 
 	public void update(Vector2 v, Direction direction) {
 		
+		this.direction = direction;
 		originePosition = v;
 		// update shape for collision
 		// this algorith is the same for drawing the radar zone
@@ -66,7 +67,7 @@ public class RadarComponent extends Component {
 		debugVertices[5] = v.y + cy;
 	}
 
-	public void draw(Matrix4 projectionMatrix, Color color, Direction direction) {
+	public void draw(Matrix4 projectionMatrix, Color color) {
 
 		// Gdx.app.debug(tag, "Direction : " + direction.name());
 		// activate transparency
@@ -77,7 +78,7 @@ public class RadarComponent extends Component {
 		this.shapeRender.begin(ShapeType.Filled);
 		this.shapeRender.setColor(color);
 		this.shapeRender.getColor().a = 0.2f;
-		this.shapeRender.arc(originePosition.x, originePosition.y, visionFieldLenght, getStart(direction), visionFieldDegree, 15);
+		this.shapeRender.arc(originePosition.x, originePosition.y, visionFieldLenght, getStart(direction), visionFieldDegree, 1);
 		this.shapeRender.end();
 		Gdx.gl.glDisable(GL20.GL_BLEND);
 		
@@ -85,18 +86,19 @@ public class RadarComponent extends Component {
 			this.shapeRender.begin(ShapeType.Line);
 			this.shapeRender.setColor(Color.ORANGE);
 			this.shapeRender.polygon(debugVertices);
+			//this.shapeRender.ellipse(debugVertices[2], debugVertices[3], visionFieldLenght, 15);
 			this.shapeRender.end();
 		}
     }
 
 	/**
 	 * Check if a Vector2 is in the radar zone
-	 * 
+	 *
 	 * @param pos
 	 * @return true if the Vector2 (position) is in the radar zone
 	 */
 	public boolean isCollided(Vector2 pos) {
-
+		
 		return Intersector.isPointInPolygon(vertices, pos);
 	}
 

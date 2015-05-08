@@ -6,16 +6,12 @@ import com.artemis.Entity;
 import com.artemis.annotations.Mapper;
 import com.artemis.systems.EntityProcessingSystem;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Shape;
 import com.game.World;
 import com.game.component.Direction;
 import com.game.component.DirectionComponent;
@@ -40,8 +36,8 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 	private  Animation animation;
 	private float frameTime = 0;
 
-	// private Bag<AtlasRegion> regionsByEntity; // collection of regions of
-	// every entity to render
+	//Debug
+	private ShapeRenderer shapeRender = new ShapeRenderer();
 
 	public SpriteRenderSystem(OrthographicCamera camera) {
 		super(Aspect.getAspectForAll(SpriteComponent.class,
@@ -89,9 +85,14 @@ public class SpriteRenderSystem extends EntityProcessingSystem {
 			// calculate x and y from row and column
 			int spriteWidth = sprite.spriteWidth(dir, state.currentState);
 			Vector2 v = map.mapToScreen(position.rowPos, position.colPos);
-		
 			batch.draw(animation.getKeyFrame(frameTime, true), v.x,  v.y);
 			
+			//debug centred position 
+//			shapeRender.setProjectionMatrix(camera.combined);
+//			shapeRender.identity();
+//			shapeRender.begin(ShapeType.Line);
+//			shapeRender.circle(v.x + map.getTileWidth() / 2, v.y, 5);
+//			shapeRender.end();
 
 			
 			// check if animation cycle is finished

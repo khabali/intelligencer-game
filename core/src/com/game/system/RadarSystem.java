@@ -69,7 +69,7 @@ public class RadarSystem extends EntityProcessingSystem {
 		
 
 		// draw radar circle
-		cRadar.draw(camera.combined, radarColor, cDirection.direction);
+		cRadar.draw(camera.combined, radarColor);
 	}
 
 	private boolean checkColision(Entity e) {
@@ -81,6 +81,7 @@ public class RadarSystem extends EntityProcessingSystem {
 				PositionComponent cPlayerPosition = ePlayer.getComponent(PositionComponent.class);
 				Vector2 playerPosition = map.mapToScreen(cPlayerPosition.rowPos, cPlayerPosition.colPos);
 				RadarComponent cRadar = cmRadar.get(e);
+				playerPosition.x = playerPosition.x + (map.getTileWidth() / 2);
 				if(cRadar.isCollided(playerPosition)){
 					Gdx.app.debug(tag, "Player spoted at position : "+ cPlayerPosition.colPos + "," + cPlayerPosition.rowPos);
 					return true;
